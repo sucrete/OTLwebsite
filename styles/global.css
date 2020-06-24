@@ -43,7 +43,7 @@
 .container main .marquee {
   position: relative;
   display: block;
-  width: 75vw;
+  width: 80vw;
   height: 600px;
   background: #c08a4e;
   background-image: url("../public/images/COVER_8.jpg");
@@ -51,10 +51,14 @@
   background-position: center center;
   background-size: 120%;
   background-repeat: no-repeat;
-  border: 10px solid #0a0a0a;
+  border: 10px solid #242e1f;
   border-radius: 38px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 0 10px rgba(0, 0, 0, 0.12), inset 0 2px 2px rgba(0, 0, 0, 0.12), inset 0 4px 4px rgba(0, 0, 0, 0.12), inset 0 8px 8px rgba(0, 0, 0, 0.12), inset 0 -2px 2px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 0 10px rgba(0, 0, 0, 0.12), inset 0 2px 2px rgba(0, 0, 0, 0.12), inset 0 4px 4px rgba(0, 0, 0, 0.12), inset 0 8px 8px rgba(0, 0, 0, 0.12), inset 0 -2px 2px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+  -webkit-filter: grayscale(40%);
+  -moz-filter: grayscale(40%);
+  -ms-filter: grayscale(40%);
+  -o-filter: grayscale(40%);
 }
 
 footer {
