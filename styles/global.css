@@ -1,6 +1,5 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,8 +19,12 @@
   background-repeat: no-repeat;
 }
 
+.container .hiddenSVG {
+  display: none;
+}
+
 .container main {
-  padding: 5rem 0;
+  padding: 3rem 0rem 0rem 0rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -49,21 +52,75 @@
   background-image: url("../public/images/COVER_8.jpg");
   /* fallback */
   background-position: center center;
+  margin-bottom: 2em;
   background-size: 120%;
   background-repeat: no-repeat;
   border: 10px solid #242e1f;
   border-radius: 38px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 0 10px rgba(0, 0, 0, 0.12), inset 0 2px 2px rgba(0, 0, 0, 0.12), inset 0 4px 4px rgba(0, 0, 0, 0.12), inset 0 8px 8px rgba(0, 0, 0, 0.12), inset 0 -2px 2px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 0 10px rgba(0, 0, 0, 0.12), inset 0 2px 2px rgba(0, 0, 0, 0.12), inset 0 4px 4px rgba(0, 0, 0, 0.12), inset 0 8px 8px rgba(0, 0, 0, 0.12), inset 0 -2px 2px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
-  -webkit-filter: grayscale(40%);
-  -moz-filter: grayscale(40%);
-  -ms-filter: grayscale(40%);
-  -o-filter: grayscale(40%);
+  -webkit-filter: sepia(0.4);
+          filter: sepia(0.4);
+}
+
+.container main .marquee .buttonContainer {
+  position: absolute;
+  background-color: #eb6035;
+  padding: 10px 5px 10px 19px;
+  border-radius: 0.5em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: -5%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 12%) scale(1);
+          transform: translate(-50%, 12%) scale(1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec83d, inset 0 -1px 1px #47413f86;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec83d, inset 0 -1px 1px #47413f86;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.container main .marquee .buttonContainer:hover .svgArrow {
+  -webkit-transform: translate(0%, 10%);
+          transform: translate(0%, 10%);
+  opacity: 0;
+}
+
+.container main .marquee .buttonContainer a {
+  color: #e2cec8;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+.container main .marquee .buttonContainer a:visited {
+  color: #e2cec8;
+}
+
+.container main .marquee .buttonContainer .svgArrow {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: inline;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  opacity: 1;
+  height: 40px;
+  width: auto;
+}
+
+.container main .marquee .buttonContainer .svgArrow path {
+  fill: #e2cec8;
 }
 
 footer {
   width: 100%;
-  height: 100px;
+  height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,6 +257,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  background: #231f20;
 }
 
 * {

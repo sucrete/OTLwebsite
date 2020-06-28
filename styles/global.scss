@@ -1,7 +1,6 @@
 $greyscale: 40%;
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,8 +9,11 @@ $greyscale: 40%;
   background: url("../public/images/terrazzo.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  .hiddenSVG {
+    display: none;
+  }
   main {
-    padding: 5rem 0;
+    padding: 3rem 0rem 0rem 0rem;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -25,6 +27,7 @@ $greyscale: 40%;
       background: #c08a4e;
       background-image: url("../public/images/COVER_8.jpg"); /* fallback */
       background-position: center center;
+      margin-bottom: 2em;
       //   background-image: url("../public/images/COVER_8.jpg"),
       //     linear-gradient(
       //       298deg,
@@ -55,21 +58,63 @@ $greyscale: 40%;
         inset 0 2px 2px rgba(0, 0, 0, 0.12), inset 0 4px 4px rgba(0, 0, 0, 0.12),
         inset 0 8px 8px rgba(0, 0, 0, 0.12), inset 0 -2px 2px rgba(0, 0, 0, 0.1),
         inset 0 -4px 4px rgba(0, 0, 0, 0.1);
-      -webkit-filter: grayscale($greyscale);
-      -moz-filter: grayscale($greyscale);
-      -ms-filter: grayscale($greyscale);
-      -o-filter: grayscale($greyscale);
-      //   -webkit-filter: url("#goo");
+      filter: sepia(0.4);
+      // -webkit-filter: url("#goo");
+      .buttonContainer {
+        position: absolute;
+        background-color: #eb6035;
+        padding: 10px 5px 10px 19px;
+        border-radius: 0.5em;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        bottom: -5%;
+        left: 50%;
+        transform: translate(-50%, 12%) scale(1);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+          0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+          0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec83d,
+          inset 0 -1px 1px #47413f86;
+        // -webkit-filter: url("#goo");
+        $btnTxtClr: #e2cec8;
+        transition: all 0.5s ease;
+        &:hover {
+          .svgArrow {
+            transform: translate(0%, 10%);
+            opacity: 0;
+          }
+        }
+        a {
+          color: $btnTxtClr;
+          font-size: 1.1em;
+          text-decoration: none;
+          &:visited {
+            color: $btnTxtClr;
+          }
+        }
+        .svgArrow {
+          transition: all 0.5s ease;
+          display: inline;
+          transform: translate(0%, 0%);
+          opacity: 1;
+          path {
+            fill: $btnTxtClr;
+          }
+          height: 40px;
+          width: auto;
+        }
+      }
     }
   }
 }
 
 footer {
   width: 100%;
-  height: 100px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  //   background: cornflowerblue;
 }
 
 footer img {
@@ -181,6 +226,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  background: #231f20;
 }
 
 * {
