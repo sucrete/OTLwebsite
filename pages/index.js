@@ -79,14 +79,23 @@ export default function Home() {
               href="https://www.oldtownloftskc.com/files/5215/9249/4482/Application_2020_Editable.pdf"
               target="_blank"
             >
-              Application{" "}
+              <span>Application</span>
               <img className="appImg" src="/file.svg" alt="my image" />
             </a>
           </div>
-          <img
-            style={{ float: "right" }}
-            src="https://www.oldtownloftskc.com/files/cache/d61cd69cec4da7d8ff35c0192b01d635_f23.png"
-          />
+          <div className="subFooter">
+            <img style={{ float: "right" }} src="/eho.svg" />
+          </div>
+
+          {/* Icons made by{" "}
+          <a href="http://www.freepik.com/" title="Freepik">
+            Freepik
+          </a>{" "}
+          from{" "}
+          <a href="https://www.flaticon.com/" title="Flaticon">
+            {" "}
+            www.flaticon.com
+          </a> */}
         </div>
       </footer>
       {/* <svg

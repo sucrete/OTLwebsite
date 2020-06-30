@@ -140,7 +140,7 @@ footer .footerSVG path {
 footer .footerContent {
   width: 100%;
   display: block;
-  height: 525px;
+  height: 575px;
   background-color: #191815;
   padding: 25px 0vw;
   color: #e2cec8;
@@ -156,34 +156,61 @@ footer .footerContent h1 {
 
 footer .footerContent .contact {
   background: #141411;
-  border-radius: 28px;
+  border-radius: 18px;
+  width: 79vw;
   height: 300px;
   margin-right: 10.5vw;
   margin-left: 10.5vw;
   padding: 2em 2em;
+  position: relative;
 }
 
 footer .footerContent .contact .appButton {
   position: absolute;
   bottom: 16px;
   right: 16px;
-  color: #e2cec8;
+  color: #f9e1c9;
   text-decoration: none;
   position: absolute;
-  background-color: #797574;
-  padding: 10px 12px 10px 27px;
+  background-color: #887f73;
+  padding: 10px 20px 10px 25px;
   border-radius: 0.5em;
   text-decoration: none;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823, inset 0 -1px 1px #47413f4f;
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823, inset 0 -1px 1px #47413f4f;
+  height: 65px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.178), 0 2px 2px rgba(0, 0, 0, 0.178), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 10px rgba(0, 0, 0, 0.1), 0 16px 20px rgba(0, 0, 0, 0.05), inset 0 1px 1px #e2cec831, inset 0 -1px 1px #47413f4f;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.178), 0 2px 2px rgba(0, 0, 0, 0.178), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 10px rgba(0, 0, 0, 0.1), 0 16px 20px rgba(0, 0, 0, 0.05), inset 0 1px 1px #e2cec831, inset 0 -1px 1px #47413f4f;
 }
 
 footer .footerContent .contact .appButton:visited {
-  color: #e2cec8;
+  color: #f9e1c9;
+}
+
+footer .footerContent .contact .appButton span {
+  position: relative;
+  bottom: -2px;
+  font-size: 1.1em;
 }
 
 footer .footerContent .contact .appButton .appImg {
-  background-image: url(../public/images/file.svg);
+  -webkit-filter: unset !important;
+          filter: unset !important;
+  height: 40px;
+  width: auto;
+  padding-left: 5px;
+}
+
+footer .footerContent .subFooter {
+  width: 79vw;
+  height: 80px;
+  padding: 25px 0px;
+  margin-right: 10.5vw;
+  margin-left: 10.5vw;
+}
+
+footer .footerContent .subFooter img {
+  height: 70px;
+  width: auto;
+  margin-right: 25px;
 }
 
 footer img {
