@@ -1,4 +1,5 @@
 $greyscale: 40%;
+$btnTxtClr: #e2cec8;
 .container {
   min-height: 100vh;
   display: flex;
@@ -24,33 +25,13 @@ $greyscale: 40%;
       display: block;
       width: 80vw;
       height: 600px;
-      background: #c08a4e;
+      background: #a59e95;
       background-image: url("../public/images/COVER_8.jpg"); /* fallback */
       background-position: center center;
       margin-bottom: 2em;
-      //   background-image: url("../public/images/COVER_8.jpg"),
-      //     linear-gradient(
-      //       298deg,
-      //       hsla(0, 0%, 88%, 0.85) 0%,
-      //       hsla(208.86, 0.52%, 87.8%, 0.835) 7%,
-      //       hsla(208.84, 1.5%, 87.39%, 0.806) 13.7%,
-      //       hsla(208.81, 2.79%, 86.82%, 0.765) 20.2%,
-      //       hsla(208.77, 4.27%, 86.11%, 0.714) 26.5%,
-      //       hsla(208.73, 5.82%, 85.28%, 0.656) 32.6%,
-      //       hsla(208.67, 7.35%, 84.37%, 0.592) 38.7%,
-      //       hsla(208.61, 8.81%, 83.4%, 0.526) 44.7%,
-      //       hsla(208.55, 10.16%, 82.41%, 0.459) 50.8%,
-      //       hsla(208.49, 11.37%, 81.43%, 0.393) 57%,
-      //       hsla(208.43, 12.43%, 80.5%, 0.331) 63.4%,
-      //       hsla(208.37, 13.32%, 79.65%, 0.276) 70%,
-      //       hsla(208.31, 14.05%, 78.92%, 0.228) 76.9%,
-      //       hsla(208.27, 14.59%, 78.35%, 0.192) 84.2%,
-      //       hsla(208.25, 14.93%, 77.98%, 0.168) 91.9%,
-      //       hsla(208.24, 15.04%, 77.84%, 0.16) 100%
-      //     ); /* W3C */
       background-size: 120%;
       background-repeat: no-repeat;
-      border: 10px solid rgb(36, 46, 31);
+      border: 10px solid rgb(22, 22, 22);
       border-radius: 38px;
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
         0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
@@ -60,48 +41,53 @@ $greyscale: 40%;
         inset 0 -4px 4px rgba(0, 0, 0, 0.1);
       filter: sepia(0.4);
       // -webkit-filter: url("#goo");
-      .buttonContainer {
+      a.buttonContainer {
         position: absolute;
-        background-color: #eb6035;
-        padding: 10px 5px 10px 19px;
+        background-color: #797574;
+        padding: 10px 12px 10px 27px;
         border-radius: 0.5em;
         display: inline-flex;
         justify-content: center;
         align-items: center;
         bottom: -5%;
         left: 50%;
-        transform: translate(-50%, 12%) scale(1);
+        text-decoration: none;
+        transform: translate(-50%, 10%) scale(1);
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
           0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
-          0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec83d,
-          inset 0 -1px 1px #47413f86;
+          0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823,
+          inset 0 -1px 1px #47413f4f;
         // -webkit-filter: url("#goo");
-        $btnTxtClr: #e2cec8;
-        transition: all 0.5s ease;
         &:hover {
           .svgArrow {
-            transform: translate(0%, 10%);
-            opacity: 0;
+            transform: translate(0%, 7%);
           }
         }
-        a {
+        transition: all 0.5s ease;
+        &:visited {
+          color: $btnTxtClr;
+        }
+
+        span {
+          position: relative;
+          font-family: "Antikor", sans-serif;
           color: $btnTxtClr;
           font-size: 1.1em;
-          text-decoration: none;
-          &:visited {
-            color: $btnTxtClr;
-          }
+          width: 100%;
+          height: 100%;
+          bottom: -2px;
         }
         .svgArrow {
-          transition: all 0.5s ease;
-          display: inline;
           transform: translate(0%, 0%);
           opacity: 1;
+          //   animation: scatter 1.75s infinite;
+          transition: all 0.5s ease;
+          height: 45px;
+          width: auto;
+          position: relative;
           path {
             fill: $btnTxtClr;
           }
-          height: 40px;
-          width: auto;
         }
       }
     }
@@ -110,11 +96,60 @@ $greyscale: 40%;
 
 footer {
   width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  //   background: cornflowerblue;
+  font-family: "Antikor", sans-serif;
+  margin-top: 3em;
+  .footerSVG {
+    display: block;
+    width: 100%;
+    path {
+      fill: #191815;
+    }
+  }
+  .footerContent {
+    width: 100%;
+    display: block;
+    height: 525px;
+    background-color: #191815;
+    padding: 25px 0vw;
+    color: $btnTxtClr;
+    h1 {
+      padding-right: 12.5vw;
+      padding-left: 13vw;
+      font-size: 2.5em;
+      margin-block-end: 0.2em;
+    }
+    .contact {
+      background: #141411;
+      border-radius: 28px;
+      //   width: 100%;
+      height: 300px;
+      margin-right: 10.5vw;
+      margin-left: 10.5vw;
+      padding: 2em 2em;
+      .appButton {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        color: $btnTxtClr;
+        text-decoration: none;
+        position: absolute;
+        background-color: #797574;
+        padding: 10px 12px 10px 27px;
+        border-radius: 0.5em;
+        text-decoration: none;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+          0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+          0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823,
+          inset 0 -1px 1px #47413f4f;
+        &:visited {
+          color: $btnTxtClr;
+        }
+        .appImg {
+          background-image: url(../public/images/file.svg);
+        }
+      }
+    }
+  }
 }
 
 footer img {
@@ -228,6 +263,9 @@ body {
   font-size: 18px;
   background: #231f20;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   box-sizing: border-box;
@@ -245,4 +283,22 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+// ⭐ ----- FONTS ----- ⭐
+
+@font-face {
+  font-family: "Antikor";
+  src: url("./fonts/Antikor_Text_Light.ttf") format("truetype");
+}
+@keyframes scatter {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -5px;
+  }
+  100% {
+    top: 0;
+  }
 }

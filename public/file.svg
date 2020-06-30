@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="Capa_1"
+   enable-background="new 0 0 512 512"
+   height="512"
+   viewBox="0 0 512 512"
+   width="512"
+   version="1.1">
+  <defs
+     id="defs2503" />
+  <path
+     id="path2486"
+     fill="#fff5f5"
+     d="M 154.29,0 131.079,43.211 90.556,63.734 V 436.798 H 420 V 201.47343 0 Z" />
+  <path
+     id="path2496"
+     fill="#dce6eb"
+     d="M 154.29,0 V 63.734 H 90.556 Z" />
+</svg>
