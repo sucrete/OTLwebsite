@@ -72,8 +72,23 @@ export default function Home() {
         <div className="footerContent">
           <h1>Contact</h1>
           <div className="contact">
-            phone number: (816) 842-1424 <br />
-            <br /> address:
+            <div className="contactContainer">
+              <div className="contactRow">
+                <span className="left">phone number:</span>
+                <span className="right">(816) 842-1424</span>{" "}
+              </div>
+              <div className="contactRow">
+                <span className="left">office address:</span>
+                <span
+                  className="right"
+                  style={{ position: "relative", left: "17%" }}
+                >
+                  934 Wyandotte St
+                  <br /> Kansas City, MO 64105
+                </span>
+              </div>
+            </div>
+            <img className="eho" style={{ float: "right" }} src="/eho.svg" />
             <a
               className="appButton"
               href="https://www.oldtownloftskc.com/files/5215/9249/4482/Application_2020_Editable.pdf"
@@ -82,9 +97,6 @@ export default function Home() {
               <span>Application</span>
               <img className="appImg" src="/file.svg" alt="my image" />
             </a>
-          </div>
-          <div className="subFooter">
-            <img style={{ float: "right" }} src="/eho.svg" />
           </div>
 
           {/* Icons made by{" "}

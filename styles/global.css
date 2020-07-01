@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ramaraja&display=swap");
 .container {
   min-height: 100vh;
   display: -webkit-box;
@@ -49,18 +50,17 @@
   width: 80vw;
   height: 600px;
   background: #a59e95;
-  background-image: url("../public/images/COVER_8.jpg");
-  /* fallback */
-  background-position: center center;
+  background-image: url("../public/images/COVER_8desaturated.jpg");
+  background-position: 40% 60%;
   margin-bottom: 2em;
-  background-size: 120%;
+  background-size: 100%;
   background-repeat: no-repeat;
   border: 10px solid #161616;
   border-radius: 38px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 0 10px rgba(0, 0, 0, 0.12), inset 0 2px 2px rgba(0, 0, 0, 0.12), inset 0 4px 4px rgba(0, 0, 0, 0.12), inset 0 8px 8px rgba(0, 0, 0, 0.12), inset 0 -2px 2px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 0 10px rgba(0, 0, 0, 0.12), inset 0 2px 2px rgba(0, 0, 0, 0.12), inset 0 4px 4px rgba(0, 0, 0, 0.12), inset 0 8px 8px rgba(0, 0, 0, 0.12), inset 0 -2px 2px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
   -webkit-filter: sepia(0.4);
           filter: sepia(0.4);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
 .container main .marquee a.buttonContainer {
@@ -124,7 +124,6 @@
 
 footer {
   width: 100%;
-  font-family: "Antikor", sans-serif;
   margin-top: 3em;
 }
 
@@ -149,12 +148,16 @@ footer .footerContent {
 footer .footerContent h1 {
   padding-right: 12.5vw;
   padding-left: 13vw;
-  font-size: 2.5em;
+  font-size: 3em;
   -webkit-margin-after: 0.2em;
           margin-block-end: 0.2em;
+  font-family: "Ivar", serif;
+  letter-spacing: 0.05em;
+  font-weight: normal !important;
 }
 
 footer .footerContent .contact {
+  font-family: "Antikor", sans-serif;
   background: #141411;
   border-radius: 18px;
   width: 79vw;
@@ -163,6 +166,37 @@ footer .footerContent .contact {
   margin-left: 10.5vw;
   padding: 2em 2em;
   position: relative;
+}
+
+footer .footerContent .contact .eho {
+  position: absolute;
+  bottom: 16px;
+  left: 20px;
+  width: 70px;
+  height: auto;
+}
+
+footer .footerContent .contact .contactContainer {
+  width: 40%;
+}
+
+footer .footerContent .contact .contactContainer .contactRow {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footerContent .contact .contactContainer .contactRow .left {
+  text-align: left;
+}
+
+footer .footerContent .contact .contactContainer .contactRow .right {
+  text-align: left;
 }
 
 footer .footerContent .contact .appButton {
@@ -194,7 +228,7 @@ footer .footerContent .contact .appButton span {
 footer .footerContent .contact .appButton .appImg {
   -webkit-filter: unset !important;
           filter: unset !important;
-  height: 40px;
+  height: 35px;
   width: auto;
   padding-left: 5px;
 }
@@ -364,11 +398,6 @@ img {
   display: block;
 }
 
-@font-face {
-  font-family: "Antikor";
-  src: url("./fonts/Antikor_Text_Light.ttf") format("truetype");
-}
-
 @-webkit-keyframes scatter {
   0% {
     top: 0;
@@ -391,5 +420,25 @@ img {
   100% {
     top: 0;
   }
+}
+
+@font-face {
+  font-family: "Antikor";
+  src: url("./fonts/Antikor_Text_Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Spectral";
+  src: url("./fonts/Spectral-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Ortica";
+  src: url("./fonts/Ortica-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Ivar";
+  src: url("./fonts/IvarDisplayCondensed-Light.woff") format("woff");
 }
 /*# sourceMappingURL=global.css.map */
