@@ -1,6 +1,5 @@
 $greyscale: 40%;
 $btnTxtClr: #e2cec8;
-@import url("https://fonts.googleapis.com/css2?family=Ramaraja&display=swap");
 .container {
   min-height: 100vh;
   display: flex;
@@ -21,72 +20,90 @@ $btnTxtClr: #e2cec8;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .marquee {
-      position: relative;
-      display: block;
-      width: 80vw;
-      height: 600px;
-      background: #a59e95;
-      background-image: url("../public/images/COVER_8desaturated.jpg");
-      background-position: 40% 60%;
-      margin-bottom: 2em;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      border: 10px solid rgb(22, 22, 22);
-      border-radius: 38px;
-      filter: sepia(0.4);
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
-        0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
-        0 16px 16px rgba(0, 0, 0, 0.12);
-
-      // -webkit-filter: url("#goo");
-      a.buttonContainer {
-        position: absolute;
-        background-color: #797574;
-        padding: 10px 12px 10px 27px;
-        border-radius: 0.5em;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        bottom: -5%;
-        left: 50%;
-        text-decoration: none;
-        transform: translate(-50%, 10%) scale(1);
-
+    .marqueeWrapper {
+      .marquee {
+        position: relative;
+        display: block;
+        width: 80vw;
+        height: 600px;
+        background: #a59e95;
+        background-image: url("../public/images/COVER_8desaturated.jpg");
+        background-position: -1% 65%;
+        margin-bottom: 2em;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border: 10px solid rgb(22, 22, 22);
+        border-radius: 38px;
+        filter: sepia(0.4);
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
           0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
-          0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823,
-          inset 0 -1px 1px #47413f4f;
+          0 16px 16px rgba(0, 0, 0, 0.12);
+
         // -webkit-filter: url("#goo");
-        &:hover {
+        a.buttonContainer {
+          position: absolute;
+          background-color: #797574;
+          padding: 10px 12px 10px 27px;
+          border-radius: 0.5em;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          bottom: -5%;
+          left: 50%;
+          text-decoration: none;
+          transform: translate(-50%, 10%) scale(1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+            0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12),
+            0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12),
+            inset 0 1px 1px #e2cec823, inset 0 -1px 1px #47413f4f;
+          // -webkit-filter: url("#goo");
+          transition: all 0.5s ease;
+          &:hover {
+            background-color: #817d7c;
+            .svgArrow {
+              transform: translate(0%, 7%);
+            }
+          }
+
+          &:visited {
+            color: $btnTxtClr;
+          }
+
+          span {
+            position: relative;
+            font-family: "Antikor", sans-serif;
+            color: $btnTxtClr;
+            font-size: 1.1em;
+            width: 100%;
+            height: 100%;
+            bottom: -2px;
+          }
           .svgArrow {
-            transform: translate(0%, 7%);
+            transform: translate(0%, 0%);
+            opacity: 1;
+            //   animation: scatter 1.75s infinite;
+            transition: all 0.5s ease;
+            height: 45px;
+            width: auto;
+            position: relative;
+            path {
+              fill: $btnTxtClr;
+            }
           }
         }
-        transition: all 0.5s ease;
-        &:visited {
-          color: $btnTxtClr;
-        }
-
-        span {
-          position: relative;
-          font-family: "Antikor", sans-serif;
-          color: $btnTxtClr;
-          font-size: 1.1em;
-          width: 100%;
-          height: 100%;
-          bottom: -2px;
-        }
-        .svgArrow {
-          transform: translate(0%, 0%);
-          opacity: 1;
-          //   animation: scatter 1.75s infinite;
-          transition: all 0.5s ease;
-          height: 45px;
-          width: auto;
-          position: relative;
-          path {
-            fill: $btnTxtClr;
+      }
+      .OTLLogoContainer {
+        position: absolute;
+        height: 400px;
+        width: 400px;
+        z-index: 77;
+        top: 10%;
+        right: 20%;
+        svg {
+          .OLDtext,
+          .TOWNtext {
+            font-size: 0.5em;
+            font-family: "TS Rough";
           }
         }
       }
@@ -156,20 +173,25 @@ footer {
         position: absolute;
         bottom: 16px;
         right: 16px;
-        color: #f9e1c9;
+        color: $btnTxtClr;
         text-decoration: none;
         position: absolute;
-        background-color: #887f73;
+        background-color: #797574;
         padding: 10px 20px 10px 25px;
         border-radius: 0.5em;
         text-decoration: none;
         height: 65px;
+        filter: sepia(0.4);
+        transition: all 0.5s ease;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.178),
           0 2px 2px rgba(0, 0, 0, 0.178), 0 4px 4px rgba(0, 0, 0, 0.12),
           0 8px 10px rgba(0, 0, 0, 0.1), 0 16px 20px rgba(0, 0, 0, 0.05),
           inset 0 1px 1px #e2cec831, inset 0 -1px 1px #47413f4f;
+        &:hover {
+          background-color: #928e8d;
+        }
         &:visited {
-          color: #f9e1c9;
+          color: $btnTxtClr;
         }
         span {
           position: relative;
@@ -177,7 +199,7 @@ footer {
           font-size: 1.1em;
         }
         .appImg {
-          filter: unset !important;
+          filter: sepia(0.4);
           height: 35px;
           width: auto;
           padding-left: 5px;
@@ -350,15 +372,16 @@ img {
 }
 
 @font-face {
-  font-family: "Spectral";
-  src: url("./fonts/Spectral-Light.ttf") format("truetype");
+  font-family: "Ivar";
+  src: url("./fonts/IvarDisplayCondensed-Light.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Ortica";
-  src: url("./fonts/Ortica-Light.otf") format("opentype");
+  font-family: "TS Rough";
+  src: url("./fonts/TradesmithRough.otf") format("opentype");
 }
+
 @font-face {
-  font-family: "Ivar";
-  src: url("./fonts/IvarDisplayCondensed-Light.woff") format("woff");
+  font-family: "TS Stamp";
+  src: url("./fonts/TradesmithStamp.otf") format("opentype");
 }
