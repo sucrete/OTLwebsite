@@ -18,7 +18,7 @@ export default function Home() {
               <div className="KCLogo"></div>
             </div>
             <a href="#footer" className="buttonContainer">
-              <span>More Info</span>
+              <span>Contact</span>
               <svg
                 className="svgArrow"
                 ns="http://www.w3.org/2000/svg"
@@ -29,7 +29,9 @@ export default function Home() {
             </a>
           </div>
           <div className="OTLLogoContainer">
-            <img src="/drawing.svg" />
+            <img className="drawing" src="/drawing.svg" />
+            <img className="circle" src="/circle.svg" />
+            <div className="LOFTStext">LOFTS</div>
             <svg
               className="circleText"
               xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +49,7 @@ export default function Home() {
                 text-anchor="middle"
                 className="OLDtext"
               >
-                <textPath href="#tophalf" startOffset="39.5%">
+                <textPath href="#tophalf" startOffset="39%">
                   OLD
                 </textPath>
               </text>
@@ -78,7 +80,9 @@ export default function Home() {
             <div className="contactContainer">
               <div className="contactRow">
                 <span className="left">phone number:</span>
-                <span className="right">(816) 842-1424</span>{" "}
+                <a className="right" href="tel:+1-816-842-1424">
+                  (816) 842-1424
+                </a>{" "}
               </div>
               <div className="contactRow">
                 <span className="left">office address:</span>

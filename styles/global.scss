@@ -94,16 +94,57 @@ $btnTxtClr: #e2cec8;
       }
       .OTLLogoContainer {
         position: absolute;
-        height: 400px;
-        width: 400px;
+        height: 325px;
+        width: 325px;
         z-index: 77;
-        top: 10%;
-        right: 20%;
+        top: 20%;
+        right: 25%;
+        .drawing {
+          position: relative;
+          z-index: 1;
+          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1))
+            drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1))
+            drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1))
+            drop-shadow(0 8px 8px rgba(0, 0, 0, 0.1))
+            drop-shadow(0 16px 16px rgba(0, 0, 0, 0.1));
+        }
+        .circle {
+          position: absolute;
+          z-index: 2;
+          height: 90%;
+          width: 90%;
+          top: 67.2%;
+          left: 5.3%;
+          transform: rotate(45deg) translate(-50%, -50%);
+        }
+        .LOFTStext {
+          z-index: 3;
+          position: absolute;
+          top: 49%;
+          left: 52.5%;
+          transform: translate(-50%, -50%);
+          color: #332521;
+          font-size: 4.8em;
+          font-family: "TS Stamp", sans-serif;
+        }
         svg {
+          position: absolute;
+          width: 120%;
+          height: 120%;
+          top: 47.5%;
+          left: 51.5%;
+          transform: translate(-50%, -50%);
+          z-index: 4;
           .OLDtext,
           .TOWNtext {
-            font-size: 0.5em;
+            font-size: 0.6em;
+            fill: #6b2c19;
+          }
+          .OLDtext {
             font-family: "TS Rough";
+          }
+          .TOWNtext {
+            font-family: "TS Stamp";
           }
         }
       }
