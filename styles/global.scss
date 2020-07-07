@@ -1,5 +1,7 @@
 $greyscale: 40%;
 $btnTxtClr: #e2cec8;
+$shadow: #6c708f;
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -32,7 +34,7 @@ $btnTxtClr: #e2cec8;
         margin-bottom: 2em;
         background-size: 100%;
         background-repeat: no-repeat;
-        border: 10px solid rgb(22, 22, 22);
+        border: 7px solid rgb(22, 22, 22);
         border-radius: 38px;
         filter: sepia(0.4);
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
@@ -96,7 +98,7 @@ $btnTxtClr: #e2cec8;
         position: absolute;
         height: 325px;
         width: 325px;
-        z-index: 77;
+        z-index: 9;
         top: 20%;
         right: 25%;
         .drawing {
@@ -138,7 +140,7 @@ $btnTxtClr: #e2cec8;
           .OLDtext,
           .TOWNtext {
             font-size: 0.6em;
-            fill: #6b2c19;
+            fill: #332521;
           }
           .OLDtext {
             font-family: "TS Rough";
@@ -146,6 +148,58 @@ $btnTxtClr: #e2cec8;
           .TOWNtext {
             font-family: "TS Stamp";
           }
+        }
+      }
+      .KCContainer {
+        position: absolute;
+        top: 45%;
+        right: 21.5%;
+        width: 225px;
+        height: auto;
+        z-index: 10;
+        .KCtext {
+          position: absolute;
+          top: 47%;
+          left: 51%;
+          color: #f07a30;
+          transform: translate(-50%, -50%);
+          font-family: "Prismatic Base", sans-serif;
+          font-size: 5.5em;
+          text-shadow: 2px 1px 0px $shadow, 1px 2px 0px $shadow,
+            3px 2px 0px $shadow, 2px 3px 0px $shadow, 4px 3px 0px $shadow,
+            3px 4px 0px $shadow, 5px 4px 0px $shadow, 4px 5px 0px $shadow,
+            6px 5px 0px $shadow, 5px 6px 0px $shadow, 7px 6px 0px $shadow,
+            6px 7px 0px $shadow, 8px 7px 0px $shadow, 7px 8px 0px $shadow,
+            9px 8px 0px $shadow, 8px 9px 0px $shadow, 10px 9px 0px $shadow,
+            9px 10px 0px $shadow, 11px 10px 0px $shadow, 10px 11px 0px $shadow;
+          &:before,
+          &:after {
+            content: attr(data-heading);
+            position: absolute;
+            font-weight: normal;
+            text-shadow: none;
+            width: 100%;
+          }
+          &:after {
+            color: #bd3627;
+            font-family: "Prismatic Bottom";
+            left: 0;
+            top: 1px;
+          }
+
+          &:before {
+            color: #fff334;
+            font-family: "Prismatic Top";
+            left: 0;
+            top: -1px;
+          }
+        }
+        .diamond {
+          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.11))
+            drop-shadow(0 2px 2px rgba(0, 0, 0, 0.11))
+            drop-shadow(0 4px 4px rgba(0, 0, 0, 0.11))
+            drop-shadow(0 8px 8px rgba(0, 0, 0, 0.11))
+            drop-shadow(0 16px 16px rgba(0, 0, 0, 0.11));
         }
       }
     }
@@ -172,8 +226,9 @@ footer {
     h1 {
       padding-right: 12.5vw;
       padding-left: 13vw;
-      font-size: 3em;
+      font-size: 4em;
       margin-block-end: 0.2em;
+      margin-block-start: 0.2em;
       font-family: "Ivar", serif;
       letter-spacing: 0.05em;
       font-weight: normal !important;
@@ -258,6 +313,22 @@ footer {
         width: auto;
         margin-right: 25px;
       }
+    }
+    .freepikContainer > *,
+    .freepikContainer {
+      display: inline;
+      font-family: "Antikor", sans-serif;
+      padding: 9px;
+    }
+    .freepikContainer {
+      position: relative;
+      margin-right: 10.5vw;
+      margin-left: 10.5vw;
+      width: 79vw;
+      padding: 25px;
+      margin-top: 1em;
+      top: 15px;
+      color: rgb(95, 95, 95);
     }
   }
 }
@@ -425,4 +496,23 @@ img {
 @font-face {
   font-family: "TS Stamp";
   src: url("./fonts/TradesmithStamp.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Prismatic Base";
+  src: url("./fonts/Prismatic-Base.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Prismatic Top";
+  src: url("./fonts/Prismatic-Top.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Prismatic Bottom";
+  src: url("./fonts/Prismatic-Bottom.otf") format("opentype");
+}
+@font-face {
+  font-family: "Prismatic Right";
+  src: url("./fonts/Prismatic-Right.otf") format("opentype");
 }

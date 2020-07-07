@@ -67,6 +67,12 @@ export default function Home() {
               </text>
             </svg>
           </div>
+          <div className="KCContainer">
+            <img className="diamond" src="/diamond.svg" />
+            <div className="KCtext" data-heading="KC">
+              KC
+            </div>
+          </div>
         </div>
       </main>
       <footer id="footer">
@@ -105,16 +111,16 @@ export default function Home() {
               <img className="appImg" src="/file.svg" alt="my image" />
             </a>
           </div>
-
-          {/* Icons made by{" "}
-          <a href="http://www.freepik.com/" title="Freepik">
-            Freepik
-          </a>{" "}
-          from{" "}
-          <a href="https://www.flaticon.com/" title="Flaticon">
-            {" "}
-            www.flaticon.com
-          </a> */}
+          <div className="freepikContainer">
+            Some icons made by
+            <a href="http://www.freepik.com/" title="Freepik">
+              Freepik
+            </a>
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>
+          </div>
         </div>
       </footer>
 
