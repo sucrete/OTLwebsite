@@ -157,14 +157,17 @@ $shadow: #6c708f;
         width: 225px;
         height: auto;
         z-index: 10;
+        .KCtext2,
         .KCtext {
           position: absolute;
+          transform: translate(-50%, -50%);
+          font-size: 5.5em;
+        }
+        .KCtext {
           top: 47%;
           left: 51%;
           color: #f07a30;
-          transform: translate(-50%, -50%);
           font-family: "Prismatic Base", sans-serif;
-          font-size: 5.5em;
           text-shadow: 2px 1px 0px $shadow, 1px 2px 0px $shadow,
             3px 2px 0px $shadow, 2px 3px 0px $shadow, 4px 3px 0px $shadow,
             3px 4px 0px $shadow, 5px 4px 0px $shadow, 4px 5px 0px $shadow,
@@ -193,6 +196,12 @@ $shadow: #6c708f;
             left: 0;
             top: -1px;
           }
+        }
+        .KCtext2 {
+          top: 47.5%;
+          left: 51.1%;
+          color: #ed463a;
+          font-family: "Prismatic Right";
         }
         .diamond {
           filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.11))

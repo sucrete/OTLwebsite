@@ -198,15 +198,19 @@
   z-index: 10;
 }
 
+.container main .marqueeWrapper .KCContainer .KCtext2,
 .container main .marqueeWrapper .KCContainer .KCtext {
   position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 5.5em;
+}
+
+.container main .marqueeWrapper .KCContainer .KCtext {
   top: 47%;
   left: 51%;
   color: #f07a30;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   font-family: "Prismatic Base", sans-serif;
-  font-size: 5.5em;
   text-shadow: 2px 1px 0px #6c708f, 1px 2px 0px #6c708f, 3px 2px 0px #6c708f, 2px 3px 0px #6c708f, 4px 3px 0px #6c708f, 3px 4px 0px #6c708f, 5px 4px 0px #6c708f, 4px 5px 0px #6c708f, 6px 5px 0px #6c708f, 5px 6px 0px #6c708f, 7px 6px 0px #6c708f, 6px 7px 0px #6c708f, 8px 7px 0px #6c708f, 7px 8px 0px #6c708f, 9px 8px 0px #6c708f, 8px 9px 0px #6c708f, 10px 9px 0px #6c708f, 9px 10px 0px #6c708f, 11px 10px 0px #6c708f, 10px 11px 0px #6c708f;
 }
 
@@ -230,6 +234,13 @@
   font-family: "Prismatic Top";
   left: 0;
   top: -1px;
+}
+
+.container main .marqueeWrapper .KCContainer .KCtext2 {
+  top: 47.5%;
+  left: 51.1%;
+  color: #ed463a;
+  font-family: "Prismatic Right";
 }
 
 .container main .marqueeWrapper .KCContainer .diamond {

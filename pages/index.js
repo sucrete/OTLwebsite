@@ -72,6 +72,7 @@ export default function Home() {
             <div className="KCtext" data-heading="KC">
               KC
             </div>
+            <div className="KCtext2">KC</div>
           </div>
         </div>
       </main>
