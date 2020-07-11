@@ -24,7 +24,7 @@
 }
 
 .container main {
-  padding: 3rem 0rem 0rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -43,86 +43,26 @@
           align-items: center;
 }
 
+.container main .marqueeWrapper {
+  position: relative;
+  height: 600px;
+  z-index: 999;
+}
+
 .container main .marqueeWrapper .marquee {
   position: relative;
   display: block;
-  width: 80vw;
+  width: 100vw;
   height: 600px;
   background: #a59e95;
   background-image: url("../public/images/COVER_8desaturated.jpg");
-  background-position: -1% 65%;
+  background-position: 0% 90%;
   margin-bottom: 2em;
-  background-size: 100%;
+  background-size: 110%;
   background-repeat: no-repeat;
-  border: 7px solid #161616;
-  border-radius: 38px;
+  z-index: 9;
   -webkit-filter: sepia(0.4);
           filter: sepia(0.4);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
-}
-
-.container main .marqueeWrapper .marquee a.buttonContainer {
-  position: absolute;
-  background-color: #797574;
-  padding: 10px 12px 10px 27px;
-  border-radius: 0.5em;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  bottom: -5%;
-  left: 50%;
-  text-decoration: none;
-  -webkit-transform: translate(-50%, 10%) scale(1);
-          transform: translate(-50%, 10%) scale(1);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823, inset 0 -1px 1px #47413f4f;
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823, inset 0 -1px 1px #47413f4f;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.container main .marqueeWrapper .marquee a.buttonContainer:hover {
-  background-color: #817d7c;
-}
-
-.container main .marqueeWrapper .marquee a.buttonContainer:hover .svgArrow {
-  -webkit-transform: translate(0%, 7%);
-          transform: translate(0%, 7%);
-}
-
-.container main .marqueeWrapper .marquee a.buttonContainer:visited {
-  color: #e2cec8;
-}
-
-.container main .marqueeWrapper .marquee a.buttonContainer span {
-  position: relative;
-  font-family: "Antikor", sans-serif;
-  color: #e2cec8;
-  font-size: 1.1em;
-  width: 100%;
-  height: 100%;
-  bottom: -2px;
-}
-
-.container main .marqueeWrapper .marquee a.buttonContainer .svgArrow {
-  -webkit-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
-  opacity: 1;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  height: 45px;
-  width: auto;
-  position: relative;
-}
-
-.container main .marqueeWrapper .marquee a.buttonContainer .svgArrow path {
-  fill: #e2cec8;
 }
 
 .container main .marqueeWrapper .OTLLogoContainer {
@@ -130,8 +70,8 @@
   height: 325px;
   width: 325px;
   z-index: 9;
-  top: 20%;
-  right: 25%;
+  top: 13%;
+  right: 27%;
 }
 
 .container main .marqueeWrapper .OTLLogoContainer .drawing {
@@ -189,10 +129,33 @@
   font-family: "TS Stamp";
 }
 
-.container main .marqueeWrapper .KCContainer {
+.container main .marqueeWrapper .quoteContainer {
+  visibility: hidden;
+  font-family: "Domaine Semi Italic";
+  font-size: 2em;
   position: absolute;
   top: 45%;
-  right: 21.5%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #243250;
+}
+
+.container main .marqueeWrapper .quoteContainer .OTLQuoteLine1 {
+  -webkit-transform: skew(-0.12rad);
+          transform: skew(-0.12rad);
+}
+
+.container main .marqueeWrapper .quoteContainer .OTLQuoteLine2 {
+  -webkit-transform: skew(-0.12rad);
+          transform: skew(-0.12rad);
+  padding-left: 95px;
+}
+
+.container main .marqueeWrapper .KCContainer {
+  position: absolute;
+  top: 40%;
+  right: 19.5%;
   width: 225px;
   height: auto;
   z-index: 10;
@@ -211,7 +174,6 @@
   left: 51%;
   color: #f07a30;
   font-family: "Prismatic Base", sans-serif;
-  text-shadow: 2px 1px 0px #6c708f, 1px 2px 0px #6c708f, 3px 2px 0px #6c708f, 2px 3px 0px #6c708f, 4px 3px 0px #6c708f, 3px 4px 0px #6c708f, 5px 4px 0px #6c708f, 4px 5px 0px #6c708f, 6px 5px 0px #6c708f, 5px 6px 0px #6c708f, 7px 6px 0px #6c708f, 6px 7px 0px #6c708f, 8px 7px 0px #6c708f, 7px 8px 0px #6c708f, 9px 8px 0px #6c708f, 8px 9px 0px #6c708f, 10px 9px 0px #6c708f, 9px 10px 0px #6c708f, 11px 10px 0px #6c708f, 10px 11px 0px #6c708f;
 }
 
 .container main .marqueeWrapper .KCContainer .KCtext:before, .container main .marqueeWrapper .KCContainer .KCtext:after {
@@ -244,8 +206,141 @@
 }
 
 .container main .marqueeWrapper .KCContainer .diamond {
-  -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.11)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.11)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.11)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.11)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.11));
-          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.11)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.11)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.11)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.11)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.11));
+  -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.12)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.12)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.12)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.12));
+          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.12)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.12)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.12)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.12));
+}
+
+.container main .marqueeWrapper a.buttonContainer {
+  position: absolute;
+  background-color: #585858;
+  padding: 10px 12px 10px 27px;
+  border-radius: 0.5em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: -5%;
+  left: 50%;
+  text-decoration: none;
+  -webkit-transform: translate(-50%, 10%) scale(1);
+          transform: translate(-50%, 10%) scale(1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823, inset 0 -1px 1px #47413f4f;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823, inset 0 -1px 1px #47413f4f;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border: 0;
+  font-size: 18px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  overflow: hidden;
+  z-index: 11;
+}
+
+.container main .marqueeWrapper a.buttonContainer:hover .svgArrow {
+  -webkit-transform: translate(0%, 7%);
+          transform: translate(0%, 7%);
+}
+
+.container main .marqueeWrapper a.buttonContainer:focus {
+  outline: 0;
+}
+
+.container main .marqueeWrapper a.buttonContainer:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
+.container main .marqueeWrapper a.buttonContainer:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
+.container main .marqueeWrapper a.buttonContainer:hover {
+  background: #6593a6;
+  cursor: pointer;
+}
+
+.container main .marqueeWrapper a.buttonContainer:hover:before {
+  -webkit-transform: translateX(300px) skewX(-15deg);
+          transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.container main .marqueeWrapper a.buttonContainer:hover:after {
+  -webkit-transform: translateX(300px) skewX(-15deg);
+          transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.container main .marqueeWrapper a.buttonContainer:visited {
+  color: #e2cec8;
+}
+
+.container main .marqueeWrapper a.buttonContainer span {
+  position: relative;
+  font-family: "Antikor", sans-serif;
+  color: #e2cec8;
+  font-size: 1.1em;
+  width: 100%;
+  height: 100%;
+  bottom: -2px;
+}
+
+.container main .marqueeWrapper a.buttonContainer .svgArrow {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  height: 45px;
+  width: auto;
+  position: relative;
+}
+
+.container main .marqueeWrapper a.buttonContainer .svgArrow path {
+  fill: #e2cec8;
+}
+
+.container main .marqueeWrapper .transitionGradient {
+  width: 100vw;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 250px;
+  z-index: 10;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(35, 31, 32, 0)), color-stop(18.5%, rgba(35, 31, 32, 0.078)), color-stop(34.1%, rgba(35, 31, 32, 0.154)), color-stop(47.2%, rgba(35, 31, 32, 0.23)), color-stop(57.9%, rgba(35, 31, 32, 0.304)), color-stop(66.6%, rgba(35, 31, 32, 0.377)), color-stop(73.5%, rgba(35, 31, 32, 0.448)), color-stop(78.9%, rgba(35, 31, 32, 0.518)), color-stop(83.1%, rgba(35, 31, 32, 0.586)), color-stop(86.3%, rgba(35, 31, 32, 0.652)), color-stop(88.7%, rgba(35, 31, 32, 0.716)), color-stop(90.8%, rgba(35, 31, 32, 0.778)), color-stop(92.7%, rgba(35, 31, 32, 0.837)), color-stop(94.7%, rgba(35, 31, 32, 0.894)), color-stop(97%, rgba(35, 31, 32, 0.949)), to(#231f20));
+  background: linear-gradient(to bottom, rgba(35, 31, 32, 0) 0%, rgba(35, 31, 32, 0.078) 18.5%, rgba(35, 31, 32, 0.154) 34.1%, rgba(35, 31, 32, 0.23) 47.2%, rgba(35, 31, 32, 0.304) 57.9%, rgba(35, 31, 32, 0.377) 66.6%, rgba(35, 31, 32, 0.448) 73.5%, rgba(35, 31, 32, 0.518) 78.9%, rgba(35, 31, 32, 0.586) 83.1%, rgba(35, 31, 32, 0.652) 86.3%, rgba(35, 31, 32, 0.716) 88.7%, rgba(35, 31, 32, 0.778) 90.8%, rgba(35, 31, 32, 0.837) 92.7%, rgba(35, 31, 32, 0.894) 94.7%, rgba(35, 31, 32, 0.949) 97%, #231f20 100%);
 }
 
 footer {
@@ -274,12 +369,12 @@ footer .footerContent {
 footer .footerContent h1 {
   padding-right: 12.5vw;
   padding-left: 13vw;
-  font-size: 4em;
+  font-size: 3em;
   -webkit-margin-after: 0.2em;
           margin-block-end: 0.2em;
   -webkit-margin-before: 0.2em;
           margin-block-start: 0.2em;
-  font-family: "Ivar", serif;
+  font-family: "Antikor", serif;
   letter-spacing: 0.05em;
   font-weight: normal !important;
 }
@@ -388,6 +483,13 @@ footer .footerContent .freepikContainer {
   display: inline;
   font-family: "Antikor", sans-serif;
   padding: 9px;
+  text-decoration: none;
+  color: #5f5f5f;
+}
+
+footer .footerContent .freepikContainer > *:visited,
+footer .footerContent .freepikContainer:visited {
+  color: #5f5f5f;
 }
 
 footer .footerContent .freepikContainer {
@@ -399,6 +501,16 @@ footer .footerContent .freepikContainer {
   margin-top: 1em;
   top: 15px;
   color: #5f5f5f;
+}
+
+footer .footerContent .freepikContainer a.freepik {
+  color: #5f5f5f !important;
+  text-decoration: none;
+}
+
+footer .footerContent .freepikContainer a.freepik:visited {
+  color: #5f5f5f;
+  text-decoration: none;
 }
 
 footer img {
@@ -614,5 +726,25 @@ img {
 @font-face {
   font-family: "Prismatic Right";
   src: url("./fonts/Prismatic-Right.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Domaine";
+  src: url("./fonts/DomaineDisplayCondensedTest-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Domaine Italic";
+  src: url("./fonts/DomaineDisplayCondensedTest-MediumItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Domaine Semi";
+  src: url("./fonts/DomaineDisplayCondensedTest-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Domaine Semi Italic";
+  src: url("./fonts/DomaineDisplayCondensedTest-SemiboldItalic.otf") format("opentype");
 }
 /*# sourceMappingURL=global.css.map */
