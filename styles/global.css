@@ -77,8 +77,8 @@
 .container main .marqueeWrapper .OTLLogoContainer .drawing {
   position: relative;
   z-index: 1;
-  -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.1)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.1));
-          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.1)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.1));
+  -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.15));
 }
 
 .container main .marqueeWrapper .OTLLogoContainer .circle {
@@ -154,7 +154,7 @@
 
 .container main .marqueeWrapper .KCContainer {
   position: absolute;
-  top: 40%;
+  top: 47%;
   right: 19.5%;
   width: 225px;
   height: auto;
@@ -206,13 +206,13 @@
 }
 
 .container main .marqueeWrapper .KCContainer .diamond {
-  -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.12)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.12)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.12)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.12));
-          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.12)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.12)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.12)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.12));
+  -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.15));
 }
 
 .container main .marqueeWrapper a.buttonContainer {
   position: absolute;
-  background-color: #585858;
+  background-color: #858380;
   padding: 10px 12px 10px 27px;
   border-radius: 0.5em;
   display: -webkit-inline-box;
@@ -283,7 +283,7 @@
 }
 
 .container main .marqueeWrapper a.buttonContainer:hover {
-  background: #6593a6;
+  background: #6b7f88;
   cursor: pointer;
 }
 
@@ -337,10 +337,19 @@
   position: absolute;
   left: 0px;
   bottom: 0px;
-  height: 250px;
+  height: 300px;
   z-index: 10;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(35, 31, 32, 0)), color-stop(18.5%, rgba(35, 31, 32, 0.078)), color-stop(34.1%, rgba(35, 31, 32, 0.154)), color-stop(47.2%, rgba(35, 31, 32, 0.23)), color-stop(57.9%, rgba(35, 31, 32, 0.304)), color-stop(66.6%, rgba(35, 31, 32, 0.377)), color-stop(73.5%, rgba(35, 31, 32, 0.448)), color-stop(78.9%, rgba(35, 31, 32, 0.518)), color-stop(83.1%, rgba(35, 31, 32, 0.586)), color-stop(86.3%, rgba(35, 31, 32, 0.652)), color-stop(88.7%, rgba(35, 31, 32, 0.716)), color-stop(90.8%, rgba(35, 31, 32, 0.778)), color-stop(92.7%, rgba(35, 31, 32, 0.837)), color-stop(94.7%, rgba(35, 31, 32, 0.894)), color-stop(97%, rgba(35, 31, 32, 0.949)), to(#231f20));
   background: linear-gradient(to bottom, rgba(35, 31, 32, 0) 0%, rgba(35, 31, 32, 0.078) 18.5%, rgba(35, 31, 32, 0.154) 34.1%, rgba(35, 31, 32, 0.23) 47.2%, rgba(35, 31, 32, 0.304) 57.9%, rgba(35, 31, 32, 0.377) 66.6%, rgba(35, 31, 32, 0.448) 73.5%, rgba(35, 31, 32, 0.518) 78.9%, rgba(35, 31, 32, 0.586) 83.1%, rgba(35, 31, 32, 0.652) 86.3%, rgba(35, 31, 32, 0.716) 88.7%, rgba(35, 31, 32, 0.778) 90.8%, rgba(35, 31, 32, 0.837) 92.7%, rgba(35, 31, 32, 0.894) 94.7%, rgba(35, 31, 32, 0.949) 97%, #231f20 100%);
+}
+
+.container main .cardsCorpus {
+  text-align: center;
+  margin: 0;
+}
+
+.container main .cardsCorpus .card {
+  margin: 16px;
 }
 
 footer {
@@ -369,12 +378,12 @@ footer .footerContent {
 footer .footerContent h1 {
   padding-right: 12.5vw;
   padding-left: 13vw;
-  font-size: 3em;
+  font-size: 4em;
   -webkit-margin-after: 0.2em;
           margin-block-end: 0.2em;
   -webkit-margin-before: 0.2em;
           margin-block-start: 0.2em;
-  font-family: "Antikor", serif;
+  font-family: "Ivar", serif;
   letter-spacing: 0.05em;
   font-weight: normal !important;
 }
@@ -434,16 +443,72 @@ footer .footerContent .contact .appButton {
   border-radius: 0.5em;
   text-decoration: none;
   height: 65px;
-  -webkit-filter: sepia(0.4);
-          filter: sepia(0.4);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  overflow: hidden;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.178), 0 2px 2px rgba(0, 0, 0, 0.178), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 10px rgba(0, 0, 0, 0.1), 0 16px 20px rgba(0, 0, 0, 0.05), inset 0 1px 1px #e2cec831, inset 0 -1px 1px #47413f4f;
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.178), 0 2px 2px rgba(0, 0, 0, 0.178), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 10px rgba(0, 0, 0, 0.1), 0 16px 20px rgba(0, 0, 0, 0.05), inset 0 1px 1px #e2cec831, inset 0 -1px 1px #47413f4f;
 }
 
+footer .footerContent .contact .appButton:focus {
+  outline: 0;
+}
+
+footer .footerContent .contact .appButton:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
+footer .footerContent .contact .appButton:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
 footer .footerContent .contact .appButton:hover {
-  background-color: #928e8d;
+  background: #6b7f88;
+  cursor: pointer;
+}
+
+footer .footerContent .contact .appButton:hover:before {
+  -webkit-transform: translateX(300px) skewX(-15deg);
+          transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+footer .footerContent .contact .appButton:hover:after {
+  -webkit-transform: translateX(300px) skewX(-15deg);
+          transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+footer .footerContent .contact .appButton:visited {
+  color: #e2cec8;
 }
 
 footer .footerContent .contact .appButton:visited {

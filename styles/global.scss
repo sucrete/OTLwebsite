@@ -50,11 +50,11 @@ $shadow: #6c708f;
         .drawing {
           position: relative;
           z-index: 1;
-          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1))
-            drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1))
-            drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1))
-            drop-shadow(0 8px 8px rgba(0, 0, 0, 0.1))
-            drop-shadow(0 16px 16px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15))
+            drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))
+            drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15))
+            drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15))
+            drop-shadow(0 16px 16px rgba(0, 0, 0, 0.15));
         }
         .circle {
           position: absolute;
@@ -115,7 +115,7 @@ $shadow: #6c708f;
       }
       .KCContainer {
         position: absolute;
-        top: 40%;
+        top: 47%;
         right: 19.5%;
         width: 225px;
         height: auto;
@@ -160,16 +160,16 @@ $shadow: #6c708f;
           font-family: "Prismatic Right";
         }
         .diamond {
-          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12))
-            drop-shadow(0 2px 2px rgba(0, 0, 0, 0.12))
-            drop-shadow(0 4px 4px rgba(0, 0, 0, 0.12))
-            drop-shadow(0 8px 8px rgba(0, 0, 0, 0.12))
-            drop-shadow(0 16px 16px rgba(0, 0, 0, 0.12));
+          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15))
+            drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))
+            drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15))
+            drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15))
+            drop-shadow(0 16px 16px rgba(0, 0, 0, 0.15));
         }
       }
       a.buttonContainer {
         position: absolute;
-        background-color: #585858;
+        background-color: #858380;
         padding: 10px 12px 10px 27px;
         border-radius: 0.5em;
         display: inline-flex;
@@ -225,7 +225,7 @@ $shadow: #6c708f;
           transform: translateX(-100px) skewX(-15deg);
         }
         &:hover {
-          background: #6593a6;
+          background: #6b7f88;
           cursor: pointer;
           &:before {
             transform: translateX(300px) skewX(-15deg);
@@ -263,13 +263,12 @@ $shadow: #6c708f;
           }
         }
       }
-
       .transitionGradient {
         width: 100vw;
         position: absolute;
         left: 0px;
         bottom: 0px;
-        height: 250px;
+        height: 300px;
         z-index: 10;
         background: linear-gradient(
           to bottom,
@@ -290,6 +289,14 @@ $shadow: #6c708f;
           hsla(345, 6.06%, 12.94%, 0.949) 97%,
           hsl(345, 6.06%, 12.94%) 100%
         );
+      }
+    }
+    .cardsCorpus {
+      text-align: center;
+      margin: 0;
+
+      .card {
+        margin: 16px;
       }
     }
   }
@@ -315,10 +322,10 @@ footer {
     h1 {
       padding-right: 12.5vw;
       padding-left: 13vw;
-      font-size: 3em;
+      font-size: 4em;
       margin-block-end: 0.2em;
       margin-block-start: 0.2em;
-      font-family: "Antikor", serif;
+      font-family: "Ivar", serif;
       letter-spacing: 0.05em;
       font-weight: normal !important;
     }
@@ -354,6 +361,7 @@ footer {
           }
         }
       }
+
       .appButton {
         position: absolute;
         bottom: 16px;
@@ -366,14 +374,57 @@ footer {
         border-radius: 0.5em;
         text-decoration: none;
         height: 65px;
-        filter: sepia(0.4);
         transition: all 0.5s ease;
+        overflow: hidden;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.178),
           0 2px 2px rgba(0, 0, 0, 0.178), 0 4px 4px rgba(0, 0, 0, 0.12),
           0 8px 10px rgba(0, 0, 0, 0.1), 0 16px 20px rgba(0, 0, 0, 0.05),
           inset 0 1px 1px #e2cec831, inset 0 -1px 1px #47413f4f;
+        &:focus {
+          outline: 0;
+        }
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          background: rgba(255, 255, 255, 0.5);
+          width: 60px;
+          height: 100%;
+          left: 0;
+          top: 0;
+          opacity: 0.5;
+          filter: blur(30px);
+          transform: translateX(-100px) skewX(-15deg);
+        }
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          background: rgba(255, 255, 255, 0.2);
+          width: 30px;
+          height: 100%;
+          left: 30px;
+          top: 0;
+          opacity: 0;
+          filter: blur(5px);
+          transform: translateX(-100px) skewX(-15deg);
+        }
         &:hover {
-          background-color: #928e8d;
+          background: #6b7f88;
+          cursor: pointer;
+          &:before {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: 0.6;
+            transition: 0.7s;
+          }
+          &:after {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: 1;
+            transition: 0.7s;
+          }
+        }
+        &:visited {
+          color: $btnTxtClr;
         }
         &:visited {
           color: $btnTxtClr;
