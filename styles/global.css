@@ -199,7 +199,7 @@
 }
 
 .container main .marqueeWrapper .KCContainer .KCtext2 {
-  top: 47.5%;
+  top: 47.9%;
   left: 51.1%;
   color: #ed463a;
   font-family: "Prismatic Right";
@@ -343,13 +343,13 @@
   background: linear-gradient(to bottom, rgba(35, 31, 32, 0) 0%, rgba(35, 31, 32, 0.078) 18.5%, rgba(35, 31, 32, 0.154) 34.1%, rgba(35, 31, 32, 0.23) 47.2%, rgba(35, 31, 32, 0.304) 57.9%, rgba(35, 31, 32, 0.377) 66.6%, rgba(35, 31, 32, 0.448) 73.5%, rgba(35, 31, 32, 0.518) 78.9%, rgba(35, 31, 32, 0.586) 83.1%, rgba(35, 31, 32, 0.652) 86.3%, rgba(35, 31, 32, 0.716) 88.7%, rgba(35, 31, 32, 0.778) 90.8%, rgba(35, 31, 32, 0.837) 92.7%, rgba(35, 31, 32, 0.894) 94.7%, rgba(35, 31, 32, 0.949) 97%, #231f20 100%);
 }
 
-.cardsCorpus {
+.container main .cardsCorpus {
   width: 79vw;
   height: 100%;
   margin-top: 7em;
 }
 
-.cardsCorpus div .my-masonry-grid {
+.container main .cardsCorpus div .my-masonry-grid {
   display: -webkit-box;
   /* Not needed if autoprefixing */
   display: -ms-flexbox;
@@ -360,13 +360,13 @@
   width: auto;
 }
 
-.cardsCorpus div .my-masonry-grid .my-masonry-grid_column {
+.container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column {
   padding-left: 30px;
   /* gutter size */
   background-clip: padding-box;
 }
 
-.cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card {
+.container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card {
   background: grey;
   /* Style your items */
   /* change div to reference your elements you put in <Masonry> */
@@ -374,22 +374,43 @@
   border-radius: 8px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823, inset 0 -1px 1px #47413f4f;
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823, inset 0 -1px 1px #47413f4f;
-  padding: 16px;
 }
 
-.cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:nth-child(odd) {
+.container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:nth-child(odd) {
   height: 300px;
   background-color: cornflowerblue;
 }
 
-.cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:nth-child(even) {
+.container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:nth-child(even) {
   height: 400px;
   background-color: azure;
 }
 
-.cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:nth-child(3) {
+.container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:nth-child(3) {
   height: 200px;
   background-color: #bd3627;
+}
+
+.container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card a {
+  position: relative;
+  left: 29px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+}
+
+.container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card a .building {
+  color: #332521;
+  font-family: "Ivar", sans-serif;
+  font-size: 1.8em;
+}
+
+.container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card a .district {
+  color: lightgray;
+  font-family: "Antikor", sans-serif;
+  font-size: .7em;
+  text-transform: uppercase;
 }
 
 footer {
@@ -486,6 +507,15 @@ footer .footerContent .contact .appButton {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   overflow: hidden;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.178), 0 2px 2px rgba(0, 0, 0, 0.178), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 10px rgba(0, 0, 0, 0.1), 0 16px 20px rgba(0, 0, 0, 0.05), inset 0 1px 1px #e2cec831, inset 0 -1px 1px #47413f4f;
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.178), 0 2px 2px rgba(0, 0, 0, 0.178), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 10px rgba(0, 0, 0, 0.1), 0 16px 20px rgba(0, 0, 0, 0.05), inset 0 1px 1px #e2cec831, inset 0 -1px 1px #47413f4f;
 }
@@ -557,8 +587,10 @@ footer .footerContent .contact .appButton:visited {
 
 footer .footerContent .contact .appButton span {
   position: relative;
-  bottom: -2px;
+  font-family: "Antikor", sans-serif;
+  color: #e2cec8;
   font-size: 1.1em;
+  bottom: -2px;
 }
 
 footer .footerContent .contact .appButton .appImg {

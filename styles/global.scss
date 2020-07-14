@@ -154,7 +154,7 @@ $shadow: #6c708f;
           }
         }
         .KCtext2 {
-          top: 47.5%;
+          top: 47.9%;
           left: 51.1%;
           color: #ed463a;
           font-family: "Prismatic Right";
@@ -289,50 +289,70 @@ $shadow: #6c708f;
         );
       }
     }
-   
-  }
-}
-
-.cardsCorpus {
-  width: 79vw;
-  height: 100%;
-  margin-top: 7em;
-  div {
-    .my-masonry-grid {
-      display: -webkit-box; /* Not needed if autoprefixing */
-      display: -ms-flexbox; /* Not needed if autoprefixing */
-      display: flex;
-      margin-left: -30px; /* gutter size offset */
-      width: auto;
-      .my-masonry-grid_column {
-       padding-left: 30px; /* gutter size */
-       background-clip: padding-box;
-       .card { background: grey; /* Style your items */ /* change div to reference your elements you put in <Masonry> */
-        margin-bottom: 30px;
-        border-radius: 8px;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
-             0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
-             0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823,
-             inset 0 -1px 1px #47413f4f;
-        padding: 16px;
-        &:nth-child(odd) {
-          height: 300px;
-          background-color: cornflowerblue;
-        }
-        &:nth-child(even) {
-          height: 400px;
-          background-color: azure;
-        }
-        &:nth-child(3) {
-          height: 200px;
-          background-color: #bd3627;
+    .cardsCorpus {
+      width: 79vw;
+      height: 100%;
+      margin-top: 7em;
+      div {
+        .my-masonry-grid {
+          display: -webkit-box; /* Not needed if autoprefixing */
+          display: -ms-flexbox; /* Not needed if autoprefixing */
+          display: flex;
+          margin-left: -30px; /* gutter size offset */
+          width: auto;
+          .my-masonry-grid_column {
+           padding-left: 30px; /* gutter size */
+           background-clip: padding-box;
+           .card { 
+            background: grey; /* Style your items */ /* change div to reference your elements you put in <Masonry> */
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+                 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+                 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823,
+                 inset 0 -1px 1px #47413f4f;
+            
+            &:nth-child(odd) {
+              height: 300px;
+              background-color: cornflowerblue;
+            }
+            &:nth-child(even) {
+              height: 400px;
+              background-color: azure;
+            }
+            &:nth-child(3) {
+              height: 200px;
+              background-color: #bd3627;
+            }
+            a {
+              position: relative;
+              left: 29px;
+              cursor: pointer;
+              width: 100%;
+              height: 100%;
+              padding: 16px;
+              .building {
+                color: #332521;
+                font-family: "Ivar", sans-serif;
+                font-size: 1.8em;
+              }
+              .district {
+                color: lightgray;
+                font-family: "Antikor", sans-serif;
+                font-size: .7em;
+                text-transform: uppercase;
+              }
+            }
+          }
+         }
         }
       }
      }
-    }
+     
   }
- }
- 
+}
+
+
  
  
 
@@ -410,6 +430,9 @@ footer {
         height: 65px;
         transition: all 0.5s ease;
         overflow: hidden;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.178),
           0 2px 2px rgba(0, 0, 0, 0.178), 0 4px 4px rgba(0, 0, 0, 0.12),
           0 8px 10px rgba(0, 0, 0, 0.1), 0 16px 20px rgba(0, 0, 0, 0.05),
@@ -465,8 +488,10 @@ footer {
         }
         span {
           position: relative;
-          bottom: -2px;
+          font-family: "Antikor", sans-serif;
+          color: $btnTxtClr;
           font-size: 1.1em;
+          bottom: -2px;
         }
         .appImg {
           filter: sepia(0.4);
