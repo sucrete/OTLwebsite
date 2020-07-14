@@ -70,7 +70,7 @@
   height: 325px;
   width: 325px;
   z-index: 9;
-  top: 13%;
+  top: 15%;
   right: 27%;
 }
 
@@ -154,7 +154,7 @@
 
 .container main .marqueeWrapper .KCContainer {
   position: absolute;
-  top: 47%;
+  top: 49%;
   right: 19.5%;
   width: 225px;
   height: auto;
@@ -241,11 +241,6 @@
   z-index: 11;
 }
 
-.container main .marqueeWrapper a.buttonContainer:hover .svgArrow {
-  -webkit-transform: translate(0%, 7%);
-          transform: translate(0%, 7%);
-}
-
 .container main .marqueeWrapper a.buttonContainer:focus {
   outline: 0;
 }
@@ -285,6 +280,11 @@
 .container main .marqueeWrapper a.buttonContainer:hover {
   background: #6b7f88;
   cursor: pointer;
+}
+
+.container main .marqueeWrapper a.buttonContainer:hover .svgArrow {
+  -webkit-transform: translate(0%, 7%);
+          transform: translate(0%, 7%);
 }
 
 .container main .marqueeWrapper a.buttonContainer:hover:before {
@@ -343,13 +343,53 @@
   background: linear-gradient(to bottom, rgba(35, 31, 32, 0) 0%, rgba(35, 31, 32, 0.078) 18.5%, rgba(35, 31, 32, 0.154) 34.1%, rgba(35, 31, 32, 0.23) 47.2%, rgba(35, 31, 32, 0.304) 57.9%, rgba(35, 31, 32, 0.377) 66.6%, rgba(35, 31, 32, 0.448) 73.5%, rgba(35, 31, 32, 0.518) 78.9%, rgba(35, 31, 32, 0.586) 83.1%, rgba(35, 31, 32, 0.652) 86.3%, rgba(35, 31, 32, 0.716) 88.7%, rgba(35, 31, 32, 0.778) 90.8%, rgba(35, 31, 32, 0.837) 92.7%, rgba(35, 31, 32, 0.894) 94.7%, rgba(35, 31, 32, 0.949) 97%, #231f20 100%);
 }
 
-.container main .cardsCorpus {
-  text-align: center;
-  margin: 0;
+.cardsCorpus {
+  width: 79vw;
+  height: 100%;
+  margin-top: 7em;
 }
 
-.container main .cardsCorpus .card {
-  margin: 16px;
+.cardsCorpus div .my-masonry-grid {
+  display: -webkit-box;
+  /* Not needed if autoprefixing */
+  display: -ms-flexbox;
+  /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px;
+  /* gutter size offset */
+  width: auto;
+}
+
+.cardsCorpus div .my-masonry-grid .my-masonry-grid_column {
+  padding-left: 30px;
+  /* gutter size */
+  background-clip: padding-box;
+}
+
+.cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card {
+  background: grey;
+  /* Style your items */
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 30px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823, inset 0 -1px 1px #47413f4f;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823, inset 0 -1px 1px #47413f4f;
+  padding: 16px;
+}
+
+.cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:nth-child(odd) {
+  height: 300px;
+  background-color: cornflowerblue;
+}
+
+.cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:nth-child(even) {
+  height: 400px;
+  background-color: azure;
+}
+
+.cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:nth-child(3) {
+  height: 200px;
+  background-color: #bd3627;
 }
 
 footer {
@@ -578,114 +618,6 @@ footer .footerContent .freepikContainer a.freepik:visited {
   text-decoration: none;
 }
 
-footer img {
-  margin-left: 0.5rem;
-}
-
-footer a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
-}
-
-.card {
-  margin: 1rem;
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  -webkit-transition: color 0.15s ease, border-color 0.15s ease;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-}
-
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -713,15 +645,6 @@ html {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 img {

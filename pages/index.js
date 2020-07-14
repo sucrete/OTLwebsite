@@ -1,6 +1,7 @@
 import Head from "next/head";
-// import LogoBG from "../public/drawing.svg";
 import Cards from "../components/Cards";
+
+
 export default function Home() {
   return (
     <div className="container">
@@ -82,6 +83,7 @@ export default function Home() {
           </a>
         </div>
         <div id="cards" className="cardsCorpus">
+
           <Cards />
         </div>
       </main>
