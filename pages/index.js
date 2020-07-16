@@ -70,7 +70,7 @@ export default function Home() {
             </div>
             <div className="KCtext2">KC</div>
           </div>
-          <div className="transitionGradient"></div>
+          {/* <div className="transitionGradient"></div> */}
           <a href="#cards" className="buttonContainer">
             <span>Our Properties</span>
             <svg

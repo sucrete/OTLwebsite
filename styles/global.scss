@@ -1,7 +1,23 @@
 $greyscale: 40%;
 $btnTxtClr: #e2cec8;
 $shadow: #6c708f;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  background: #e4e4db;
+}
+html {
+  scroll-behavior: smooth;
+}
 
+* {
+  box-sizing: border-box;
+}
 .container {
   min-height: 100vh;
   display: flex;
@@ -31,16 +47,17 @@ $shadow: #6c708f;
         display: block;
         width: 100vw;
         height: 600px;
-        background: #a59e95;
-        background-image: url("../public/images/COVER_8desaturated.jpg");
+        background: #F2EADD;
+        // background-image: url("../public/terrazo2.svg");
         background-position: 0% 90%;
         margin-bottom: 2em;
         background-size: 110%;
         background-repeat: no-repeat;
         z-index: 9;
-        filter: sepia(0.4);
+        // filter: sepia(0.4);
       }
       .OTLLogoContainer {
+        visibility: hidden;
         position: absolute;
         height: 325px;
         width: 325px;
@@ -50,11 +67,11 @@ $shadow: #6c708f;
         .drawing {
           position: relative;
           z-index: 1;
-          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15))
-            drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))
-            drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15))
-            drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15))
-            drop-shadow(0 16px 16px rgba(0, 0, 0, 0.15));
+          // filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15))
+          //   drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))
+          //   drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15))
+          //   drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15))
+          //   drop-shadow(0 16px 16px rgba(0, 0, 0, 0.15));
         }
         .circle {
           position: absolute;
@@ -160,11 +177,11 @@ $shadow: #6c708f;
           font-family: "Prismatic Right";
         }
         .diamond {
-          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15))
-            drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))
-            drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15))
-            drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15))
-            drop-shadow(0 16px 16px rgba(0, 0, 0, 0.15));
+          // filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15))
+          //   drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))
+          //   drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15))
+          //   drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15))
+          //   drop-shadow(0 16px 16px rgba(0, 0, 0, 0.15));
         }
       }
       a.buttonContainer {
@@ -305,45 +322,59 @@ $shadow: #6c708f;
           .my-masonry-grid_column {
            padding-left: 30px; /* gutter size */
            background-clip: padding-box;
-           .card { 
-            background: grey; /* Style your items */ /* change div to reference your elements you put in <Masonry> */
+           .card {  /* Style your items */ /* change div to reference your elements you put in <Masonry> */
             margin-bottom: 30px;
             border-radius: 8px;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
-                 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
-                 0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823,
-                 inset 0 -1px 1px #47413f4f;
-            
-            &:nth-child(odd) {
-              height: 300px;
-              background-color: cornflowerblue;
-            }
-            &:nth-child(even) {
-              height: 400px;
-              background-color: azure;
-            }
-            &:nth-child(3) {
-              height: 200px;
-              background-color: #bd3627;
-            }
+            background: transparent;
+            overflow: hidden;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
+                 0 4px 4px rgba(0, 0, 0, .1), 0 8px 8px rgba(0, 0, 0, .1),
+                 0 16px 16px rgba(0, 0, 0, .08),inset 0 -1px 1px 0px #00000023;
+            height: auto;
+            width: 100%;
+            z-index: 2;
             a {
               position: relative;
-              left: 29px;
               cursor: pointer;
               width: 100%;
               height: 100%;
-              padding: 16px;
-              .building {
-                color: #332521;
-                font-family: "Ivar", sans-serif;
-                font-size: 1.8em;
+              top: 0px;
+              .imageContainer {
+                position: relative;
+                width: 100%;
+                margin: 0px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                box-shadow: inset 0 1px 1px 0px #ffffff73;
+                z-index: 1;
+                .imgTransition {
+                  position: absolute;
+                  width: 100%;
+                  height: 100px;
+                  bottom: -8px;
+                  left: 0px;
+                }
               }
-              .district {
-                color: lightgray;
-                font-family: "Antikor", sans-serif;
-                font-size: .7em;
-                text-transform: uppercase;
+              .descriptionContainer {
+                position: relative;
+                padding: 16px;
+                left: 5px;
+                bottom: 0px;
+                .building {
+                  color: #332521;
+                  font-family: "Ivar", sans-serif;
+                  font-size: 1.8em;
+                }
+                .district {
+                  color: rgb(180, 179, 179);
+                  font-family: "Antikor", sans-serif;
+                  font-size: .7em;
+                  text-transform: uppercase;
+                }
               }
+             
             }
           }
          }
@@ -407,7 +438,7 @@ footer {
       .eho {
         position: absolute;
         bottom: 16px;
-        left: 20px;
+        left: 40px;
         width: 70px;
         height: auto;
       }
@@ -543,6 +574,7 @@ footer {
       padding: 25px;
       margin-top: 1em;
       top: 15px;
+      font-size: .8em;
       color: rgb(95, 95, 95);
       a.freepik {
         color: rgb(95, 95, 95) !important;
@@ -657,23 +689,7 @@ footer {
     flex-direction: column;
   }
 }
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
-  background: #231f20;
-}
-html {
-  scroll-behavior: smooth;
-}
 
-* {
-  box-sizing: border-box;
-}
 
 
 img {
