@@ -1,6 +1,7 @@
 $greyscale: 40%;
 $btnTxtClr: #e2cec8;
 $shadow: #6c708f;
+$footerColor: rgb(219, 219, 219);
 html,
 body {
   padding: 0;
@@ -47,7 +48,7 @@ html {
         display: block;
         width: 100vw;
         height: 600px;
-        background: #F2EADD;
+        background: transparent;
         // background-image: url("../public/terrazo2.svg");
         background-position: 0% 90%;
         margin-bottom: 2em;
@@ -57,61 +58,20 @@ html {
         // filter: sepia(0.4);
       }
       .OTLLogoContainer {
-        visibility: hidden;
         position: absolute;
-        height: 325px;
-        width: 325px;
+        padding: 50px;
+        background: #ff6014;
         z-index: 9;
         top: 15%;
         right: 27%;
-        .drawing {
-          position: relative;
-          z-index: 1;
-          // filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15))
-          //   drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))
-          //   drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15))
-          //   drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15))
-          //   drop-shadow(0 16px 16px rgba(0, 0, 0, 0.15));
-        }
-        .circle {
-          position: absolute;
-          z-index: 2;
-          height: 90%;
-          width: 90%;
-          top: 67.2%;
-          left: 5.3%;
-          transform: rotate(45deg) translate(-50%, -50%);
-        }
-        .LOFTStext {
-          z-index: 3;
-          position: absolute;
-          top: 49%;
-          left: 52.5%;
-          transform: translate(-50%, -50%);
-          color: #332521;
-          font-size: 4.8em;
-          font-family: "TS Stamp", sans-serif;
-        }
-        svg {
-          position: absolute;
-          width: 120%;
-          height: 120%;
-          top: 47.5%;
-          left: 51.5%;
-          transform: translate(-50%, -50%);
-          z-index: 4;
-          .OLDtext,
-          .TOWNtext {
-            font-size: 0.6em;
-            fill: #332521;
-          }
-          .OLDtext {
-            font-family: "TS Rough";
-          }
-          .TOWNtext {
-            font-family: "TS Stamp";
-          }
-        }
+        font-family: "Ivar";
+        line-height: 90%;
+        font-size: 4em;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08),
+          0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08),
+          0 16px 16px rgba(0, 0, 0, 0.08);
+       
+        
       }
       .quoteContainer {
         visibility: hidden;
@@ -177,16 +137,16 @@ html {
           font-family: "Prismatic Right";
         }
         .diamond {
-          // filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15))
-          //   drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))
-          //   drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15))
-          //   drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15))
-          //   drop-shadow(0 16px 16px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .08))
+            drop-shadow(0 2px 2px rgba(0, 0, 0, .08))
+            drop-shadow(0 4px 4px rgba(0, 0, 0, .08))
+            drop-shadow(0 8px 8px rgba(0, 0, 0, .08))
+            drop-shadow(0 16px 16px rgba(0, 0, 0, .08));
         }
       }
       a.buttonContainer {
         position: absolute;
-        background-color: rgb(107, 127, 136);
+        background-color: #fafaf5;
         padding: 10px 12px 10px 27px;
         border-radius: 0.5em;
         display: inline-flex;
@@ -198,13 +158,12 @@ html {
         transform: translate(-50%, 10%) scale(1);
         // text-transform: uppercase;
         letter-spacing: .03em;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
-          0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
-          0 16px 16px rgba(0, 0, 0, 0.12), inset 0 1px 1px #e2cec823,
-          inset 0 -1px 1px #47413f4f;
+        border: 1px solid #332521;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08),
+          0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08),
+          0 16px 16px rgba(0, 0, 0, 0.08);
         // -webkit-filter: url("#goo");
         transition: all 0.5s ease;
-        border: 0;
         font-size: 18px;
         transition: 0.6s;
         overflow: hidden;
@@ -239,7 +198,7 @@ html {
           transform: translateX(-100px) skewX(-15deg);
         }
         &:hover {
-          background: rgb(96, 134, 151);
+          background: white;
           cursor: pointer;
           .svgArrow {
             transform: translate(0%, 7%);
@@ -261,7 +220,7 @@ html {
         span {
           position: relative;
           font-family: "Antikor", sans-serif;
-          color: $btnTxtClr;
+          color: #332521;
           font-size: 1.1em;
           width: 100%;
           height: 100%;
@@ -276,7 +235,7 @@ html {
           width: auto;
           position: relative;
           path {
-            fill: $btnTxtClr;
+            fill: #332521;
           }
         }
       }
@@ -329,7 +288,7 @@ html {
             overflow: hidden;
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
                  0 4px 4px rgba(0, 0, 0, .1), 0 8px 8px rgba(0, 0, 0, .1),
-                 0 16px 16px rgba(0, 0, 0, .08),inset 0 -1px 1px 0px #00000023;
+                 0 16px 16px rgba(0, 0, 0, .08);
             height: auto;
             width: 100%;
             z-index: 2;
@@ -345,9 +304,6 @@ html {
                 margin: 0px;
                 background-repeat: no-repeat;
                 background-size: cover;
-                border-top-left-radius: 8px;
-                border-top-right-radius: 8px;
-                box-shadow: inset 0 1px 1px 0px #ffffff73;
                 z-index: 1;
                 .imgTransition {
                   position: absolute;
@@ -368,7 +324,7 @@ html {
                   font-size: 1.8em;
                 }
                 .district {
-                  color: rgb(180, 179, 179);
+                  color: rgb(102, 102, 102);
                   font-family: "Antikor", sans-serif;
                   font-size: .7em;
                   text-transform: uppercase;
@@ -405,30 +361,32 @@ footer {
     display: block;
     width: 100%;
     path {
-      fill: #191815;
+      fill: $footerColor;
     }
   }
   .footerContent {
     width: 100%;
     display: block;
     height: 575px;
-    background-color: #191815;
+    background-color: $footerColor;
     padding: 25px 0vw;
-    color: $btnTxtClr;
     h1 {
       padding-right: 12.5vw;
       padding-left: 13vw;
-      font-size: 4em;
+      font-size: 2.5em;
       margin-block-end: 0.2em;
       margin-block-start: 0.2em;
       font-family: "Ivar", serif;
       letter-spacing: 0.05em;
       font-weight: normal !important;
+      color: #332521;
     }
     .contact {
       font-family: "Antikor", sans-serif;
-      background: #141411;
+      background: #fafaf5;
+      color: rgb(56, 56, 56);
       border-radius: 18px;
+      border: 1px solid rgb(56, 56, 56);
       width: 79vw;
       height: 300px;
       margin-right: 10.5vw;
@@ -437,8 +395,8 @@ footer {
       position: relative;
       .eho {
         position: absolute;
-        bottom: 16px;
-        left: 40px;
+        bottom: 18px;
+        left: 30px;
         width: 70px;
         height: auto;
       }
@@ -475,10 +433,9 @@ footer {
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.178),
-          0 2px 2px rgba(0, 0, 0, 0.178), 0 4px 4px rgba(0, 0, 0, 0.12),
-          0 8px 10px rgba(0, 0, 0, 0.1), 0 16px 20px rgba(0, 0, 0, 0.05),
-          inset 0 1px 1px #e2cec831, inset 0 -1px 1px #47413f4f;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08),
+          0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08),
+          0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
         &:focus {
           outline: 0;
         }
@@ -537,9 +494,9 @@ footer {
         }
         .appImg {
           filter: sepia(0.4);
-          height: 35px;
+          height: 30px;
           width: auto;
-          padding-left: 5px;
+          padding-left: 10px;
         }
       }
     }
@@ -561,7 +518,7 @@ footer {
       font-family: "Antikor", sans-serif;
       padding: 9px;
       text-decoration: none;
-      color: rgb(95, 95, 95);
+      color: rgb(156, 156, 156);
       &:visited {
         color: rgb(95, 95, 95);
       }
@@ -575,113 +532,18 @@ footer {
       margin-top: 1em;
       top: 15px;
       font-size: .8em;
-      color: rgb(95, 95, 95);
+      color: rgb(156, 156, 156);
       a.freepik {
-        color: rgb(95, 95, 95) !important;
+        color: rgb(156, 156, 156) !important;
         text-decoration: none;
         &:visited {
-          color: rgb(95, 95, 95);
+          color: rgb(156, 156, 156);
           text-decoration: none;
         }
       }
     }
   }
 }
-
-// footer img {
-//   margin-left: 0.5rem;
-// }
-
-// footer a {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// a {
-//   color: inherit;
-//   text-decoration: none;
-// }
-
-// .title a {
-//   color: #0070f3;
-//   text-decoration: none;
-// }
-
-// .title a:hover,
-// .title a:focus,
-// .title a:active {
-//   text-decoration: underline;
-// }
-
-// .title {
-//   margin: 0;
-//   line-height: 1.15;
-//   font-size: 4rem;
-// }
-
-// .title,
-// .description {
-//   text-align: center;
-// }
-
-// .description {
-//   line-height: 1.5;
-//   font-size: 1.5rem;
-// }
-
-// code {
-//   background: #fafafa;
-//   border-radius: 5px;
-//   padding: 0.75rem;
-//   font-size: 1.1rem;
-//   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-//     Bitstream Vera Sans Mono, Courier New, monospace;
-// }
-
-// .grid {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-wrap: wrap;
-
-//   max-width: 800px;
-//   margin-top: 3rem;
-// }
-
-// .card {
-//   margin: 1rem;
-//   flex-basis: 45%;
-//   padding: 1.5rem;
-//   text-align: left;
-//   color: inherit;
-//   text-decoration: none;
-//   border: 1px solid #eaeaea;
-//   border-radius: 10px;
-//   transition: color 0.15s ease, border-color 0.15s ease;
-// }
-
-// .card:hover,
-// .card:focus,
-// .card:active {
-//   color: #0070f3;
-//   border-color: #0070f3;
-// }
-
-// .card h3 {
-//   margin: 0 0 1rem 0;
-//   font-size: 1.5rem;
-// }
-
-// .card p {
-//   margin: 0;
-//   font-size: 1.25rem;
-//   line-height: 1.5;
-// }
-
-// .logo {
-//   height: 1em;
-// }
 
 @media (max-width: 600px) {
   .grid {

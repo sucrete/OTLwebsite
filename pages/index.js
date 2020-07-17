@@ -12,56 +12,12 @@ export default function Home() {
 
       <main>
         <div className="marqueeWrapper">
-          <div className="marquee">
-            <div className="leftBox"></div>
-            <div className="logoBox">
-              <div className="OTLogo"></div>
-              <div className="KCLogo"></div>
-            </div>
-          </div>
-          <div className="quoteContainer">
-            <div className="OTLQuoteLine1">"Affordable living in the</div>{" "}
-            <div className="OTLQuoteLine2">heart of Kansas City."</div>
-          </div>
+          <div className="marquee"></div>
 
           <div className="OTLLogoContainer">
-            <img className="drawing" src="/drawing.svg" />
-            <img className="circle" src="/circle.svg" />
-            <div className="LOFTStext">LOFTS</div>
-            <svg
-              className="circleText"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 80 80"
-            >
-              <defs>
-                <path id="tophalf" d="M26,40 a14,14 0 0,1 28,0" />
-                <path id="lowerhalf" d="M16,40 a24,24 0 0,0 48,0" />
-              </defs>
-
-              <text
-                x="5"
-                y="50"
-                style={{ stroke: "none", letterSpacing: ".08em" }}
-                text-anchor="middle"
-                className="OLDtext"
-              >
-                <textPath href="#tophalf" startOffset="39%">
-                  OLD
-                </textPath>
-              </text>
-
-              <text
-                x="5"
-                y="50"
-                style={{ stroke: "none", letterSpacing: ".3em" }}
-                text-anchor="middle"
-                className="TOWNtext"
-              >
-                <textPath href="#lowerhalf" startOffset="42%">
-                  TOWN
-                </textPath>
-              </text>
-            </svg>
+            Old <br />
+            Town <br />
+            Lofts <br />
           </div>
           <div className="KCContainer">
             <img className="diamond" src="/diamond.svg" />
