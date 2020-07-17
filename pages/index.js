@@ -7,17 +7,16 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>Old Town Lofts</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/brickwall.svg" />
       </Head>
-
       <main>
         <div className="marqueeWrapper">
           <div className="marquee"></div>
 
           <div className="OTLLogoContainer">
-            Old <br />
-            Town <br />
-            Lofts <br />
+            <div>Old</div>
+            <div>Town</div>
+            <div className="loftsText">Lofts</div>
           </div>
           <div className="KCContainer">
             <img className="diamond" src="/diamond.svg" />

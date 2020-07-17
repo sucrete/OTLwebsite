@@ -72,7 +72,7 @@ html {
   position: relative;
   display: block;
   width: 100vw;
-  height: 600px;
+  height: 700px;
   background: transparent;
   background-position: 0% 90%;
   margin-bottom: 2em;
@@ -83,16 +83,28 @@ html {
 
 .container main .marqueeWrapper .OTLLogoContainer {
   position: absolute;
-  padding: 50px;
+  padding: 60px;
+  width: 400px;
+  text-align: left;
   background: #ff6014;
   z-index: 9;
+  letter-spacing: .03em;
   top: 15%;
   right: 27%;
   font-family: "Ivar";
-  line-height: 90%;
-  font-size: 4em;
+  line-height: 95%;
+  font-size: 5em;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08);
+}
+
+.container main .marqueeWrapper .OTLLogoContainer div {
+  position: relative;
+  left: 5px;
+}
+
+.container main .marqueeWrapper .OTLLogoContainer .loftsText {
+  left: 10px;
 }
 
 .container main .marqueeWrapper .quoteContainer {
@@ -190,7 +202,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  bottom: -5%;
+  bottom: -15%;
   left: 50%;
   text-decoration: none;
   -webkit-transform: translate(-50%, 10%) scale(1);

@@ -47,7 +47,7 @@ html {
         position: relative;
         display: block;
         width: 100vw;
-        height: 600px;
+        height: 700px;
         background: transparent;
         // background-image: url("../public/terrazo2.svg");
         background-position: 0% 90%;
@@ -59,18 +59,28 @@ html {
       }
       .OTLLogoContainer {
         position: absolute;
-        padding: 50px;
+        padding: 60px;
+        width: 400px;
+        text-align: left;
         background: #ff6014;
         z-index: 9;
+        letter-spacing: .03em;
         top: 15%;
         right: 27%;
         font-family: "Ivar";
-        line-height: 90%;
-        font-size: 4em;
+        line-height: 95%;
+        font-size: 5em;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08),
           0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08),
           0 16px 16px rgba(0, 0, 0, 0.08);
-       
+          div {
+            position: relative;
+            left: 5px
+          }
+       .loftsText {
+         left: 10px;
+        
+       }
         
       }
       .quoteContainer {
@@ -152,7 +162,7 @@ html {
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        bottom: -5%;
+        bottom: -15%;
         left: 50%;
         text-decoration: none;
         transform: translate(-50%, 10%) scale(1);
