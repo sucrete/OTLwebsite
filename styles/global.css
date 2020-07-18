@@ -146,7 +146,7 @@ html {
 
 .container main .marqueeWrapper .OTLLogoContainer .BL {
   bottom: 12px;
-  left: 12px;
+  left: 13px;
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
 }
@@ -218,7 +218,7 @@ html {
 
 .container main .marqueeWrapper a.buttonContainer {
   position: absolute;
-  background-color: #fafaf5;
+  background-color: #e7e5d5;
   padding: 10px 12px 10px 27px;
   border-radius: 0.5em;
   display: -webkit-inline-box;
@@ -252,62 +252,13 @@ html {
   outline: 0;
 }
 
-.container main .marqueeWrapper a.buttonContainer:before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.5);
-  width: 60px;
-  height: 100%;
-  left: 0;
-  top: 0;
-  opacity: 0.5;
-  -webkit-filter: blur(30px);
-          filter: blur(30px);
-  -webkit-transform: translateX(-100px) skewX(-15deg);
-          transform: translateX(-100px) skewX(-15deg);
-}
-
-.container main .marqueeWrapper a.buttonContainer:after {
-  content: "";
-  display: block;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.2);
-  width: 30px;
-  height: 100%;
-  left: 30px;
-  top: 0;
-  opacity: 0;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
-  -webkit-transform: translateX(-100px) skewX(-15deg);
-          transform: translateX(-100px) skewX(-15deg);
-}
-
 .container main .marqueeWrapper a.buttonContainer:hover {
-  background: white;
   cursor: pointer;
 }
 
 .container main .marqueeWrapper a.buttonContainer:hover .svgArrow {
   -webkit-transform: translate(0%, 7%);
           transform: translate(0%, 7%);
-}
-
-.container main .marqueeWrapper a.buttonContainer:hover:before {
-  -webkit-transform: translateX(300px) skewX(-15deg);
-          transform: translateX(300px) skewX(-15deg);
-  opacity: 0.6;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
-.container main .marqueeWrapper a.buttonContainer:hover:after {
-  -webkit-transform: translateX(300px) skewX(-15deg);
-          transform: translateX(300px) skewX(-15deg);
-  opacity: 1;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
 }
 
 .container main .marqueeWrapper a.buttonContainer:visited {
@@ -380,11 +331,18 @@ html {
   border-radius: 8px;
   background: transparent;
   overflow: hidden;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07), 0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.07), 0 8px 8px rgba(0, 0, 0, 0.07), 0 16px 16px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07), 0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.07), 0 8px 8px rgba(0, 0, 0, 0.07), 0 16px 16px rgba(0, 0, 0, 0.07);
   height: auto;
   width: 100%;
   z-index: 2;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:hover {
+  -webkit-box-shadow: 0 20px 26px rgba(0, 0, 0, 0.13), 0 12px 16px rgba(189, 131, 131, 0.18), 0 5px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 20px 26px rgba(0, 0, 0, 0.13), 0 12px 16px rgba(189, 131, 131, 0.18), 0 5px 7px rgba(0, 0, 0, 0.2);
 }
 
 .container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card a {
@@ -465,7 +423,7 @@ footer .footerContent {
 
 footer .footerContent .contact {
   font-family: "Antikor", sans-serif;
-  background: #fafaf5;
+  background: #e7e5d5;
   color: #383838;
   border-radius: 18px;
   border: 1px solid #383838;
@@ -480,12 +438,12 @@ footer .footerContent .contact {
 
 footer .footerContent .contact h1 {
   padding-right: 12.5vw;
-  font-size: 2.5em;
+  font-size: 2.7em;
   margin-top: -1em;
-  -webkit-margin-after: 0.1em;
-          margin-block-end: 0.1em;
-  -webkit-margin-before: 0em;
-          margin-block-start: 0em;
+  -webkit-margin-after: 0.2em;
+          margin-block-end: 0.2em;
+  -webkit-margin-before: .2em;
+          margin-block-start: .2em;
   font-family: "Ivar", serif;
   letter-spacing: 0.05em;
   font-weight: normal !important;
@@ -519,6 +477,7 @@ footer .footerContent .contact .contactContainer .contactRow {
 
 footer .footerContent .contact .contactContainer .contactRow .left {
   text-align: left;
+  text-transform: uppercase;
 }
 
 footer .footerContent .contact .contactContainer .contactRow .right {
