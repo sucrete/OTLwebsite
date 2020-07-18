@@ -58,48 +58,63 @@ html {
         // filter: sepia(0.4);
       }
       .OTLLogoContainer {
+        color: rgb(51, 37, 33);
         position: absolute;
         padding: 60px;
-        width: 400px;
         text-align: left;
         background: #ff6014;
         z-index: 9;
         letter-spacing: .03em;
         top: 15%;
-        right: 27%;
+        left: 27%;
         font-family: "Ivar";
         line-height: 95%;
-        font-size: 5em;
+        font-size: 4.5em;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08),
           0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08),
           0 16px 16px rgba(0, 0, 0, 0.08);
           div {
             position: relative;
-            left: 5px
           }
-       .loftsText {
-         left: 10px;
-        
+       
+       .innerFrame {
+         height: calc(100% - 50px);
+         width: calc(100% - 50px);
+         border: 2px solid rgba(0, 0, 0, 0.094);
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%,-50%);
+         z-index: 8;
        }
-        
+       .corner {
+         position: absolute;
+         background: #ee5d30;
+         z-index: 9;
+        //  visibility: hidden;
+       }
+       $pos: 12px;
+       .TL {
+        top: 13px;
+        left: 13px;
+       }
+       .TR {
+        top: 13px;
+        right: 12px;
+        transform: rotate(90deg);
+       }
+       .BL {
+        bottom: 12px;
+        left: $pos;
+        transform: rotate(270deg);
+       }
+       .BR {
+        bottom: 12px;
+        right: 12px;
+        transform: rotate(180deg);
+       }
       }
-      .quoteContainer {
-        visibility: hidden;
-        font-family: "Domaine Semi Italic";
-        font-size: 2em;
-        position: absolute;
-        top: 45%;
-        left: 30%;
-        transform: translate(-50%, -50%);
-        color: #243250;
-        .OTLQuoteLine1 {
-          transform: skew(-0.12rad);
-        }
-        .OTLQuoteLine2 {
-          transform: skew(-0.12rad);
-          padding-left: 95px;
-        }
-      }
+      
       .KCContainer {
         position: absolute;
         top: 49%;
@@ -380,17 +395,7 @@ footer {
     height: 575px;
     background-color: $footerColor;
     padding: 25px 0vw;
-    h1 {
-      padding-right: 12.5vw;
-      padding-left: 13vw;
-      font-size: 2.5em;
-      margin-block-end: 0.2em;
-      margin-block-start: 0.2em;
-      font-family: "Ivar", serif;
-      letter-spacing: 0.05em;
-      font-weight: normal !important;
-      color: #332521;
-    }
+    
     .contact {
       font-family: "Antikor", sans-serif;
       background: #fafaf5;
@@ -401,8 +406,20 @@ footer {
       height: 300px;
       margin-right: 10.5vw;
       margin-left: 10.5vw;
-      padding: 2em 2em;
+      margin-top: 3em;
+      padding: .7em 2em 2em 2em;
       position: relative;
+      h1 {
+        padding-right: 12.5vw;
+        font-size: 2.5em;
+        margin-top: -1em;
+        margin-block-end: 0.1em;
+        margin-block-start: 0em;
+        font-family: "Ivar", serif;
+        letter-spacing: 0.05em;
+        font-weight: normal !important;
+        color: #332521;
+      }
       .eho {
         position: absolute;
         bottom: 18px;
@@ -412,6 +429,8 @@ footer {
       }
       .contactContainer {
         width: 40%;
+        position: relative;
+        left: 3px;
         .contactRow {
           width: 100%;
           display: flex;

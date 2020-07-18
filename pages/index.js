@@ -14,9 +14,13 @@ export default function Home() {
           <div className="marquee"></div>
 
           <div className="OTLLogoContainer">
-            <div>Old</div>
-            <div>Town</div>
-            <div className="loftsText">Lofts</div>
+            <img src="/corner.svg" className="corner TL" />
+            <img src="/corner.svg" className="corner TR" />
+            <img src="/corner.svg" className="corner BL" />
+            <img src="/corner.svg" className="corner BR" />
+            <div className="innerFrame"></div>
+            <div>Old Town Lofts</div>
+
           </div>
           <div className="KCContainer">
             <img className="diamond" src="/diamond.svg" />
@@ -48,8 +52,9 @@ export default function Home() {
         </svg>
 
         <div className="footerContent">
-          <h1>Contact</h1>
+
           <div className="contact">
+            <h1>Contact</h1>
             <div className="contactContainer">
               <div className="contactRow">
                 <span className="left">phone number:</span>

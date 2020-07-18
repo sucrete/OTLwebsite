@@ -82,52 +82,68 @@ html {
 }
 
 .container main .marqueeWrapper .OTLLogoContainer {
+  color: #332521;
   position: absolute;
   padding: 60px;
-  width: 400px;
   text-align: left;
   background: #ff6014;
   z-index: 9;
   letter-spacing: .03em;
   top: 15%;
-  right: 27%;
+  left: 27%;
   font-family: "Ivar";
   line-height: 95%;
-  font-size: 5em;
+  font-size: 4.5em;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08);
 }
 
 .container main .marqueeWrapper .OTLLogoContainer div {
   position: relative;
-  left: 5px;
 }
 
-.container main .marqueeWrapper .OTLLogoContainer .loftsText {
-  left: 10px;
-}
-
-.container main .marqueeWrapper .quoteContainer {
-  visibility: hidden;
-  font-family: "Domaine Semi Italic";
-  font-size: 2em;
+.container main .marqueeWrapper .OTLLogoContainer .innerFrame {
+  height: calc(100% - 50px);
+  width: calc(100% - 50px);
+  border: 2px solid rgba(0, 0, 0, 0.094);
   position: absolute;
-  top: 45%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #243250;
+  z-index: 8;
 }
 
-.container main .marqueeWrapper .quoteContainer .OTLQuoteLine1 {
-  -webkit-transform: skew(-0.12rad);
-          transform: skew(-0.12rad);
+.container main .marqueeWrapper .OTLLogoContainer .corner {
+  position: absolute;
+  background: #ee5d30;
+  z-index: 9;
 }
 
-.container main .marqueeWrapper .quoteContainer .OTLQuoteLine2 {
-  -webkit-transform: skew(-0.12rad);
-          transform: skew(-0.12rad);
-  padding-left: 95px;
+.container main .marqueeWrapper .OTLLogoContainer .TL {
+  top: 13px;
+  left: 13px;
+}
+
+.container main .marqueeWrapper .OTLLogoContainer .TR {
+  top: 13px;
+  right: 12px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.container main .marqueeWrapper .OTLLogoContainer .BL {
+  bottom: 12px;
+  left: 12px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.container main .marqueeWrapper .OTLLogoContainer .BR {
+  bottom: 12px;
+  right: 12px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .container main .marqueeWrapper .KCContainer {
@@ -435,20 +451,6 @@ footer .footerContent {
   padding: 25px 0vw;
 }
 
-footer .footerContent h1 {
-  padding-right: 12.5vw;
-  padding-left: 13vw;
-  font-size: 2.5em;
-  -webkit-margin-after: 0.2em;
-          margin-block-end: 0.2em;
-  -webkit-margin-before: 0.2em;
-          margin-block-start: 0.2em;
-  font-family: "Ivar", serif;
-  letter-spacing: 0.05em;
-  font-weight: normal !important;
-  color: #332521;
-}
-
 footer .footerContent .contact {
   font-family: "Antikor", sans-serif;
   background: #fafaf5;
@@ -459,8 +461,23 @@ footer .footerContent .contact {
   height: 300px;
   margin-right: 10.5vw;
   margin-left: 10.5vw;
-  padding: 2em 2em;
+  margin-top: 3em;
+  padding: .7em 2em 2em 2em;
   position: relative;
+}
+
+footer .footerContent .contact h1 {
+  padding-right: 12.5vw;
+  font-size: 2.5em;
+  margin-top: -1em;
+  -webkit-margin-after: 0.1em;
+          margin-block-end: 0.1em;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  font-family: "Ivar", serif;
+  letter-spacing: 0.05em;
+  font-weight: normal !important;
+  color: #332521;
 }
 
 footer .footerContent .contact .eho {
@@ -473,6 +490,8 @@ footer .footerContent .contact .eho {
 
 footer .footerContent .contact .contactContainer {
   width: 40%;
+  position: relative;
+  left: 3px;
 }
 
 footer .footerContent .contact .contactContainer .contactRow {
