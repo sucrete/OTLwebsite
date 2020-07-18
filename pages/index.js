@@ -20,7 +20,7 @@ export default function Home() {
             <img src="/corner.svg" className="corner BR" />
             <div className="innerFrame"></div>
             <div>Old Town Lofts</div>
-
+            <div className="mask"></div>
           </div>
           <div className="KCContainer">
             <img className="diamond" src="/diamond.svg" />
