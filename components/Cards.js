@@ -8,19 +8,18 @@ const breakpointColumnsObj = {
 };
 
 const cards = [
-  { district: "Business Loop", building: "917 Lofts", url: "", picURL: "917Lofts", color: "hsla(53, 27%, 87%, 1.0)", color2: "hsla(53, 27%, 87%,", imgHeight: "370px" },
-  { district: "Business Loop", building: "Waltower Lofts", url: "", picURL: "waltowerLofts", color: "hsla(53, 27%, 87%, 1.0)", color2: "hsla(53, 27%, 87%,", imgHeight: "349px" },
-  { district: "Business Loop", building: "Hanover Lofts", url: "", picURL: "hanoverLofts", color: "hsla(53, 27%, 87%, 1.0)", color2: "hsla(53, 27%, 87%,", imgHeight: "360px" },
-  { district: "Business Loop", building: "Graphic Arts", url: "", picURL: "graphicArts", color: "hsla(53, 27%, 87%, 1.0)", color2: "hsla(53, 27%, 87%,", imgHeight: "400px" },
-  { district: "Business Loop", building: "Chambers Lofts", url: "", picURL: "chambersLofts", color: "hsla(53, 27%, 87%, 1.0)", color2: "hsla(53, 27%, 87%,", imgHeight: "343px" },
-  { district: "Business Loop", building: "Finance Lofts", url: "", picURL: "financeLofts", color: "hsla(53, 27%, 87%, 1.0)", color2: "hsla(53, 27%, 87%,", imgHeight: "320px" },
-  { district: "Crossroads", building: "Columbia Lofts", url: "", picURL: "columbiaLofts", color: "hsla(53, 27%, 87%, 1.0)", color2: "hsla(53, 27%, 87%,", imgHeight: "330px" },
-  { district: "Crossroads", building: "Carriage Lofts", url: "", picURL: "carriageLofts", color: "hsla(53, 27%, 87%, 1.0)", color2: "hsla(53, 27%, 87%,", imgHeight: "320px" },
-  { district: "Crossroads", building: "Star Lofts", url: "", picURL: "starLofts", color: "hsla(53, 27%, 87%, 1.0)", color2: "hsla(53, 27%, 87%,", imgHeight: "333px" },
-  { district: "River Market", building: "Old Town Lofts", url: "", picURL: "oldTownLofts", color: "hsla(53, 27%, 87%,1.0)", color2: "hsla(53, 27%, 87%,", imgHeight: "300px" },
-  { district: "River Market", building: "Chase Lofts", url: "", picURL: "chaseLofts", color: "hsla(53, 27%, 87%,1.0)", color2: "hsla(53, 27%, 87%,", imgHeight: "314px" },
-  { district: "", building: "Lucas Place", url: "", picURL: "lucasPlace", color: "hsla(261, 75%, 79%, 1.0)", color2: "hsla(261, 75%, 79%,", imgHeight: "275px" },
-  { district: "", building: "Wellington", url: "", picURL: "wellington", color: "hsla(14, 59%, 58%, 1.0)", color2: "hsla(14, 59%, 58%,", imgHeight: "202px" }
+  { district: "Business Loop", building: "917 Lofts", url: "", picURL: "917Lofts", color: "hsla(53, 24%, 93%, 1.0)", color2: "hsla(53, 24%, 93%,", imgHeight: "370px" },
+  { district: "Business Loop", building: "Waltower Lofts", url: "", picURL: "waltowerLofts", color: "hsla(53, 24%, 93%, 1.0)", color2: "hsla(53, 24%, 93%,", imgHeight: "349px" },
+  { district: "Business Loop", building: "Hanover Lofts", url: "", picURL: "hanoverLofts", color: "hsla(53, 24%, 93%, 1.0)", color2: "hsla(53, 24%, 93%,", imgHeight: "360px" },
+  { district: "Business Loop", building: "Graphic Arts", url: "", picURL: "graphicArts", color: "hsla(53, 24%, 93%, 1.0)", color2: "hsla(53, 24%, 93%,", imgHeight: "400px" },
+  { district: "Business Loop", building: "Chambers Lofts", url: "", picURL: "chambersLofts", color: "hsla(53, 24%, 93%, 1.0)", color2: "hsla(53, 24%, 93%,", imgHeight: "343px" },
+  { district: "Business Loop", building: "Finance Lofts", url: "", picURL: "financeLofts", color: "hsla(53, 24%, 93%, 1.0)", color2: "hsla(53, 24%, 93%,", imgHeight: "320px" },
+  { district: "Crossroads", building: "Columbia Lofts", url: "", picURL: "columbiaLofts", color: "hsla(53, 24%, 93%, 1.0)", color2: "hsla(53, 24%, 93%,", imgHeight: "330px" },
+  { district: "Crossroads", building: "Carriage Lofts", url: "", picURL: "carriageLofts", color: "hsla(53, 24%, 93%, 1.0)", color2: "hsla(53, 24%, 93%,", imgHeight: "320px" },
+  { district: "Crossroads", building: "Star Lofts", url: "", picURL: "starLofts", color: "hsla(53, 24%, 93%, 1.0)", color2: "hsla(53, 24%, 93%,", imgHeight: "333px" },
+  { district: "River Market", building: "Old Town Lofts", url: "", picURL: "oldTownLofts", color: "hsla(53, 24%, 93%,1.0)", color2: "hsla(53, 24%, 93%,", imgHeight: "300px" },
+  { district: "River Market", building: "Chase Lofts", url: "", picURL: "chaseLofts", color: "hsla(53, 24%, 93%,1.0)", color2: "hsla(53, 24%, 93%,", imgHeight: "314px" },
+  { district: "", building: "Lucas Place", url: "", picURL: "lucasPlace", color: "hsla(261, 75%, 79%, 1.0)", color2: "hsla(261, 75%, 79%,", imgHeight: "275px" }
 ];
 const Cards = () => (
   <div >

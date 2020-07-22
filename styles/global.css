@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital@1&display=swap");
 html,
 body {
   padding: 0;
@@ -5,7 +6,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  background: #e4e4db;
+  background: #e7e5d5;
 }
 
 html {
@@ -85,16 +86,15 @@ html {
   color: #332521;
   position: absolute;
   padding: 60px;
+  padding-left: 70px;
+  padding-right: 70px;
   text-align: left;
-  background: #ff6014;
+  background: #BDA44A;
   border-radius: 2px;
-  z-index: 9;
-  letter-spacing: .03em;
-  top: 15%;
-  left: 27%;
-  font-family: "TS Rough";
-  line-height: 95%;
-  font-size: 4.5em;
+  z-index: 8;
+  top: 16%;
+  left: 10%;
+  height: 340px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.178);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.178);
 }
@@ -103,14 +103,28 @@ html {
   position: relative;
 }
 
+.container main .marqueeWrapper .OTLLogoContainer .OTLText {
+  font-size: 4.5em;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.094);
+  padding-bottom: 25px;
+  font-family: "TS Stamp";
+  line-height: 95%;
+  letter-spacing: .03em;
+  z-index: 9;
+}
+
+.container main .marqueeWrapper .OTLLogoContainer .OTLText .middle {
+  font-family: "TS Rough";
+}
+
 .container main .marqueeWrapper .OTLLogoContainer .mask {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
+  background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
   opacity: .5;
-  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
   z-index: 10;
 }
 
@@ -128,7 +142,7 @@ html {
 
 .container main .marqueeWrapper .OTLLogoContainer .corner {
   position: absolute;
-  background: #ee5d30;
+  background: #BDA44A;
   z-index: 9;
 }
 
@@ -158,31 +172,65 @@ html {
           transform: rotate(180deg);
 }
 
-.container main .marqueeWrapper .KCContainer {
+.container main .marqueeWrapper .OTLLogoContainer .brickwallBox {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  padding-top: 16px;
+  display: inline-block;
+}
+
+.container main .marqueeWrapper .OTLLogoContainer .brickwallBox .brickwall {
+  width: 40px;
+  height: auto;
   position: absolute;
-  top: 49%;
-  right: 19.5%;
+  top: -48px;
+  left: 3px;
+}
+
+.container main .marqueeWrapper .OTLLogoContainer .quoteBox {
+  font-family: "Ayer";
+  font-size: 2.7em;
+  color: #d8bc55;
+  display: inline-block;
+  padding-left: 26px;
+  line-height: 110%;
+  padding-top: 23px;
+  letter-spacing: .02em;
+}
+
+.container main .marqueeWrapper .OTLLogoContainer .quoteBox .quoteBoxLine2 {
+  padding-left: 66px;
+}
+
+.container main .marqueeWrapper .OTLLogoContainer .KCContainer, .container main .marqueeWrapper .OTLLogoContainer .KCtext, .container main .marqueeWrapper .OTLLogoContainer .KCtext2 {
+  font-size: 2.3em;
+}
+
+.container main .marqueeWrapper .OTLLogoContainer .KCContainer {
+  position: absolute;
+  bottom: -10px;
+  right: 12px;
   width: 225px;
   height: auto;
   z-index: 10;
 }
 
-.container main .marqueeWrapper .KCContainer .KCtext2,
-.container main .marqueeWrapper .KCContainer .KCtext {
+.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext2,
+.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 5.5em;
 }
 
-.container main .marqueeWrapper .KCContainer .KCtext {
+.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext {
   top: 47%;
   left: 51%;
   color: #f07a30;
   font-family: "Prismatic Base", sans-serif;
 }
 
-.container main .marqueeWrapper .KCContainer .KCtext:before, .container main .marqueeWrapper .KCContainer .KCtext:after {
+.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext:before, .container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext:after {
   content: attr(data-heading);
   position: absolute;
   font-weight: normal;
@@ -190,30 +238,30 @@ html {
   width: 100%;
 }
 
-.container main .marqueeWrapper .KCContainer .KCtext:after {
+.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext:after {
   color: #bd3627;
   font-family: "Prismatic Bottom";
   left: 0;
   top: 1px;
 }
 
-.container main .marqueeWrapper .KCContainer .KCtext:before {
+.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext:before {
   color: #fff334;
   font-family: "Prismatic Top";
   left: 0;
-  top: -1px;
+  top: -0px;
 }
 
-.container main .marqueeWrapper .KCContainer .KCtext2 {
+.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext2 {
   top: 47.9%;
   left: 51.1%;
   color: #ed463a;
   font-family: "Prismatic Right";
 }
 
-.container main .marqueeWrapper .KCContainer .diamond {
-  -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.08)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.08)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.08)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.08)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.08));
-          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.08)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.08)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.08)) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.08)) drop-shadow(0 16px 16px rgba(0, 0, 0, 0.08));
+.container main .marqueeWrapper .OTLLogoContainer .KCContainer .diamond {
+  -webkit-filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12)) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.24));
+          filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12)) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.24));
 }
 
 .container main .marqueeWrapper a.buttonContainer {
@@ -431,23 +479,36 @@ footer .footerContent .contact {
   height: 300px;
   margin-right: 10.5vw;
   margin-left: 10.5vw;
-  margin-top: 3em;
   padding: .7em 2em 2em 2em;
   position: relative;
+  z-index: 2;
+}
+
+footer .footerContent .contact:after {
+  content: "";
+  height: 100%;
+  background: #e7e5d5;
+  position: absolute;
+  width: 145px;
+  height: 10px;
+  left: 1.6em;
+  top: -1px;
+  z-index: -1;
 }
 
 footer .footerContent .contact h1 {
-  padding-right: 12.5vw;
+  position: relative;
+  padding-right: 9px;
   font-size: 2.7em;
-  margin-top: -1em;
+  margin-top: -1.15em;
   -webkit-margin-after: 0.2em;
           margin-block-end: 0.2em;
-  -webkit-margin-before: .2em;
-          margin-block-start: .2em;
   font-family: "Ivar", serif;
   letter-spacing: 0.05em;
   font-weight: normal !important;
   color: #332521;
+  width: 147px;
+  z-index: 3;
 }
 
 footer .footerContent .contact .eho {
@@ -693,6 +754,11 @@ img {
 }
 
 @font-face {
+  font-family: "Ayer";
+  src: url("./fonts/Ayer.woff") format("woff");
+}
+
+@font-face {
   font-family: "TS Rough";
   src: url("./fonts/TradesmithRough.otf") format("opentype");
 }
@@ -720,25 +786,5 @@ img {
 @font-face {
   font-family: "Prismatic Right";
   src: url("./fonts/Prismatic-Right.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Domaine";
-  src: url("./fonts/DomaineDisplayCondensedTest-Medium.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Domaine Italic";
-  src: url("./fonts/DomaineDisplayCondensedTest-MediumItalic.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Domaine Semi";
-  src: url("./fonts/DomaineDisplayCondensedTest-Semibold.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Domaine Semi Italic";
-  src: url("./fonts/DomaineDisplayCondensedTest-SemiboldItalic.otf") format("opentype");
 }
 /*# sourceMappingURL=global.css.map */

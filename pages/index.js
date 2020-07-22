@@ -19,17 +19,24 @@ export default function Home() {
             <img src="/corner.svg" className="corner BL" />
             <img src="/corner.svg" className="corner BR" />
             <div className="innerFrame"></div>
-            <div>Old Town Lofts</div>
-            <div className="mask"></div>
-          </div>
-          <div className="KCContainer">
-            <img className="diamond" src="/diamond.svg" />
-            <div className="KCtext" data-heading="KC">
-              KC
+            <div className="OTLText">Old <span className="middle">Town L</span>ofts</div>
+            <div className="brickwallBox">
+              <img className="brickwall" src="/brickwall.svg" />
             </div>
-            <div className="KCtext2">KC</div>
+            <div className="quoteBox">
+              <div className="quoteBoxLine1">"Affordable luxury in </div>
+              <div className="quoteBoxLine2">the heart of Kansas City."</div>
+            </div>
+            <div className="mask"></div>
+            <div className="KCContainer">
+              <img className="diamond" src="/diamond.svg" />
+              <div className="KCtext" data-heading="KC">
+                KC
+            </div>
+              <div className="KCtext2">KC</div>
+            </div>
           </div>
-          {/* <div className="transitionGradient"></div> */}
+
           <a href="#cards" className="buttonContainer">
             <span>Our Properties</span>
             <svg
