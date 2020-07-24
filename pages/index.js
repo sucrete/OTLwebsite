@@ -1,14 +1,30 @@
 import Head from "next/head";
 import Cards from "../components/Cards";
-
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-115px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  });
   return (
     <div className="container">
       <Head>
         <title>Old Town Lofts</title>
         <link rel="icon" href="/brickwall.svg" />
       </Head>
+      <nav className="navBar" id="navbar">
+        <div className="OTLText">Old <span className="middle">Town L</span>ofts</div>
+        <div className="navMask"></div>
+      </nav>
       <main>
         <div className="marqueeWrapper">
           <div className="marquee"></div>
@@ -19,15 +35,12 @@ export default function Home() {
             <img src="/corner.svg" className="corner BL" />
             <img src="/corner.svg" className="corner BR" />
             <div className="innerFrame"></div>
-            <div className="OTLText">Old <span className="middle">Town L</span>ofts</div>
-            <div className="brickwallBox">
-              <img className="brickwall" src="/brickwall.svg" />
-            </div>
-            <div className="quoteBox">
-              <div className="quoteBoxLine1">"Affordable luxury in </div>
-              <div className="quoteBoxLine2">the heart of Kansas City."</div>
-            </div>
             <div className="mask"></div>
+            <img className="brickwall" src="/brickwall.svg" />
+            <div className="quoteBox">
+              <img src="/affordable.svg" />
+            </div>
+
             <div className="KCContainer">
               <img className="diamond" src="/diamond.svg" />
               <div className="KCtext" data-heading="KC">

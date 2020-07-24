@@ -39,8 +39,60 @@ html {
   background-repeat: no-repeat;
 }
 
-.container .hiddenSVG {
-  display: none;
+.container .navBar {
+  background: #9c9859ea;
+  /* Black background color */
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  position: fixed;
+  /* Make it stick/fixed */
+  top: 0;
+  /* Stay on top */
+  width: 100%;
+  /* Full width */
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
+  /* Transition effect when sliding down (and up) */
+  z-index: 15;
+  border-bottom: 2px solid #949055d0;
+}
+
+.container .navBar .OTLText {
+  color: #332521;
+  font-size: 3.5em;
+  padding-bottom: 25px;
+  padding-top: 28px;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: "TS Stamp";
+  line-height: 95%;
+  letter-spacing: .03em;
+  z-index: 13;
+}
+
+.container .navBar .OTLText .middle {
+  font-family: "TS Rough";
+}
+
+.container .navBar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.container .navBar .navMask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: transparent;
+  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+  z-index: 14;
+  opacity: .7;
 }
 
 .container main {
@@ -66,7 +118,7 @@ html {
 .container main .marqueeWrapper {
   position: relative;
   height: 600px;
-  z-index: 999;
+  z-index: 11;
 }
 
 .container main .marqueeWrapper .marquee {
@@ -83,24 +135,27 @@ html {
 }
 
 .container main .marqueeWrapper .OTLLogoContainer {
-  color: #332521;
   position: absolute;
   padding: 60px;
   padding-left: 70px;
   padding-right: 70px;
   text-align: left;
-  background: #BDA44A;
+  background: #e8e4c9;
   border-radius: 2px;
   z-index: 8;
-  top: 16%;
-  left: 10%;
-  height: 340px;
+  top: 26%;
+  left: 15%;
+  height: 270px;
+  width: 455px;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.178);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.178);
 }
 
-.container main .marqueeWrapper .OTLLogoContainer div {
-  position: relative;
+.container main .marqueeWrapper .OTLLogoContainer .quoteBox {
+  width: 200px;
+  height: auto;
 }
 
 .container main .marqueeWrapper .OTLLogoContainer .OTLText {
@@ -124,14 +179,14 @@ html {
   top: 0px;
   left: 0px;
   background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
-  opacity: .5;
+  opacity: .8;
   z-index: 10;
 }
 
 .container main .marqueeWrapper .OTLLogoContainer .innerFrame {
   height: calc(100% - 50px);
   width: calc(100% - 50px);
-  border: 2px solid rgba(0, 0, 0, 0.094);
+  border: 1px solid #4D3F3E;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -142,7 +197,7 @@ html {
 
 .container main .marqueeWrapper .OTLLogoContainer .corner {
   position: absolute;
-  background: #BDA44A;
+  background: #e8e4c9;
   z-index: 9;
 }
 
@@ -172,35 +227,14 @@ html {
           transform: rotate(180deg);
 }
 
-.container main .marqueeWrapper .OTLLogoContainer .brickwallBox {
-  width: 45px;
-  height: 45px;
+.container main .marqueeWrapper .OTLLogoContainer .brickwall {
+  width: 35px;
+  height: auto;
+  position: absolute;
+  left: 3px;
   position: relative;
   padding-top: 16px;
   display: inline-block;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .brickwallBox .brickwall {
-  width: 40px;
-  height: auto;
-  position: absolute;
-  top: -48px;
-  left: 3px;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .quoteBox {
-  font-family: "Ayer";
-  font-size: 2.7em;
-  color: #d8bc55;
-  display: inline-block;
-  padding-left: 26px;
-  line-height: 110%;
-  padding-top: 23px;
-  letter-spacing: .02em;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .quoteBox .quoteBoxLine2 {
-  padding-left: 66px;
 }
 
 .container main .marqueeWrapper .OTLLogoContainer .KCContainer, .container main .marqueeWrapper .OTLLogoContainer .KCtext, .container main .marqueeWrapper .OTLLogoContainer .KCtext2 {
@@ -208,6 +242,7 @@ html {
 }
 
 .container main .marqueeWrapper .OTLLogoContainer .KCContainer {
+  visibility: hidden;
   position: absolute;
   bottom: -10px;
   right: 12px;
@@ -751,11 +786,6 @@ img {
 @font-face {
   font-family: "Ivar";
   src: url("./fonts/IvarDisplayCondensed-Light.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Ayer";
-  src: url("./fonts/Ayer.woff") format("woff");
 }
 
 @font-face {
