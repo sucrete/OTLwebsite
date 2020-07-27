@@ -11,7 +11,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  background: hsla(53, 27%, 87%, 1);
+  background: rgb(228, 226, 210);
 }
 html {
   scroll-behavior: smooth;
@@ -31,7 +31,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   .navBar {
-    background: #9c9859; /* Black background color */
+    background: #aca870; /* Black background color */
     position: fixed; /* Make it stick/fixed */
     top: 0; /* Stay on top */
     width: 100%; /* Full width */
@@ -65,11 +65,11 @@ html {
     }
 
     .OTLText {
-      color: rgb(51, 51, 33);
+      color: rgb(37, 37, 26);
       font-size: 2.5em;
       padding-bottom: 21px;
-      padding-top: 23px;
-      padding-left: 15px;
+      padding-top: 25px;
+      padding-left: 25px;
       padding-right: 1em;
       font-family: "TS Stamp";
       line-height: 95%;
