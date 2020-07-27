@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Cardo:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital@1&display=swap");
 $greyscale: 40%;
 $btnTxtClr: #e2cec8;
 $shadow: #6c708f;
@@ -12,7 +11,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  background: hsla(53, 27%, 87%, 1.0);
+  background: hsla(53, 27%, 87%, 1);
 }
 html {
   scroll-behavior: smooth;
@@ -32,48 +31,73 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   .navBar {
-    background: #9c9859ea; /* Black background color */
-    backdrop-filter: blur(12px);
-  position: fixed; /* Make it stick/fixed */
-  top: 0; /* Stay on top */
-  width: 100%; /* Full width */
-  transition: top 0.5s; /* Transition effect when sliding down (and up) */
-  z-index: 15;
-  border-bottom: 2px solid #949055d0;
-  .OTLText {
-    color: rgb(51, 37, 33);
-    font-size: 3.5em;
-    padding-bottom: 25px;
-    padding-top: 28px;
-    padding-left: 1em;
-    padding-right: 1em;
-    font-family: "TS Stamp";
-    line-height: 95%;
-    letter-spacing: .03em;
-    z-index: 13;
-    .middle {
-      font-family: "TS Rough";
+    background: #9c9859; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.5s; /* Transition effect when sliding down (and up) */
+    z-index: 15;
+    // border-bottom: 2px solid #949055d0;
+    display: inline-flex;
+    padding-left: 56px;
+    padding-right: 56px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03), 0 2px 2px rgba(0, 0, 0, 0.03),
+      0 4px 4px rgba(0, 0, 0, 0.03), 0 8px 8px rgba(0, 0, 0, 0.03),
+      0 16px 16px rgba(0, 0, 0, 0.03);
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   top: -50px;
+    //   left: 0px;
+    //   z-index: -1;
+    //   background: #9c9859;
+    //   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+    //   width: 100%;
+    //   height: 70px;
+    // }
+    .brickwallContainer {
+      display: inline-flex;
+      align-self: center;
+      .brickwall {
+        width: 32px;
+        height: auto;
+      }
     }
-  }
-  a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-  }
-  .navMask {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    background: transparent;
-    background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
-    z-index: 14;
-    opacity: .7;
-  }
+
+    .OTLText {
+      color: rgb(51, 51, 33);
+      font-size: 2.5em;
+      padding-bottom: 21px;
+      padding-top: 23px;
+      padding-left: 15px;
+      padding-right: 1em;
+      font-family: "TS Stamp";
+      line-height: 95%;
+      letter-spacing: 0.03em;
+      z-index: 13;
+      .middle {
+        font-family: "TS Rough";
+      }
+    }
+    a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      text-decoration: none;
+    }
+    .navMask {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      background: transparent;
+      background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+      z-index: 14;
+      opacity: 0.7;
+    }
   }
   main {
     padding: 0rem 0rem 0rem 0rem;
@@ -108,160 +132,157 @@ html {
         background: $logoBG;
         border-radius: 2px;
         z-index: 8;
-        top: 26%;
+        top: 36%;
         left: 15%;
         height: 270px;
         width: 455px;
-        transform:rotate(-5deg);
-        
+        transform: rotate(-5deg);
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08),
           0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08),
-          0 16px 16px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.178);
-          .quoteBox {
-            width: 200px;
-            height: auto;
-          }
+          0 16px 16px rgba(0, 0, 0, 0.08),
+          inset 0 1px 1px rgba(255, 255, 255, 0.178);
+        .quoteBox {
+          width: 200px;
+          height: auto;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
         .OTLText {
           font-size: 4.5em;
           border-bottom: 2px solid rgba(0, 0, 0, 0.094);
           padding-bottom: 25px;
           font-family: "TS Stamp";
           line-height: 95%;
-          letter-spacing: .03em;
+          letter-spacing: 0.03em;
           z-index: 9;
           .middle {
             font-family: "TS Rough";
           }
         }
-       .mask {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        background-image: url('https://www.transparenttextures.com/patterns/handmade-paper.png');
-        opacity: .8;
-        
-        z-index: 10;
-       }
-       .innerFrame {
-         height: calc(100% - 50px);
-         width: calc(100% - 50px);
-         border: 1px solid #4D3F3E;
-         position: absolute;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%,-50%);
-         z-index: 8;
-       }
-       .corner {
-         position: absolute;
-         background: $logoBG;
-         z-index: 9;
-        //  visibility: hidden;
-       }
-       $pos: 12px;
-       .TL {
-        top: 13px;
-        left: 13px;
-       }
-       .TR {
-        top: 13px;
-        right: 13px;
-        transform: rotate(90deg);
-       }
-       .BL {
-        bottom: 12px;
-        left: 13px;
-        transform: rotate(270deg);
-       }
-       .BR {
-        bottom: 12px;
-        right: 12px;
-        transform: rotate(180deg);
-       }
-        .brickwall {
-          width: 35px;
-          height: auto;
+        .mask {
+          width: 100%;
+          height: 100%;
           position: absolute;
-          left: 3px;
-        position: relative;
-        padding-top: 16px;
-        display: inline-block;
-      }
-      .KCContainer, .KCtext, .KCtext2 {
-        font-size: 2.3em;
-      }
-       .KCContainer {
-         visibility: hidden;
-        position: absolute;
-        bottom: -10px;
-        right: 12px;
-        width: 225px;
-        height: auto;
-        
-        z-index: 10;
-        .KCtext2,
-        .KCtext {
-          position: absolute;
-          transform: translate(-50%, -50%);
-        }
-       
-        .KCtext {
-          top: 47%;
-          left: 51%;
-          color: #f07a30;
-          
-          font-family: "Prismatic Base", sans-serif;
-          &:before,
-          &:after {
-            content: attr(data-heading);
-            position: absolute;
-            font-weight: normal;
-            text-shadow: none;
-            width: 100%;
-          }
-          &:after {
-            color: #bd3627;
-            font-family: "Prismatic Bottom";
-            left: 0;
-            top: 1px;
-          }
+          top: 0px;
+          left: 0px;
+          background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
+          opacity: 1;
 
-          &:before {
-            color: #fff334;
-            font-family: "Prismatic Top";
-            left: 0;
-            top: -0px;
-          }
+          z-index: 10;
         }
-        .KCtext2 {
-          top: 47.9%;
-          left: 51.1%;
-          color: #ed463a;
-          font-family: "Prismatic Right";
+        .innerFrame {
+          height: calc(100% - 50px);
+          width: calc(100% - 50px);
+          border: 1px solid rgb(77, 63, 62);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 8;
         }
-        .diamond {
-          filter: drop-shadow(0 1px 3px rgba(0,0,0,0.12))
-            drop-shadow(0 1px 2px rgba(0,0,0,0.24));
+        .corner {
+          position: absolute;
+          background: $logoBG;
+          z-index: 9;
+          //  visibility: hidden;
         }
+        $pos: 12px;
+        .TL {
+          top: 13px;
+          left: 13px;
+        }
+        .TR {
+          top: 13px;
+          right: 12px;
+          transform: rotate(90deg);
+        }
+        .BL {
+          bottom: 12px;
+          left: 13px;
+          transform: rotate(270deg);
+        }
+        .BR {
+          bottom: 12px;
+          right: 12px;
+          transform: rotate(180deg);
+        }
+
+        // .KCContainer,
+        // .KCtext,
+        // .KCtext2 {
+        //   font-size: 2.3em;
+        // }
+        // .KCContainer {
+        //   visibility: hidden;
+        //   position: absolute;
+        //   bottom: -10px;
+        //   right: 12px;
+        //   width: 225px;
+        //   height: auto;
+
+        //   z-index: 10;
+        //   .KCtext2,
+        //   .KCtext {
+        //     position: absolute;
+        //     transform: translate(-50%, -50%);
+        //   }
+
+        //   .KCtext {
+        //     top: 47%;
+        //     left: 51%;
+        //     color: #f07a30;
+
+        //     font-family: "Prismatic Base", sans-serif;
+        //     &:before,
+        //     &:after {
+        //       content: attr(data-heading);
+        //       position: absolute;
+        //       font-weight: normal;
+        //       text-shadow: none;
+        //       width: 100%;
+        //     }
+        //     &:after {
+        //       color: #bd3627;
+        //       font-family: "Prismatic Bottom";
+        //       left: 0;
+        //       top: 1px;
+        //     }
+
+        //     &:before {
+        //       color: #fff334;
+        //       font-family: "Prismatic Top";
+        //       left: 0;
+        //       top: -0px;
+        //     }
+        //   }
+        //   .KCtext2 {
+        //     top: 47.9%;
+        //     left: 51.1%;
+        //     color: #ed463a;
+        //     font-family: "Prismatic Right";
+        //   }
+        //   .diamond {
+        //     filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12))
+        //       drop-shadow(0 1px 2px rgba(0, 0, 0, 0.24));
+        //   }
+        // }
       }
-      }
-      
-      
+
       a.buttonContainer {
         position: absolute;
-        background-color: hsla(53, 27%, 87%, 1.0);
+        background-color: hsla(53, 27%, 87%, 1);
         padding: 10px 12px 10px 27px;
         border-radius: 0.5em;
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        bottom: -15%;
+        bottom: -25%;
         left: 50%;
         text-decoration: none;
         transform: translate(-50%, 10%) scale(1);
-        letter-spacing: .03em;
+        letter-spacing: 0.03em;
         border: 1px solid #332521;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08),
           0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08),
@@ -279,7 +300,6 @@ html {
           .svgArrow {
             transform: translate(0%, 5%);
           }
-          
         }
         &:visited {
           color: $btnTxtClr;
@@ -346,86 +366,80 @@ html {
           margin-left: -30px; /* gutter size offset */
           width: auto;
           .my-masonry-grid_column {
-           padding-left: 30px; /* gutter size */
-           background-clip: padding-box;
-           .card {  /* Style your items */ /* change div to reference your elements you put in <Masonry> */
-            margin-bottom: 30px;
-            border-radius: 8px;
-            background: transparent;
-            overflow: hidden;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07), 0 2px 2px rgba(0, 0, 0, 0.07),
-                 0 4px 4px rgba(0, 0, 0, .07), 0 8px 8px rgba(0, 0, 0, .07),
-                 0 16px 16px rgba(0, 0, 0, .07);
-            height: auto;
-            width: 100%;
-            z-index: 2;
-            transition: all .25s ease;
-            &:hover {
-              box-shadow: 0 18px 24px rgba(0, 0, 0, 0.1), 0 12px 14px rgba(0, 0, 0, 0.12),
-              0 5px 6px rgba(0, 0, 0, .19);
-            }
-            a {
-              position: relative;
-              cursor: pointer;
+            padding-left: 30px; /* gutter size */
+            background-clip: padding-box;
+            .card {
+              /* Style your items */ /* change div to reference your elements you put in <Masonry> */
+              margin-bottom: 30px;
+              border-radius: 8px;
+              background: transparent;
+              overflow: hidden;
+              box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07),
+                0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.07),
+                0 8px 8px rgba(0, 0, 0, 0.07), 0 16px 16px rgba(0, 0, 0, 0.07);
+              height: auto;
               width: 100%;
-              height: 100%;
-              top: 0px;
-              .imageContainer {
+              z-index: 2;
+              transition: all 0.25s ease;
+              &:hover {
+                box-shadow: 0 18px 24px rgba(0, 0, 0, 0.1),
+                  0 12px 14px rgba(0, 0, 0, 0.12), 0 5px 6px rgba(0, 0, 0, 0.19);
+              }
+              a {
                 position: relative;
+                cursor: pointer;
                 width: 100%;
-                margin: 0px;
-                background-repeat: no-repeat;
-                background-size: cover;
-                z-index: 1;
-                
-                .imgTransition {
-                  position: absolute;
+                height: 100%;
+                top: 0px;
+                .imageContainer {
+                  position: relative;
                   width: 100%;
-                  height: 100px;
-                  bottom: -8px;
-                  left: 0px;
+                  margin: 0px;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  z-index: 1;
+
+                  .imgTransition {
+                    position: absolute;
+                    width: 100%;
+                    height: 100px;
+                    bottom: -8px;
+                    left: 0px;
+                  }
+                }
+                .descriptionContainer {
+                  position: relative;
+                  padding: 16px;
+                  left: 5px;
+                  bottom: 0px;
+                  .building {
+                    color: #332521;
+                    font-family: "Ivar", sans-serif;
+                    font-size: 1.8em;
+                  }
+                  .district {
+                    color: rgb(102, 102, 102);
+                    font-family: "Antikor", sans-serif;
+                    font-size: 0.7em;
+                    text-transform: uppercase;
+                  }
                 }
               }
-              .descriptionContainer {
-                position: relative;
-                padding: 16px;
-                left: 5px;
-                bottom: 0px;
-                .building {
-                  color: #332521;
-                  font-family: "Ivar", sans-serif;
-                  font-size: 1.8em;
-                }
-                .district {
-                  color: rgb(102, 102, 102);
-                  font-family: "Antikor", sans-serif;
-                  font-size: .7em;
-                  text-transform: uppercase;
-                }
-              }
-             
             }
           }
-         }
         }
       }
       &::before {
-          display: block; 
-          content: " "; 
-          margin-top: -40px; 
-          height: 65px; 
-          visibility: hidden; 
-          pointer-events: none;
-        
+        display: block;
+        content: " ";
+        margin-top: -40px;
+        height: 65px;
+        visibility: hidden;
+        pointer-events: none;
       }
-     }
-     
+    }
   }
 }
-
-
- 
- 
 
 footer {
   width: 100%;
@@ -443,10 +457,10 @@ footer {
     height: 575px;
     background-color: $footerColor;
     padding: 25px 0vw;
-    
+
     .contact {
       font-family: "Antikor", sans-serif;
-      background: hsla(53, 27%, 87%, 1.0);
+      background: hsla(53, 27%, 87%, 1);
       color: rgb(56, 56, 56);
       border-radius: 18px;
       border: 1px solid rgb(56, 56, 56);
@@ -454,13 +468,13 @@ footer {
       height: 300px;
       margin-right: 10.5vw;
       margin-left: 10.5vw;
-      padding: .7em 2em 2em 2em;
+      padding: 0.7em 2em 2em 2em;
       position: relative;
       z-index: 2;
       &:after {
         content: "";
         height: 100%;
-        background: hsla(53, 27%, 87%, 1.0);
+        background: hsla(53, 27%, 87%, 1);
         position: absolute;
         width: 145px;
         height: 10px;
@@ -481,7 +495,6 @@ footer {
         // background: yellow;
         width: 147px;
         z-index: 3;
-        
       }
       .eho {
         position: absolute;
@@ -526,9 +539,9 @@ footer {
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08),
-          0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08),
-          0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08),
+          0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 10px rgba(0, 0, 0, 0.08),
+          0 16px 20px rgba(0, 0, 0, 0.08);
         &:focus {
           outline: 0;
         }
@@ -624,7 +637,7 @@ footer {
       padding: 25px;
       margin-top: 1em;
       top: 15px;
-      font-size: .8em;
+      font-size: 0.8em;
       color: rgb(156, 156, 156);
       a.freepik {
         color: rgb(156, 156, 156) !important;
@@ -644,8 +657,6 @@ footer {
     flex-direction: column;
   }
 }
-
-
 
 img {
   max-width: 100%;
@@ -701,5 +712,3 @@ img {
   font-family: "Prismatic Right";
   src: url("./fonts/Prismatic-Right.otf") format("opentype");
 }
-
-

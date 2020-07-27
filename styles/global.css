@@ -40,10 +40,8 @@ html {
 }
 
 .container .navBar {
-  background: #9c9859ea;
+  background: #9c9859;
   /* Black background color */
-  -webkit-backdrop-filter: blur(12px);
-          backdrop-filter: blur(12px);
   position: fixed;
   /* Make it stick/fixed */
   top: 0;
@@ -54,19 +52,38 @@ html {
   transition: top 0.5s;
   /* Transition effect when sliding down (and up) */
   z-index: 15;
-  border-bottom: 2px solid #949055d0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-left: 56px;
+  padding-right: 56px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03), 0 2px 2px rgba(0, 0, 0, 0.03), 0 4px 4px rgba(0, 0, 0, 0.03), 0 8px 8px rgba(0, 0, 0, 0.03), 0 16px 16px rgba(0, 0, 0, 0.03);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03), 0 2px 2px rgba(0, 0, 0, 0.03), 0 4px 4px rgba(0, 0, 0, 0.03), 0 8px 8px rgba(0, 0, 0, 0.03), 0 16px 16px rgba(0, 0, 0, 0.03);
+}
+
+.container .navBar .brickwallContainer {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.container .navBar .brickwallContainer .brickwall {
+  width: 32px;
+  height: auto;
 }
 
 .container .navBar .OTLText {
-  color: #332521;
-  font-size: 3.5em;
-  padding-bottom: 25px;
-  padding-top: 28px;
-  padding-left: 1em;
+  color: #333321;
+  font-size: 2.5em;
+  padding-bottom: 21px;
+  padding-top: 23px;
+  padding-left: 15px;
   padding-right: 1em;
   font-family: "TS Stamp";
   line-height: 95%;
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
   z-index: 13;
 }
 
@@ -92,7 +109,7 @@ html {
   background: transparent;
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
   z-index: 14;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .container main {
@@ -143,7 +160,7 @@ html {
   background: #e8e4c9;
   border-radius: 2px;
   z-index: 8;
-  top: 26%;
+  top: 36%;
   left: 15%;
   height: 270px;
   width: 455px;
@@ -156,6 +173,11 @@ html {
 .container main .marqueeWrapper .OTLLogoContainer .quoteBox {
   width: 200px;
   height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .container main .marqueeWrapper .OTLLogoContainer .OTLText {
@@ -164,7 +186,7 @@ html {
   padding-bottom: 25px;
   font-family: "TS Stamp";
   line-height: 95%;
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
   z-index: 9;
 }
 
@@ -179,14 +201,14 @@ html {
   top: 0px;
   left: 0px;
   background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
-  opacity: .8;
+  opacity: 1;
   z-index: 10;
 }
 
 .container main .marqueeWrapper .OTLLogoContainer .innerFrame {
   height: calc(100% - 50px);
   width: calc(100% - 50px);
-  border: 1px solid #4D3F3E;
+  border: 1px solid #4d3f3e;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -208,7 +230,7 @@ html {
 
 .container main .marqueeWrapper .OTLLogoContainer .TR {
   top: 13px;
-  right: 13px;
+  right: 12px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -227,78 +249,6 @@ html {
           transform: rotate(180deg);
 }
 
-.container main .marqueeWrapper .OTLLogoContainer .brickwall {
-  width: 35px;
-  height: auto;
-  position: absolute;
-  left: 3px;
-  position: relative;
-  padding-top: 16px;
-  display: inline-block;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .KCContainer, .container main .marqueeWrapper .OTLLogoContainer .KCtext, .container main .marqueeWrapper .OTLLogoContainer .KCtext2 {
-  font-size: 2.3em;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .KCContainer {
-  visibility: hidden;
-  position: absolute;
-  bottom: -10px;
-  right: 12px;
-  width: 225px;
-  height: auto;
-  z-index: 10;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext2,
-.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext {
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext {
-  top: 47%;
-  left: 51%;
-  color: #f07a30;
-  font-family: "Prismatic Base", sans-serif;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext:before, .container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext:after {
-  content: attr(data-heading);
-  position: absolute;
-  font-weight: normal;
-  text-shadow: none;
-  width: 100%;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext:after {
-  color: #bd3627;
-  font-family: "Prismatic Bottom";
-  left: 0;
-  top: 1px;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext:before {
-  color: #fff334;
-  font-family: "Prismatic Top";
-  left: 0;
-  top: -0px;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .KCContainer .KCtext2 {
-  top: 47.9%;
-  left: 51.1%;
-  color: #ed463a;
-  font-family: "Prismatic Right";
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .KCContainer .diamond {
-  -webkit-filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12)) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.24));
-          filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12)) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.24));
-}
-
 .container main .marqueeWrapper a.buttonContainer {
   position: absolute;
   background-color: #e7e5d5;
@@ -313,12 +263,12 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  bottom: -15%;
+  bottom: -25%;
   left: 50%;
   text-decoration: none;
   -webkit-transform: translate(-50%, 10%) scale(1);
           transform: translate(-50%, 10%) scale(1);
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
   border: 1px solid #332521;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08);
@@ -419,8 +369,8 @@ html {
   height: auto;
   width: 100%;
   z-index: 2;
-  -webkit-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:hover {
@@ -469,7 +419,7 @@ html {
 .container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card a .descriptionContainer .district {
   color: #666666;
   font-family: "Antikor", sans-serif;
-  font-size: .7em;
+  font-size: 0.7em;
   text-transform: uppercase;
 }
 
@@ -514,7 +464,7 @@ footer .footerContent .contact {
   height: 300px;
   margin-right: 10.5vw;
   margin-left: 10.5vw;
-  padding: .7em 2em 2em 2em;
+  padding: 0.7em 2em 2em 2em;
   position: relative;
   z-index: 2;
 }
@@ -725,7 +675,7 @@ footer .footerContent .freepikContainer {
   padding: 25px;
   margin-top: 1em;
   top: 15px;
-  font-size: .8em;
+  font-size: 0.8em;
   color: #9c9c9c;
 }
 

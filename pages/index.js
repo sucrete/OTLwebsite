@@ -13,7 +13,7 @@ export default function Home() {
         document.getElementById("navbar").style.top = "-115px";
       }
       prevScrollpos = currentScrollPos;
-    }
+    };
   });
   return (
     <div className="container">
@@ -22,7 +22,13 @@ export default function Home() {
         <link rel="icon" href="/brickwall.svg" />
       </Head>
       <nav className="navBar" id="navbar">
-        <div className="OTLText">Old <span className="middle">Town L</span>ofts</div>
+        <div className="brickwallContainer">
+          <img className="brickwall" src="/brickwall.svg" />
+        </div>
+
+        <div className="OTLText">
+          Old <span className="middle">Town L</span>ofts
+        </div>
         <div className="navMask"></div>
       </nav>
       <main>
@@ -36,18 +42,18 @@ export default function Home() {
             <img src="/corner.svg" className="corner BR" />
             <div className="innerFrame"></div>
             <div className="mask"></div>
-            <img className="brickwall" src="/brickwall.svg" />
+
             <div className="quoteBox">
               <img src="/affordable.svg" />
             </div>
 
-            <div className="KCContainer">
+            {/* <div className="KCContainer">
               <img className="diamond" src="/diamond.svg" />
               <div className="KCtext" data-heading="KC">
                 KC
-            </div>
+              </div>
               <div className="KCtext2">KC</div>
-            </div>
+            </div> */}
           </div>
 
           <a href="#cards" className="buttonContainer">
@@ -62,7 +68,6 @@ export default function Home() {
           </a>
         </div>
         <div id="cards" className="cardsCorpus">
-
           <Cards />
         </div>
       </main>
@@ -72,7 +77,6 @@ export default function Home() {
         </svg>
 
         <div className="footerContent">
-
           <div className="contact">
             <h1>Contact</h1>
             <div className="contactContainer">
