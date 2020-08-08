@@ -36,7 +36,18 @@ export default function Home() {
           <div className="marquee"></div>
           <div className="parentCardContainer">
             <div class="cardContainer">
-              <div class="bizCard"></div>
+              <div class="bizCard">
+                <img src="/corner.svg" className="corner TL" />
+                <img src="/corner.svg" className="corner TR" />
+                <img src="/corner.svg" className="corner BL" />
+                <img src="/corner.svg" className="corner BR" />
+                <div className="innerFrame"></div>
+                <div className="mask"></div>
+
+                <div className="quoteBox">
+                  <img src="/affordable.svg" />
+                </div>
+              </div>
               <svg
                 class="shadow _1"
                 viewBox="0 0 525 340"
@@ -107,7 +118,7 @@ export default function Home() {
               >
                 <rect x="35" y="35" height="270" width="455" />
               </svg>
-              <svg
+              {/* <svg
                 class="shadow _11"
                 viewBox="0 0 525 340"
                 xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +152,7 @@ export default function Home() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <rect x="35" y="35" height="270" width="455" />
-              </svg>
+              </svg> */}
             </div>
           </div>
           {/* <div className="OTLLogoContainer">

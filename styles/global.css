@@ -6,7 +6,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  background: #e4e2d2;
+  background: #f4f4e7;
 }
 
 html {
@@ -140,12 +140,14 @@ html {
   display: block;
   width: 100vw;
   height: 700px;
-  background: transparent;
+  background: #e4e2d2;
   background-position: 0% 90%;
   margin-bottom: 2em;
   background-size: 110%;
   background-repeat: no-repeat;
-  z-index: 9;
+  z-index: 2;
+  -webkit-backdrop-filter: hue-rotate(120%);
+          backdrop-filter: hue-rotate(120%);
 }
 
 .container main .marqueeWrapper .OTLLogoContainer {
@@ -163,87 +165,8 @@ html {
   width: 455px;
   -webkit-transform: rotate(-5deg);
           transform: rotate(-5deg);
-  -webkit-box-shadow: -1px 1px 0 rgba(190, 185, 146, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.9);
-          box-shadow: -1px 1px 0 rgba(190, 185, 146, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.9);
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .quoteBox {
-  width: 200px;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .OTLText {
-  font-size: 4.5em;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.094);
-  padding-bottom: 25px;
-  font-family: "TS Stamp";
-  line-height: 95%;
-  letter-spacing: 0.03em;
-  z-index: 9;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .OTLText .middle {
-  font-family: "TS Rough";
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .mask {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
-  opacity: 0.8;
-  z-index: 10;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .innerFrame {
-  height: calc(100% - 50px);
-  width: calc(100% - 50px);
-  border: 1px solid #4d3f3e;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 8;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .corner {
-  position: absolute;
-  background: #e8e4c9;
-  z-index: 9;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .TL {
-  top: 13px;
-  left: 13px;
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .TR {
-  top: 13px;
-  right: 12px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .BL {
-  bottom: 12px;
-  left: 13px;
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
-}
-
-.container main .marqueeWrapper .OTLLogoContainer .BR {
-  bottom: 12px;
-  right: 12px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-box-shadow: -1px 1px 0 rgba(212, 212, 161, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.9);
+          box-shadow: -1px 1px 0 rgba(212, 212, 161, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.9);
 }
 
 .container main .marqueeWrapper a.buttonContainer {
@@ -762,13 +685,11 @@ img {
   src: url("./fonts/Prismatic-Right.otf") format("opentype");
 }
 
-body {
-  background: #e4e2d2;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+.parentCardContainer {
+  position: absolute;
+  top: 32%;
+  left: 12%;
+  z-index: 5;
 }
 
 .cardContainer {
@@ -778,8 +699,8 @@ body {
           transform: translate3d(0, 850px, 0);
   -webkit-animation-timing-function: cubic-bezier(0.37, 0.71, 0.42, 0.99);
           animation-timing-function: cubic-bezier(0.37, 0.71, 0.42, 0.99);
-  -webkit-animation-duration: 0.7s;
-          animation-duration: 0.7s;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-name: cardMove;
@@ -790,8 +711,8 @@ body {
 .cardContainer .bizCard {
   -webkit-animation-timing-function: cubic-bezier(0.37, 0.71, 0.42, 0.99);
           animation-timing-function: cubic-bezier(0.37, 0.71, 0.42, 0.99);
-  -webkit-animation-duration: 0.7s;
-          animation-duration: 0.7s;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -810,7 +731,7 @@ body {
 .cardContainer .bizCard {
   width: 455px;
   height: 270px;
-  background-image: linear-gradient(10deg, #e4e2d2 0%, #e9e9de 100%);
+  background-image: linear-gradient(15deg, #e4e2d2 0%, #f0eedf 100%);
   position: absolute;
   -webkit-transform-origin: center;
           transform-origin: center;
@@ -822,6 +743,79 @@ body {
           box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
   -webkit-animation-name: cardSpin, cardChanges;
           animation-name: cardSpin, cardChanges;
+}
+
+.cardContainer .bizCard .quoteBox {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.cardContainer .bizCard .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #3a382a;
+  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+  opacity: 0.9;
+  z-index: 10;
+  -webkit-animation: colorChange 0.2s cubic-bezier(0.37, 0.71, 0.42, 0.99);
+          animation: colorChange 0.2s cubic-bezier(0.37, 0.71, 0.42, 0.99);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.cardContainer .bizCard .innerFrame {
+  height: calc(100% - 50px);
+  width: calc(100% - 50px);
+  border: 1px solid #4d3f3e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 8;
+}
+
+.cardContainer .bizCard .corner {
+  position: absolute;
+  z-index: 9;
+}
+
+.cardContainer .bizCard .TL {
+  top: 13px;
+  left: 13px;
+  background-color: #ebe9d9;
+}
+
+.cardContainer .bizCard .TR {
+  top: 13px;
+  right: 12px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background-color: #eeeddd;
+}
+
+.cardContainer .bizCard .BL {
+  bottom: 12px;
+  left: 13px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  background: #e3e3d2;
+}
+
+.cardContainer .bizCard .BR {
+  bottom: 12px;
+  right: 12px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background: #e4e5d3;
 }
 
 ._1 {
@@ -988,6 +982,20 @@ body {
   }
 }
 
+@-webkit-keyframes colorChange {
+  to {
+    background: transparent;
+    opacity: 0.3;
+  }
+}
+
+@keyframes colorChange {
+  to {
+    background: transparent;
+    opacity: 0.3;
+  }
+}
+
 @-webkit-keyframes cardSpin {
   to {
     -webkit-transform: rotate(355deg);
@@ -1016,15 +1024,15 @@ body {
 
 @-webkit-keyframes cardChanges {
   to {
-    -webkit-box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.08), -1px 1px 0 rgba(255, 255, 255, 0.08), 0px 0px 14px rgba(255, 255, 255, 0.5);
-            box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.08), -1px 1px 0 rgba(255, 255, 255, 0.08), 0px 0px 14px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.08), -1px 1px 0 rgba(255, 255, 255, 0.08), 0px 0px 17px rgba(255, 255, 255, 0.7);
+            box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.08), -1px 1px 0 rgba(255, 255, 255, 0.08), 0px 0px 17px rgba(255, 255, 255, 0.7);
   }
 }
 
 @keyframes cardChanges {
   to {
-    -webkit-box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.08), -1px 1px 0 rgba(255, 255, 255, 0.08), 0px 0px 14px rgba(255, 255, 255, 0.5);
-            box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.08), -1px 1px 0 rgba(255, 255, 255, 0.08), 0px 0px 14px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.08), -1px 1px 0 rgba(255, 255, 255, 0.08), 0px 0px 17px rgba(255, 255, 255, 0.7);
+            box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.08), -1px 1px 0 rgba(255, 255, 255, 0.08), 0px 0px 17px rgba(255, 255, 255, 0.7);
   }
 }
 /*# sourceMappingURL=global.css.map */
