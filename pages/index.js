@@ -34,8 +34,117 @@ export default function Home() {
       <main>
         <div className="marqueeWrapper">
           <div className="marquee"></div>
-
-          <div className="OTLLogoContainer">
+          <div className="parentCardContainer">
+            <div class="cardContainer">
+              <div class="bizCard"></div>
+              <svg
+                class="shadow _1"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _2"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _3"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _4"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _5"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _6"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _7"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _8"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _9"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _10"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _11"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _12"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _13"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _14"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+              <svg
+                class="shadow _15"
+                viewBox="0 0 525 340"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="35" y="35" height="270" width="455" />
+              </svg>
+            </div>
+          </div>
+          {/* <div className="OTLLogoContainer">
             <img src="/corner.svg" className="corner TL" />
             <img src="/corner.svg" className="corner TR" />
             <img src="/corner.svg" className="corner BL" />
@@ -46,15 +155,7 @@ export default function Home() {
             <div className="quoteBox">
               <img src="/affordable.svg" />
             </div>
-
-            {/* <div className="KCContainer">
-              <img className="diamond" src="/diamond.svg" />
-              <div className="KCtext" data-heading="KC">
-                KC
-              </div>
-              <div className="KCtext2">KC</div>
-            </div> */}
-          </div>
+          </div> */}
 
           <a href="#cards" className="buttonContainer">
             <span>Our Properties</span>

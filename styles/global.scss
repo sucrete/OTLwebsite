@@ -4,10 +4,20 @@ $btnTxtClr: #e2cec8;
 $shadow: #6c708f;
 $footerColor: rgb(219, 219, 219);
 $background: rgb(228, 226, 210);
+$logoBG: #e8e4c9;
+$bgClr: #e4e2d2;
+@mixin deets($left, $top, $blur, $opacity) {
+  $_top: $top + 1;
+  $_left: $left;
+  filter: blur(#{$blur}px);
+  top: #{$_top}px;
+  left: -#{$_left}px;
+  opacity: $opacity;
+}
 @mixin glow($color, $glow) {
   $all: ();
   $all: append($all, -1px 1px 0 rgba($color, 0.1), comma);
-  $all: append($all, 1px -1px 0 rgba($glow, 0.1), comma);
+  $all: append($all, 1px -1px 0 rgba($glow, 0.5), comma);
   $all: append($all, 0px 0px 25px rgba($glow, 0.9), comma);
   box-shadow: $all;
 }
@@ -46,7 +56,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   .navBar {
-    background: #aca870; /* Black background color */
+    background-color: darken($logoBG, 5%); /* Black background color */
     position: fixed; /* Make it stick/fixed */
     top: 0; /* Stay on top */
     width: 100%; /* Full width */
@@ -56,20 +66,6 @@ html {
     display: inline-flex;
     padding-left: 56px;
     padding-right: 56px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03), 0 2px 2px rgba(0, 0, 0, 0.03),
-      0 4px 4px rgba(0, 0, 0, 0.03), 0 8px 8px rgba(0, 0, 0, 0.03),
-      0 16px 16px rgba(0, 0, 0, 0.03);
-    // &:before {
-    //   content: "";
-    //   position: absolute;
-    //   top: -50px;
-    //   left: 0px;
-    //   z-index: -1;
-    //   background: #9c9859;
-    //   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
-    //   width: 100%;
-    //   height: 70px;
-    // }
     .brickwallContainer {
       display: inline-flex;
       align-self: center;
@@ -80,7 +76,7 @@ html {
     }
 
     .OTLText {
-      color: rgb(37, 37, 26);
+      color: #ed6e2f;
       font-size: 2.5em;
       padding-bottom: 21px;
       padding-top: 25px;
@@ -109,7 +105,7 @@ html {
       top: 0px;
       left: 0px;
       background: transparent;
-      background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+
       z-index: 14;
       opacity: 0.7;
     }
@@ -137,7 +133,7 @@ html {
         background-repeat: no-repeat;
         z-index: 9;
       }
-      $logoBG: #e8e4c9;
+
       .OTLLogoContainer {
         position: absolute;
         padding: 60px;
@@ -145,7 +141,7 @@ html {
         padding-right: 70px;
         text-align: left;
         background: $logoBG;
-        border-radius: 2px;
+        border-radius: 1px;
         z-index: 8;
         top: 36%;
         left: 15%;
@@ -179,9 +175,8 @@ html {
           position: absolute;
           top: 0px;
           left: 0px;
-          background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
-          opacity: 1;
-
+          background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+          opacity: 0.8;
           z-index: 10;
         }
         .innerFrame {
@@ -338,33 +333,6 @@ html {
           }
         }
       }
-      .transitionGradient {
-        width: 100vw;
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-        height: 300px;
-        z-index: 10;
-        background: linear-gradient(
-          to bottom,
-          hsla(345, 6.06%, 12.94%, 0) 0%,
-          hsla(345, 6.06%, 12.94%, 0.078) 18.5%,
-          hsla(345, 6.06%, 12.94%, 0.154) 34.1%,
-          hsla(345, 6.06%, 12.94%, 0.23) 47.2%,
-          hsla(345, 6.06%, 12.94%, 0.304) 57.9%,
-          hsla(345, 6.06%, 12.94%, 0.377) 66.6%,
-          hsla(345, 6.06%, 12.94%, 0.448) 73.5%,
-          hsla(345, 6.06%, 12.94%, 0.518) 78.9%,
-          hsla(345, 6.06%, 12.94%, 0.586) 83.1%,
-          hsla(345, 6.06%, 12.94%, 0.652) 86.3%,
-          hsla(345, 6.06%, 12.94%, 0.716) 88.7%,
-          hsla(345, 6.06%, 12.94%, 0.778) 90.8%,
-          hsla(345, 6.06%, 12.94%, 0.837) 92.7%,
-          hsla(345, 6.06%, 12.94%, 0.894) 94.7%,
-          hsla(345, 6.06%, 12.94%, 0.949) 97%,
-          hsl(345, 6.06%, 12.94%) 100%
-        );
-      }
     }
     .cardsCorpus {
       width: 79vw;
@@ -386,21 +354,24 @@ html {
               border-radius: 8px;
               background: transparent;
               overflow: hidden;
-              box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07),
-                0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.07),
-                0 8px 8px rgba(0, 0, 0, 0.07), 0 16px 16px rgba(0, 0, 0, 0.07);
+              box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075),
+                0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.065),
+                0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.055);
               height: auto;
               width: 100%;
               z-index: 2;
               transition: all 0.4s ease;
+              -webkit-transform: translateZ(0);
+              transform: translateY(1%);
               &:hover {
-                box-shadow: 0 18px 24px rgba(0, 0, 0, 0.1),
-                  0 12px 14px rgba(0, 0, 0, 0.12), 0 5px 6px rgba(0, 0, 0, 0.19);
-                a {
-                  .imageContainer {
-                    transform: scale(1.03);
-                  }
-                }
+                box-shadow: 0 18px 24px rgba(0, 0, 0, 0.15),
+                  0 12px 14px rgba(0, 0, 0, 0.1), 0 5px 6px rgba(0, 0, 0, 0.1);
+                transform: translateY(0%);
+                // a {
+                //   .imageContainer {
+                //     transform: scale(1.03);
+                //   }
+                // }
               }
               a {
                 position: relative;
@@ -729,4 +700,155 @@ img {
 @font-face {
   font-family: "Prismatic Right";
   src: url("./fonts/Prismatic-Right.otf") format("opentype");
+}
+
+$bgClr: #e4e2d2;
+@mixin deets($left, $top, $blur, $opacity) {
+  $_top: $top + 1;
+  $_left: $left;
+  filter: blur(#{$blur}px);
+  top: #{$_top}px;
+  left: -#{$_left}px;
+  opacity: $opacity;
+}
+body {
+  background: $bgClr;
+  display: grid;
+  place-items: center;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+.cardContainer {
+  width: 525px;
+  height: 340px;
+  transform: translate3d(0, 850px, 0);
+  animation-timing-function: cubic-bezier(0.37, 0.71, 0.42, 0.99);
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-name: cardMove;
+  .shadow,
+  .bizCard {
+    animation-timing-function: cubic-bezier(
+      0.37,
+      0.71,
+      0.42,
+      0.99
+    ); //or ease-out
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+  }
+  .shadow {
+    background: transparent;
+    height: 340px;
+    width: auto;
+    position: absolute;
+    transform-origin: center;
+    fill: #b4af82;
+    opacity: 1;
+  }
+  .bizCard {
+    width: 455px;
+    height: 270px;
+    background-image: linear-gradient(
+      10deg,
+      rgba(228, 226, 210, 1) 0%,
+      #e9e9de 100%
+    );
+    position: absolute;
+    transform-origin: center;
+    display: block;
+    left: 35px;
+    top: 35px;
+    z-index: 2;
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
+    animation-name: cardSpin, cardChanges;
+  }
+}
+
+._1 {
+  @include deets(1, 1.9, 1, 1);
+  animation-name: cardSpin;
+}
+._2 {
+  @include deets(2, 3.8, 2, 1);
+  animation-name: cardSpin;
+}
+._3 {
+  @include deets(3, 5.7, 3, 0.6666666667);
+  animation-name: cardSpin, disappear;
+}
+._4 {
+  @include deets(4, 7.6, 4, 0.5);
+  animation-name: disappear, cardSpin;
+}
+._5 {
+  @include deets(5, 9.5, 5, 0.4);
+  animation-name: disappear, cardSpin;
+}
+._6 {
+  @include deets(6, 11.4, 6, 0.33333333333);
+  animation-name: disappear, cardSpin;
+}
+._7 {
+  @include deets(7, 13.3, 7, 0.2857142857);
+  animation-name: disappear, cardSpin;
+}
+._8 {
+  @include deets(8, 15.2, 8, 0.25);
+  animation-name: disappear, cardSpin;
+}
+._9 {
+  @include deets(9, 17.9, 9, 0.2222222222);
+  animation-name: disappear, cardSpin;
+}
+._10 {
+  @include deets(10, 19, 10, 0.2);
+  animation-name: disappear, cardSpin;
+}
+._11 {
+  @include deets(11, 20.9, 11, 0.1818181818);
+  animation-name: disappear, cardSpin;
+}
+._12 {
+  @include deets(12, 22.8, 12, 0.1666666667);
+  animation-name: disappear, cardSpin;
+}
+._13 {
+  @include deets(13, 24.7, 13, 0.1538461538);
+  animation-name: disappear, cardSpin;
+}
+._14 {
+  @include deets(14, 26.6, 14, 0.1428571429);
+  animation-name: disappear, cardSpin;
+}
+._15 {
+  @include deets(15, 28.5, 15, 0.1333333333);
+  animation-name: disappear, cardSpin;
+}
+// ORDER IS (LEFT(negative), TOP, BLUR, OPACITY)
+//   -1px 1px 0 rgba(180, 175, 130, 0.1)
+
+@keyframes cardMove {
+  to {
+    transform: translate3d(0, 20px, 0);
+  }
+}
+
+@keyframes cardSpin {
+  to {
+    transform: rotate(355deg);
+  }
+}
+
+@keyframes disappear {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes cardChanges {
+  to {
+    box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1),
+      1px -1px 0 rgba(255, 255, 255, 0.08), -1px 1px 0 rgba(255, 255, 255, 0.08),
+      0px 0px 14px rgba(255, 255, 255, 0.5);
+  }
 }
