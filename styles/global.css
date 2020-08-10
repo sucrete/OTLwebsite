@@ -57,6 +57,7 @@ html {
   display: inline-flex;
   padding-left: 56px;
   padding-right: 56px;
+  height: 90px;
 }
 
 .container .navBar .brickwallContainer {
@@ -86,7 +87,7 @@ html {
 }
 
 .container .navBar .OTLText .middle {
-  font-family: "TS Rough";
+  font-family: "TS Stamp";
 }
 
 .container .navBar a {
@@ -761,7 +762,7 @@ img {
   position: absolute;
   top: 0px;
   left: 0px;
-  background: #3a382a;
+  background: #292302;
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
   opacity: 0.9;
   z-index: 10;

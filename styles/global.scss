@@ -67,6 +67,7 @@ html {
     display: inline-flex;
     padding-left: 56px;
     padding-right: 56px;
+    height: 90px;
     .brickwallContainer {
       display: inline-flex;
       align-self: center;
@@ -88,7 +89,7 @@ html {
       letter-spacing: 0.03em;
       z-index: 13;
       .middle {
-        font-family: "TS Rough";
+        font-family: "TS Stamp";
       }
     }
     a {
@@ -707,7 +708,7 @@ $animationLength: 0.9s;
       position: absolute;
       top: 0px;
       left: 0px;
-      background: #3a382a;
+      background: #292302;
       background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
       opacity: 0.9;
       z-index: 10;
