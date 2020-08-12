@@ -61,6 +61,7 @@ html {
 }
 
 .container .navBar .brickwallContainer {
+  display: none;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -74,7 +75,7 @@ html {
 }
 
 .container .navBar .OTLText {
-  color: #ed6e2f;
+  color: #3f3525;
   font-size: 2.5em;
   padding-bottom: 21px;
   padding-top: 25px;
@@ -87,7 +88,7 @@ html {
 }
 
 .container .navBar .OTLText .middle {
-  font-family: "TS Stamp";
+  font-family: "TS Rough";
 }
 
 .container .navBar a {
@@ -141,8 +142,10 @@ html {
   display: block;
   width: 100vw;
   height: 700px;
-  background: #e4e2d2;
-  background-position: 0% 90%;
+  background: url("../public/terrazo2.svg");
+  background-color: #e4e2d2;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-bottom: 2em;
   background-size: 110%;
   background-repeat: no-repeat;
@@ -172,7 +175,7 @@ html {
 
 .container main .marqueeWrapper a.buttonContainer {
   position: absolute;
-  background-color: #e7e5d5;
+  background-color: #e0dbb7;
   padding: 10px 12px 10px 27px;
   border-radius: 0.5em;
   display: -webkit-inline-box;
@@ -184,13 +187,12 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  bottom: -25%;
+  bottom: -22%;
   left: 50%;
   text-decoration: none;
-  -webkit-transform: translate(-50%, 10%) scale(1);
-          transform: translate(-50%, 10%) scale(1);
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
   letter-spacing: 0.03em;
-  border: 1px solid #332521;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08);
   -webkit-transition: all 0.5s ease;
@@ -208,21 +210,75 @@ html {
 
 .container main .marqueeWrapper a.buttonContainer:hover {
   cursor: pointer;
-}
-
-.container main .marqueeWrapper a.buttonContainer:hover .svgArrow {
-  -webkit-transform: translate(0%, 5%);
-          transform: translate(0%, 5%);
+  -webkit-transform: translate(-50%, -5%);
+          transform: translate(-50%, -5%);
 }
 
 .container main .marqueeWrapper a.buttonContainer:visited {
   color: #e2cec8;
 }
 
+.container main .marqueeWrapper a.buttonContainer:focus {
+  outline: 0;
+}
+
+.container main .marqueeWrapper a.buttonContainer:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
+.container main .marqueeWrapper a.buttonContainer:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
+.container main .marqueeWrapper a.buttonContainer:hover {
+  background: #e9e4be;
+  cursor: pointer;
+}
+
+.container main .marqueeWrapper a.buttonContainer:hover:before {
+  -webkit-transform: translateX(300px) skewX(-15deg);
+          transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.container main .marqueeWrapper a.buttonContainer:hover:after {
+  -webkit-transform: translateX(300px) skewX(-15deg);
+          transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
 .container main .marqueeWrapper a.buttonContainer span {
   position: relative;
   font-family: "Antikor", sans-serif;
-  color: #332521;
+  color: #5d6947;
   font-size: 1.1em;
   width: 100%;
   height: 100%;
@@ -241,7 +297,7 @@ html {
 }
 
 .container main .marqueeWrapper a.buttonContainer .svgArrow path {
-  fill: #332521;
+  fill: #5d6947;
 }
 
 .container main .cardsCorpus {
@@ -764,10 +820,10 @@ img {
   left: 0px;
   background: #292302;
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
-  opacity: 0.9;
+  opacity: 1;
   z-index: 10;
-  -webkit-animation: colorChange 0.3s ease-out;
-          animation: colorChange 0.3s ease-out;
+  -webkit-animation: colorChange 0.2s ease;
+          animation: colorChange 0.2s ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -775,7 +831,7 @@ img {
 .cardContainer .bizCard .innerFrame {
   height: calc(100% - 50px);
   width: calc(100% - 50px);
-  border: 1px solid #4d3f3e;
+  border: 1px solid #6c5353;
   position: absolute;
   top: 50%;
   left: 50%;

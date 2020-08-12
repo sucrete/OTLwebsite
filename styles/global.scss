@@ -69,16 +69,18 @@ html {
     padding-right: 56px;
     height: 90px;
     .brickwallContainer {
+      display: none;
       display: inline-flex;
       align-self: center;
       .brickwall {
+        // display: none;
         width: 32px;
         height: auto;
       }
     }
 
     .OTLText {
-      color: #ed6e2f;
+      color: #3f3525;
       font-size: 2.5em;
       padding-bottom: 21px;
       padding-top: 25px;
@@ -89,7 +91,7 @@ html {
       letter-spacing: 0.03em;
       z-index: 13;
       .middle {
-        font-family: "TS Stamp";
+        font-family: "TS Rough";
       }
     }
     a {
@@ -128,9 +130,10 @@ html {
         display: block;
         width: 100vw;
         height: 700px;
-        background: #e4e2d2;
-        // background: transparent;
-        background-position: 0% 90%;
+        background: url("../public/terrazo2.svg");
+        background-color: #e4e2d2;
+        background-size: cover;
+        background-repeat: no-repeat;
         margin-bottom: 2em;
         background-size: 110%;
         background-repeat: no-repeat;
@@ -217,18 +220,18 @@ html {
 
       a.buttonContainer {
         position: absolute;
-        background-color: hsla(53, 27%, 87%, 1);
+        background-color: #e0dbb7;
         padding: 10px 12px 10px 27px;
         border-radius: 0.5em;
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        bottom: -25%;
+        bottom: -22%;
         left: 50%;
         text-decoration: none;
-        transform: translate(-50%, 10%) scale(1);
+        transform: translate(-50%, 0%);
         letter-spacing: 0.03em;
-        border: 1px solid #332521;
+        // border: 1px solid #332521;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08),
           0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08),
           0 16px 16px rgba(0, 0, 0, 0.08);
@@ -242,17 +245,61 @@ html {
         }
         &:hover {
           cursor: pointer;
+          transform: translate(-50%, -5%);
           .svgArrow {
-            transform: translate(0%, 5%);
+            // transform: translate(0%, 5%);
           }
         }
         &:visited {
           color: $btnTxtClr;
         }
+        &:focus {
+          outline: 0;
+        }
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          background: rgba(255, 255, 255, 0.5);
+          width: 60px;
+          height: 100%;
+          left: 0;
+          top: 0;
+          opacity: 0.5;
+          filter: blur(30px);
+          transform: translateX(-100px) skewX(-15deg);
+        }
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          background: rgba(255, 255, 255, 0.2);
+          width: 30px;
+          height: 100%;
+          left: 30px;
+          top: 0;
+          opacity: 0;
+          filter: blur(5px);
+          transform: translateX(-100px) skewX(-15deg);
+        }
+        &:hover {
+          background: #e9e4be;
+          cursor: pointer;
+          &:before {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: 0.6;
+            transition: 0.7s;
+          }
+          &:after {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: 1;
+            transition: 0.7s;
+          }
+        }
         span {
           position: relative;
           font-family: "Antikor", sans-serif;
-          color: #332521;
+          color: #5d6947;
           font-size: 1.1em;
           width: 100%;
           height: 100%;
@@ -267,7 +314,7 @@ html {
           width: auto;
           position: relative;
           path {
-            fill: #332521;
+            fill: #5d6947;
           }
         }
       }
@@ -710,15 +757,15 @@ $animationLength: 0.9s;
       left: 0px;
       background: #292302;
       background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
-      opacity: 0.9;
+      opacity: 1;
       z-index: 10;
-      animation: colorChange 0.3s ease-out;
+      animation: colorChange 0.2s ease;
       animation-fill-mode: forwards;
     }
     .innerFrame {
       height: calc(100% - 50px);
       width: calc(100% - 50px);
-      border: 1px solid rgb(77, 63, 62);
+      border: 1px solid rgb(108, 83, 83);
       position: absolute;
       top: 50%;
       left: 50%;
