@@ -195,11 +195,9 @@ html {
   letter-spacing: 0.03em;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08), 0 16px 16px rgba(0, 0, 0, 0.08);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
   font-size: 18px;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
   overflow: hidden;
   z-index: 11;
 }
@@ -516,8 +514,8 @@ footer .footerContent .contact .appButton {
   border-radius: 0.5em;
   text-decoration: none;
   height: 65px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
   overflow: hidden;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -571,6 +569,7 @@ footer .footerContent .contact .appButton:after {
 footer .footerContent .contact .appButton:hover {
   background: #6b7f88;
   cursor: pointer;
+  bottom: 20px;
 }
 
 footer .footerContent .contact .appButton:hover:before {
