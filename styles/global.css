@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cardo:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Karla:wght@400;700&display=swap");
 html,
 body {
   padding: 0;
@@ -275,12 +275,11 @@ html {
 
 .container main .marqueeWrapper a.buttonContainer span {
   position: relative;
-  font-family: "Antikor", sans-serif;
+  font-family: "Alata", sans-serif;
   color: #5d6947;
-  font-size: 1.1em;
+  font-size: 1.3em;
   width: 100%;
   height: 100%;
-  bottom: -2px;
 }
 
 .container main .marqueeWrapper a.buttonContainer .svgArrow {
@@ -384,8 +383,8 @@ html {
 
 .container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card a .descriptionContainer .building {
   color: #332521;
-  font-family: "Ivar", sans-serif;
-  font-size: 1.8em;
+  font-family: "Alata", sans-serif;
+  font-size: 1.4em;
 }
 
 .container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card a .descriptionContainer .district {
@@ -526,6 +525,8 @@ footer .footerContent .contact .appButton {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
 }
@@ -569,7 +570,8 @@ footer .footerContent .contact .appButton:after {
 footer .footerContent .contact .appButton:hover {
   background: #6b7f88;
   cursor: pointer;
-  bottom: 20px;
+  -webkit-transform: translate(0%, -6%);
+          transform: translate(0%, -6%);
 }
 
 footer .footerContent .contact .appButton:hover:before {
@@ -598,10 +600,9 @@ footer .footerContent .contact .appButton:visited {
 
 footer .footerContent .contact .appButton span {
   position: relative;
-  font-family: "Antikor", sans-serif;
+  font-family: "Alata", sans-serif;
   color: #e2cec8;
   font-size: 1.1em;
-  bottom: -2px;
 }
 
 footer .footerContent .contact .appButton .appImg {
