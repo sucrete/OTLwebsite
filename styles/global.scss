@@ -231,9 +231,9 @@ html {
         text-decoration: none;
         transform: translate(-50%, 0%);
         letter-spacing: 0.03em;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08),
-          0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08),
-          0 16px 16px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.065),
+          0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.055);
         transition: all 0.6s ease;
         font-size: 18px;
         overflow: hidden;
@@ -244,9 +244,9 @@ html {
         &:hover {
           cursor: pointer;
           transform: translate(-50%, -5%);
-          .svgArrow {
-            // transform: translate(0%, 5%);
-          }
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08),
+            0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08),
+            0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
         }
         &:visited {
           color: $btnTxtClr;
@@ -347,8 +347,10 @@ html {
               -webkit-transform: translateZ(0);
               transform: translateY(1%);
               &:hover {
-                box-shadow: 0 18px 24px rgba(0, 0, 0, 0.15),
-                  0 12px 14px rgba(0, 0, 0, 0.1), 0 5px 6px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08),
+                  0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08),
+                  0 8px 10px rgba(0, 0, 0, 0.08),
+                  0 16px 20px rgba(0, 0, 0, 0.08);
                 transform: translateY(0%);
                 // a {
                 //   .imageContainer {
@@ -426,10 +428,9 @@ footer {
   .footerContent {
     width: 100%;
     display: block;
-    height: 575px;
+    height: 500px;
     background-color: $footerColor;
     padding: 25px 0vw;
-
     .contact {
       font-family: "Antikor", sans-serif;
       background: hsla(53, 27%, 87%, 1);
@@ -440,7 +441,7 @@ footer {
       height: 300px;
       margin-right: 10.5vw;
       margin-left: 10.5vw;
-      padding: 0.7em 2em 2em 2em;
+      padding: 2.7em 2em 2em 2em;
       position: relative;
       z-index: 2;
       &:after {
@@ -448,7 +449,7 @@ footer {
         height: 100%;
         background: hsla(53, 27%, 87%, 1);
         position: absolute;
-        width: 145px;
+        width: 203px;
         height: 10px;
         left: 1.6em;
         top: -1px;
@@ -458,9 +459,9 @@ footer {
         position: relative;
         padding-right: 9px;
         font-size: 2.7em;
-        margin-top: -1.15em;
+        margin-top: -1.2em;
         margin-block-end: 0.2em;
-        font-family: "Ivar", serif;
+        font-family: "Alata", serif;
         letter-spacing: 0.05em;
         font-weight: normal !important;
         color: #332521;
@@ -512,9 +513,9 @@ footer {
         justify-content: center;
         align-items: center;
         transform: translate(0%, 0%);
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08),
-          0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 10px rgba(0, 0, 0, 0.08),
-          0 16px 20px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.065),
+          0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.055);
         &:focus {
           outline: 0;
         }
@@ -548,6 +549,9 @@ footer {
           background: #6b7f88;
           cursor: pointer;
           transform: translate(0%, -6%);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08),
+            0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08),
+            0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
           &:before {
             transform: translateX(300px) skewX(-15deg);
             opacity: 0.6;
@@ -570,7 +574,7 @@ footer {
           font-family: "Alata", sans-serif;
           color: $btnTxtClr;
           font-size: 1.1em;
-          // letter-spacing: 0.03em;
+          letter-spacing: 0.03em;
         }
         .appImg {
           filter: sepia(0.4);
