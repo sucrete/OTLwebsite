@@ -29,7 +29,7 @@ $bgClr: #e4e2d2;
   @for $i from 1 through $steps {
     $all: append(
       $all,
-      append($i * 0px $i * 1.9px $i * 1px, rgba($color, 2 / $i))
+      append($i * -1px $i * 1.9px $i * 1px, rgba($color, 1.5 / $i))
     );
   }
   box-shadow: $all;
@@ -239,7 +239,7 @@ html {
 
       a.buttonContainer {
         position: absolute;
-        background-color: #e0dbb7;
+        background: #ebba7a;
         padding: 10px 12px 10px 27px;
         border-radius: 0.5em;
         display: inline-flex;
@@ -250,7 +250,7 @@ html {
         text-decoration: none;
         transform: translate(-50%, 0%);
         letter-spacing: 0.03em;
-        @include shadow(darken(rgb(245, 245, 236), 30%), 5, white);
+        @include shadow(darken(rgb(245, 245, 236), 20%), 4, white);
         transition: all 0.6s ease;
         font-size: 18px;
         overflow: hidden;
@@ -260,8 +260,8 @@ html {
         }
         &:hover {
           cursor: pointer;
-          transform: translate(-50%, -5%);
-          @include shadow(darken(rgb(245, 245, 236), 25%), 10, white);
+          transform: translate(-50%, 0%);
+          @include shadow(darken(rgb(245, 245, 236), 20%), 10, white);
         }
         &:visited {
           color: $btnTxtClr;
@@ -296,7 +296,7 @@ html {
           transform: translateX(-100px) skewX(-15deg);
         }
         &:hover {
-          background: #e9e4be;
+          background: #f8c582;
           cursor: pointer;
           &:before {
             transform: translateX(300px) skewX(-15deg);
@@ -312,7 +312,7 @@ html {
         span {
           position: relative;
           font-family: "Alata", sans-serif;
-          color: #5d6947;
+          color: #97774c;
           font-size: 1.3em;
           width: 100%;
           height: 100%;
@@ -327,7 +327,7 @@ html {
           width: auto;
           position: relative;
           path {
-            fill: #5d6947;
+            fill: #97774c;
           }
         }
       }
@@ -358,12 +358,12 @@ html {
               height: auto;
               width: 100%;
               z-index: 2;
-              transition: all 0.4s ease-in-out;
+              transition: all 0.4s ease;
               -webkit-transform: translateZ(0);
-              transform: translateY(1%);
-              @include shadow(darken(rgb(245, 245, 236), 20%), 6, white);
+              transform: translateY(0%);
+              @include shadow(darken(rgb(245, 245, 236), 20%), 4, white);
               &:hover {
-                @include shadow(darken(rgb(245, 245, 236), 20%), 12, white);
+                @include shadow(darken(rgb(245, 245, 236), 20%), 10, white);
                 // box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08),
                 //   0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08),
                 //   0 8px 10px rgba(0, 0, 0, 0.08),
@@ -526,7 +526,7 @@ footer {
         // box-shadow: -1px 1.9px 1px #b4af82, -2px 3.8px 2px #b4af82,
         //   -3px 5.7px 3px rgba(180, 175, 130, 0.6666666667),
         //   -4px 7.6px 4px rgba(180, 175, 130, 0.5);
-        @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 4, white);
+        @include shadow(darken(hsla(53, 27%, 87%, 1), 20%), 4, white);
         &:focus {
           outline: 0;
         }
@@ -558,8 +558,8 @@ footer {
         }
         &:hover {
           background: #6b7f88;
-          transform: translate(0%, -6%);
-          @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 8, white);
+          // transform: translate(0%, -6%);
+          @include shadow(darken(hsla(53, 27%, 87%, 1), 20%), 10, white);
           // box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1),
           //   1px -1px 0 rgba(255, 255, 255, 0.08),
           //   -1px 1px 0 rgba(255, 255, 255, 0.08),
