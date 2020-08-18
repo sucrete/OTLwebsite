@@ -4,7 +4,7 @@ $btnTxtClr: #e2cec8;
 $shadow: #6c708f;
 $footerColor: rgb(219, 219, 219);
 
-$background: #f4f4e7;
+$background: rgb(244, 244, 231);
 $logoBG: #e8e4c9;
 $bgClr: #e4e2d2;
 @mixin deets($left, $top, $blur, $opacity) {
@@ -22,11 +22,16 @@ $bgClr: #e4e2d2;
   $all: append($all, 0px 0px 25px rgba($glow, 0.9), comma);
   box-shadow: $all;
 }
-@mixin glow2($color, $glow) {
+@mixin shadow($color, $steps, $glow) {
   $all: ();
-  $all: append($all, -1px 1px 0 rgba($color, 0.1), comma);
-  $all: append($all, 1px -1px 0 rgba($glow, 0.1), comma);
-  $all: append($all, 0px 0px 25px rgba($glow, 0.9), comma);
+  $all: append($all, 0px 1px 0 rgba($color, 0.1), comma);
+  // $all: append($all, 1px -1px 25px lighten($glow, 5%), comma);
+  @for $i from 1 through $steps {
+    $all: append(
+      $all,
+      append($i * 0px $i * 1.9px $i * 1px, rgba($color, 2 / $i))
+    );
+  }
   box-shadow: $all;
 }
 html,
@@ -63,11 +68,25 @@ html {
     width: 100%; /* Full width */
     transition: top 0.5s; /* Transition effect when sliding down (and up) */
     z-index: 15;
-    // border-bottom: 2px solid #949055d0;
+    border-bottom: 7px solid darken($logoBG, 8%);
+    border-top: 8px solid darken($logoBG, 10%);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.05),
+      0 4px 4px rgba(0, 0, 0, 0.06);
     display: inline-flex;
-    padding-left: 56px;
-    padding-right: 56px;
+    padding-left: 30px;
+    padding-right: 30px;
     height: 90px;
+    a.contactButton {
+      font-family: "Alata", sans-serif;
+      border-radius: 30px;
+      padding: 10px 25px;
+      background: green;
+      position: absolute;
+      right: 35px;
+      top: 50%;
+      transform: translateY(-50%);
+      letter-spacing: 0.03em;
+    }
     .brickwallContainer {
       display: none;
       display: inline-flex;
@@ -83,7 +102,7 @@ html {
       color: #3f3525;
       font-size: 2.5em;
       padding-bottom: 21px;
-      padding-top: 25px;
+      padding-top: 18px;
       padding-left: 25px;
       padding-right: 1em;
       font-family: "TS Stamp";
@@ -102,17 +121,17 @@ html {
       padding: 15px;
       text-decoration: none;
     }
-    .navMask {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0px;
-      left: 0px;
-      background: transparent;
+    // .navMask {
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   top: 0px;
+    //   left: 0px;
+    //   background: transparent;
 
-      z-index: 14;
-      opacity: 0.7;
-    }
+    //   z-index: 14;
+    //   opacity: 0.7;
+    // }
   }
   main {
     padding: 0rem 0rem 0rem 0rem;
@@ -130,7 +149,7 @@ html {
         display: block;
         width: 100vw;
         height: 700px;
-        background: url("../public/terrazo2.svg");
+        // background: url("../public/terrazo2.svg");
         background-color: #e4e2d2;
         background-size: cover;
         background-repeat: no-repeat;
@@ -231,9 +250,7 @@ html {
         text-decoration: none;
         transform: translate(-50%, 0%);
         letter-spacing: 0.03em;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075),
-          0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.065),
-          0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.055);
+        @include shadow(darken(rgb(245, 245, 236), 30%), 5, white);
         transition: all 0.6s ease;
         font-size: 18px;
         overflow: hidden;
@@ -244,9 +261,7 @@ html {
         &:hover {
           cursor: pointer;
           transform: translate(-50%, -5%);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08),
-            0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08),
-            0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
+          @include shadow(darken(rgb(245, 245, 236), 25%), 10, white);
         }
         &:visited {
           color: $btnTxtClr;
@@ -337,20 +352,22 @@ html {
               border-radius: 8px;
               background: transparent;
               overflow: hidden;
-              box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075),
-                0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.065),
-                0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.055);
+              // box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075),
+              //   0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.065),
+              //   0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.055);
               height: auto;
               width: 100%;
               z-index: 2;
-              transition: all 0.4s ease;
+              transition: all 0.4s ease-in-out;
               -webkit-transform: translateZ(0);
               transform: translateY(1%);
+              @include shadow(darken(rgb(245, 245, 236), 20%), 6, white);
               &:hover {
-                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08),
-                  0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08),
-                  0 8px 10px rgba(0, 0, 0, 0.08),
-                  0 16px 20px rgba(0, 0, 0, 0.08);
+                @include shadow(darken(rgb(245, 245, 236), 20%), 12, white);
+                // box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08),
+                //   0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08),
+                //   0 8px 10px rgba(0, 0, 0, 0.08),
+                //   0 16px 20px rgba(0, 0, 0, 0.08);
                 transform: translateY(0%);
                 // a {
                 //   .imageContainer {
@@ -418,25 +435,18 @@ html {
 footer {
   width: 100%;
   margin-top: 3em;
-  .footerSVG {
-    display: block;
-    width: 100%;
-    path {
-      fill: $footerColor;
-    }
-  }
+
   .footerContent {
     width: 100%;
     display: block;
     height: 500px;
-    background-color: $footerColor;
     padding: 25px 0vw;
     .contact {
       font-family: "Antikor", sans-serif;
       background: hsla(53, 27%, 87%, 1);
       color: rgb(56, 56, 56);
       border-radius: 18px;
-      border: 1px solid rgb(56, 56, 56);
+      border: 1px solid darken(hsla(53, 27%, 87%, 1), 9%);
       width: 79vw;
       height: 300px;
       margin-right: 10.5vw;
@@ -507,15 +517,16 @@ footer {
         border-radius: 0.5em;
         text-decoration: none;
         height: 65px;
-        transition: all 0.6s ease;
+        transition: all 0.5s ease;
         overflow: hidden;
         display: inline-flex;
         justify-content: center;
         align-items: center;
         transform: translate(0%, 0%);
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075),
-          0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.065),
-          0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.055);
+        // box-shadow: -1px 1.9px 1px #b4af82, -2px 3.8px 2px #b4af82,
+        //   -3px 5.7px 3px rgba(180, 175, 130, 0.6666666667),
+        //   -4px 7.6px 4px rgba(180, 175, 130, 0.5);
+        @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 4, white);
         &:focus {
           outline: 0;
         }
@@ -547,11 +558,24 @@ footer {
         }
         &:hover {
           background: #6b7f88;
-          cursor: pointer;
           transform: translate(0%, -6%);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08),
-            0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08),
-            0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
+          @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 8, white);
+          // box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1),
+          //   1px -1px 0 rgba(255, 255, 255, 0.08),
+          //   -1px 1px 0 rgba(255, 255, 255, 0.08),
+          //   0px 0px 25px rgba(255, 255, 255, 0.4), -1px 1.9px 1px #b4af82,
+          //   -2px 3.8px 2px #b4af82,
+          //   -3px 5.7px 3px rgba(180, 175, 130, 0.6666666667),
+          //   -4px 7.6px 4px rgba(180, 175, 130, 0.5),
+          //   -5px 9.5px 5px rgba(180, 175, 130, 0.4),
+          //   -6px 11.4px 6px rgba(180, 175, 130, 0.3333333333),
+          //   -7px 13.3px 7px rgba(180, 175, 130, 0.2857142857),
+          //   -8px 15.2px 8px rgba(180, 175, 130, 0.25),
+          //   -9px 17.1px 9px rgba(180, 175, 130, 0.2222222222),
+          //   -10px 19px 10px rgba(180, 175, 130, 0.2),
+          //   -11px 20.9px 11px rgba(180, 175, 130, 0.1818181818),
+          //   -12px 22.8px 12px rgba(180, 175, 130, 0.1666666667),
+          //   -13px 24.7px 13px rgba(180, 175, 130, 0.1538461538);
           &:before {
             transform: translateX(300px) skewX(-15deg);
             opacity: 0.6;
@@ -769,7 +793,7 @@ $animationLength: 0.9s;
     .innerFrame {
       height: calc(100% - 50px);
       width: calc(100% - 50px);
-      border: 1px solid rgb(108, 83, 83);
+      border: 1px solid rgb(194, 186, 136);
       position: absolute;
       top: 50%;
       left: 50%;

@@ -29,7 +29,10 @@ export default function Home() {
         <div className="OTLText">
           Old <span className="middle">Town L</span>ofts
         </div>
-        <div className="navMask"></div>
+        {/* <div className="navMask"></div> */}
+        <a className="contactButton" href="#contact">
+          Contact
+        </a>
       </nav>
       <main>
         <div className="marqueeWrapper">
@@ -184,10 +187,6 @@ export default function Home() {
         </div>
       </main>
       <footer id="footer">
-        <svg viewBox="0 0 1198 30" className="footerSVG">
-          <path d="M-1,30C-1,30,599,30,599,30C599,30,599,19.33,599,0C453.66,0,374.09,14.24,199.67,22.97C89.21,28.49,-1,30,-1,30C-1,30,-1,30,-1,30M1199,30C1199,30,599,30,599,30C599,30,599,19.33,599,0C744.34,0,823.91,14.24,998.33,22.97C1108.79,28.49,1199,30,1199,30C1199,30,1199,30,1199,30"></path>
-        </svg>
-
         <div className="footerContent">
           <div className="contact">
             <h1>Contact</h1>
@@ -219,7 +218,7 @@ export default function Home() {
               <img className="appImg" src="/file.svg" alt="my image" />
             </a>
           </div>
-          <div className="freepikContainer">
+          {/* <div className="freepikContainer">
             Some icons made by
             <a
               className="freepik"
@@ -237,7 +236,7 @@ export default function Home() {
             >
               www.flaticon.com
             </a>
-          </div>
+          </div> */}
         </div>
       </footer>
 

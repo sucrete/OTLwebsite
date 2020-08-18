@@ -52,12 +52,29 @@ html {
   transition: top 0.5s;
   /* Transition effect when sliding down (and up) */
   z-index: 15;
+  border-bottom: 7px solid #dcd6ac;
+  border-top: 8px solid #d9d2a5;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.05), 0 4px 4px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.05), 0 4px 4px rgba(0, 0, 0, 0.06);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding-left: 56px;
-  padding-right: 56px;
+  padding-left: 30px;
+  padding-right: 30px;
   height: 90px;
+}
+
+.container .navBar a.contactButton {
+  font-family: "Alata", sans-serif;
+  border-radius: 30px;
+  padding: 10px 25px;
+  background: green;
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  letter-spacing: 0.03em;
 }
 
 .container .navBar .brickwallContainer {
@@ -78,7 +95,7 @@ html {
   color: #3f3525;
   font-size: 2.5em;
   padding-bottom: 21px;
-  padding-top: 25px;
+  padding-top: 18px;
   padding-left: 25px;
   padding-right: 1em;
   font-family: "TS Stamp";
@@ -98,17 +115,6 @@ html {
   text-align: center;
   padding: 15px;
   text-decoration: none;
-}
-
-.container .navBar .navMask {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background: transparent;
-  z-index: 14;
-  opacity: 0.7;
 }
 
 .container main {
@@ -142,7 +148,6 @@ html {
   display: block;
   width: 100vw;
   height: 700px;
-  background: url("../public/terrazo2.svg");
   background-color: #e4e2d2;
   background-size: cover;
   background-repeat: no-repeat;
@@ -193,8 +198,8 @@ html {
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
   letter-spacing: 0.03em;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.065), 0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.055);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.065), 0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.055);
+  -webkit-box-shadow: 0px 1px 0 rgba(192, 192, 136, 0.1), 0px 1.9px 1px #c0c088, 0px 3.8px 2px #c0c088, 0px 5.7px 3px rgba(192, 192, 136, 0.666667), 0px 7.6px 4px rgba(192, 192, 136, 0.5), 0px 9.5px 5px rgba(192, 192, 136, 0.4);
+          box-shadow: 0px 1px 0 rgba(192, 192, 136, 0.1), 0px 1.9px 1px #c0c088, 0px 3.8px 2px #c0c088, 0px 5.7px 3px rgba(192, 192, 136, 0.666667), 0px 7.6px 4px rgba(192, 192, 136, 0.5), 0px 9.5px 5px rgba(192, 192, 136, 0.4);
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
   font-size: 18px;
@@ -210,8 +215,8 @@ html {
   cursor: pointer;
   -webkit-transform: translate(-50%, -5%);
           transform: translate(-50%, -5%);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 1px 0 rgba(201, 201, 152, 0.1), 0px 1.9px 1px #c9c998, 0px 3.8px 2px #c9c998, 0px 5.7px 3px rgba(201, 201, 152, 0.666667), 0px 7.6px 4px rgba(201, 201, 152, 0.5), 0px 9.5px 5px rgba(201, 201, 152, 0.4), 0px 11.4px 6px rgba(201, 201, 152, 0.333333), 0px 13.3px 7px rgba(201, 201, 152, 0.285714), 0px 15.2px 8px rgba(201, 201, 152, 0.25), 0px 17.1px 9px rgba(201, 201, 152, 0.222222), 0px 19px 10px rgba(201, 201, 152, 0.2);
+          box-shadow: 0px 1px 0 rgba(201, 201, 152, 0.1), 0px 1.9px 1px #c9c998, 0px 3.8px 2px #c9c998, 0px 5.7px 3px rgba(201, 201, 152, 0.666667), 0px 7.6px 4px rgba(201, 201, 152, 0.5), 0px 9.5px 5px rgba(201, 201, 152, 0.4), 0px 11.4px 6px rgba(201, 201, 152, 0.333333), 0px 13.3px 7px rgba(201, 201, 152, 0.285714), 0px 15.2px 8px rgba(201, 201, 152, 0.25), 0px 17.1px 9px rgba(201, 201, 152, 0.222222), 0px 19px 10px rgba(201, 201, 152, 0.2);
 }
 
 .container main .marqueeWrapper a.buttonContainer:visited {
@@ -329,20 +334,20 @@ html {
   border-radius: 8px;
   background: transparent;
   overflow: hidden;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.065), 0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.055);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.065), 0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.055);
   height: auto;
   width: 100%;
   z-index: 2;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   -webkit-transform: translateZ(0);
   transform: translateY(1%);
+  -webkit-box-shadow: 0px 1px 0 rgba(210, 210, 169, 0.1), 0px 1.9px 1px #d2d2a9, 0px 3.8px 2px #d2d2a9, 0px 5.7px 3px rgba(210, 210, 169, 0.666667), 0px 7.6px 4px rgba(210, 210, 169, 0.5), 0px 9.5px 5px rgba(210, 210, 169, 0.4), 0px 11.4px 6px rgba(210, 210, 169, 0.333333);
+          box-shadow: 0px 1px 0 rgba(210, 210, 169, 0.1), 0px 1.9px 1px #d2d2a9, 0px 3.8px 2px #d2d2a9, 0px 5.7px 3px rgba(210, 210, 169, 0.666667), 0px 7.6px 4px rgba(210, 210, 169, 0.5), 0px 9.5px 5px rgba(210, 210, 169, 0.4), 0px 11.4px 6px rgba(210, 210, 169, 0.333333);
 }
 
 .container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:hover {
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 1px 0 rgba(210, 210, 169, 0.1), 0px 1.9px 1px #d2d2a9, 0px 3.8px 2px #d2d2a9, 0px 5.7px 3px rgba(210, 210, 169, 0.666667), 0px 7.6px 4px rgba(210, 210, 169, 0.5), 0px 9.5px 5px rgba(210, 210, 169, 0.4), 0px 11.4px 6px rgba(210, 210, 169, 0.333333), 0px 13.3px 7px rgba(210, 210, 169, 0.285714), 0px 15.2px 8px rgba(210, 210, 169, 0.25), 0px 17.1px 9px rgba(210, 210, 169, 0.222222), 0px 19px 10px rgba(210, 210, 169, 0.2), 0px 20.9px 11px rgba(210, 210, 169, 0.181818), 0px 22.8px 12px rgba(210, 210, 169, 0.166667);
+          box-shadow: 0px 1px 0 rgba(210, 210, 169, 0.1), 0px 1.9px 1px #d2d2a9, 0px 3.8px 2px #d2d2a9, 0px 5.7px 3px rgba(210, 210, 169, 0.666667), 0px 7.6px 4px rgba(210, 210, 169, 0.5), 0px 9.5px 5px rgba(210, 210, 169, 0.4), 0px 11.4px 6px rgba(210, 210, 169, 0.333333), 0px 13.3px 7px rgba(210, 210, 169, 0.285714), 0px 15.2px 8px rgba(210, 210, 169, 0.25), 0px 17.1px 9px rgba(210, 210, 169, 0.222222), 0px 19px 10px rgba(210, 210, 169, 0.2), 0px 20.9px 11px rgba(210, 210, 169, 0.181818), 0px 22.8px 12px rgba(210, 210, 169, 0.166667);
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
@@ -410,20 +415,10 @@ footer {
   margin-top: 3em;
 }
 
-footer .footerSVG {
-  display: block;
-  width: 100%;
-}
-
-footer .footerSVG path {
-  fill: #dbdbdb;
-}
-
 footer .footerContent {
   width: 100%;
   display: block;
   height: 500px;
-  background-color: #dbdbdb;
   padding: 25px 0vw;
 }
 
@@ -432,7 +427,7 @@ footer .footerContent .contact {
   background: #e7e5d5;
   color: #383838;
   border-radius: 18px;
-  border: 1px solid #383838;
+  border: 1px solid #d6d3b8;
   width: 79vw;
   height: 300px;
   margin-right: 10.5vw;
@@ -515,8 +510,8 @@ footer .footerContent .contact .appButton {
   border-radius: 0.5em;
   text-decoration: none;
   height: 65px;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   overflow: hidden;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -529,8 +524,8 @@ footer .footerContent .contact .appButton {
           align-items: center;
   -webkit-transform: translate(0%, 0%);
           transform: translate(0%, 0%);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.065), 0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.055);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.065), 0 8px 8px rgba(0, 0, 0, 0.06), 0 16px 16px rgba(0, 0, 0, 0.055);
+  -webkit-box-shadow: 0px 1px 0 rgba(184, 178, 132, 0.1), 0px 1.9px 1px #b8b284, 0px 3.8px 2px #b8b284, 0px 5.7px 3px rgba(184, 178, 132, 0.666667), 0px 7.6px 4px rgba(184, 178, 132, 0.5);
+          box-shadow: 0px 1px 0 rgba(184, 178, 132, 0.1), 0px 1.9px 1px #b8b284, 0px 3.8px 2px #b8b284, 0px 5.7px 3px rgba(184, 178, 132, 0.666667), 0px 7.6px 4px rgba(184, 178, 132, 0.5);
 }
 
 footer .footerContent .contact .appButton:focus {
@@ -571,11 +566,10 @@ footer .footerContent .contact .appButton:after {
 
 footer .footerContent .contact .appButton:hover {
   background: #6b7f88;
-  cursor: pointer;
   -webkit-transform: translate(0%, -6%);
           transform: translate(0%, -6%);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 10px rgba(0, 0, 0, 0.08), 0 16px 20px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 1px 0 rgba(184, 178, 132, 0.1), 0px 1.9px 1px #b8b284, 0px 3.8px 2px #b8b284, 0px 5.7px 3px rgba(184, 178, 132, 0.666667), 0px 7.6px 4px rgba(184, 178, 132, 0.5), 0px 9.5px 5px rgba(184, 178, 132, 0.4), 0px 11.4px 6px rgba(184, 178, 132, 0.333333), 0px 13.3px 7px rgba(184, 178, 132, 0.285714), 0px 15.2px 8px rgba(184, 178, 132, 0.25);
+          box-shadow: 0px 1px 0 rgba(184, 178, 132, 0.1), 0px 1.9px 1px #b8b284, 0px 3.8px 2px #b8b284, 0px 5.7px 3px rgba(184, 178, 132, 0.666667), 0px 7.6px 4px rgba(184, 178, 132, 0.5), 0px 9.5px 5px rgba(184, 178, 132, 0.4), 0px 11.4px 6px rgba(184, 178, 132, 0.333333), 0px 13.3px 7px rgba(184, 178, 132, 0.285714), 0px 15.2px 8px rgba(184, 178, 132, 0.25);
 }
 
 footer .footerContent .contact .appButton:hover:before {
@@ -836,7 +830,7 @@ img {
 .cardContainer .bizCard .innerFrame {
   height: calc(100% - 50px);
   width: calc(100% - 50px);
-  border: 1px solid #6c5353;
+  border: 1px solid #c2ba88;
   position: absolute;
   top: 50%;
   left: 50%;
