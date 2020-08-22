@@ -68,7 +68,7 @@ html {
   padding: 10px 25px;
   line-height: 130%;
   background-image: url("../public/backticket.svg");
-  color: #3f3d1c;
+  color: #e6e3c6;
   text-shadow: 1px 1px #6f8247, 2px 2px #6f8247, 3px 3px #6f8247, 4px 4px #6f8247, 5px 5px #6f8247, 6px 6px #6f8247, 7px 7px #6f8247, 8px 8px #6f8247, 9px 9px #6f8247, 10px 10px #6f8247, 11px 11px #6f8247, 12px 12px #6f8247, 13px 13px #6f8247, 14px 14px #6f8247, 15px 15px #6f8247, 16px 16px #6f8247, 17px 17px #6f8247, 18px 18px #6f8247, 19px 19px #6f8247, 20px 20px #6f8247, 21px 21px #6f8247, 22px 22px #6f8247, 23px 23px #6f8247, 24px 24px #6f8247, 25px 25px #6f8247, 26px 26px #6f8247, 27px 27px #6f8247, 28px 28px #6f8247, 29px 29px #6f8247, 30px 30px #6f8247, 31px 31px #6f8247, 32px 32px #6f8247, 33px 33px #6f8247, 34px 34px #6f8247, 35px 35px #6f8247, 36px 36px #6f8247, 37px 37px #6f8247, 38px 38px #6f8247, 39px 39px #6f8247, 40px 40px #6f8247, 41px 41px #6f8247, 42px 42px #6f8247, 43px 43px #6f8247, 44px 44px #6f8247, 45px 45px #6f8247, 46px 46px #6f8247, 47px 47px #6f8247, 48px 48px #6f8247, 49px 49px #6f8247, 50px 50px #6f8247, 51px 51px #6f8247, 52px 52px #6f8247, 53px 53px #6f8247, 54px 54px #6f8247, 55px 55px #6f8247, 56px 56px #6f8247, 57px 57px #6f8247, 58px 58px #6f8247, 59px 59px #6f8247, 60px 60px #6f8247;
   position: absolute;
   right: 40px;
@@ -87,7 +87,7 @@ html {
 }
 
 .container .navBar a.contactButton:hover {
-  color: #e6e3c6;
+  color: #fdfad8;
 }
 
 .container .navBar a.contactButton:hover svg {
@@ -165,7 +165,7 @@ html {
   display: block;
   width: 100vw;
   height: 700px;
-  background-color: #e4e2d2;
+  background-color: #f1edd1;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 2em;
