@@ -42,8 +42,6 @@ html {
 .container .navBar {
   background-color: #e0dbb7;
   /* Black background color */
-  position: fixed;
-  /* Make it stick/fixed */
   top: 0;
   /* Stay on top */
   width: 100%;
@@ -54,8 +52,8 @@ html {
   z-index: 15;
   border-bottom: 7px solid #dcd6ac;
   border-top: 8px solid #d9d2a5;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.05), 0 4px 4px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.05), 0 4px 4px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 1px 0 rgba(209, 205, 178, 0), -1px 1.9px 1px #d1cdb2, -2px 3.8px 2px rgba(209, 205, 178, 0.75), -3px 5.7px 3px rgba(209, 205, 178, 0.5), -4px 7.6px 4px rgba(209, 205, 178, 0.375);
+          box-shadow: 0px 1px 0 rgba(209, 205, 178, 0), -1px 1.9px 1px #d1cdb2, -2px 3.8px 2px rgba(209, 205, 178, 0.75), -3px 5.7px 3px rgba(209, 205, 178, 0.5), -4px 7.6px 4px rgba(209, 205, 178, 0.375);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -66,15 +64,34 @@ html {
 
 .container .navBar a.contactButton {
   font-family: "Alata", sans-serif;
-  border-radius: 30px;
+  font-size: 1.3em;
   padding: 10px 25px;
-  background: green;
+  line-height: 130%;
+  background-image: url("../public/backticket.svg");
+  color: #3f3d1c;
+  text-shadow: 1px 1px #6f8247, 2px 2px #6f8247, 3px 3px #6f8247, 4px 4px #6f8247, 5px 5px #6f8247, 6px 6px #6f8247, 7px 7px #6f8247, 8px 8px #6f8247, 9px 9px #6f8247, 10px 10px #6f8247, 11px 11px #6f8247, 12px 12px #6f8247, 13px 13px #6f8247, 14px 14px #6f8247, 15px 15px #6f8247, 16px 16px #6f8247, 17px 17px #6f8247, 18px 18px #6f8247, 19px 19px #6f8247, 20px 20px #6f8247, 21px 21px #6f8247, 22px 22px #6f8247, 23px 23px #6f8247, 24px 24px #6f8247, 25px 25px #6f8247, 26px 26px #6f8247, 27px 27px #6f8247, 28px 28px #6f8247, 29px 29px #6f8247, 30px 30px #6f8247, 31px 31px #6f8247, 32px 32px #6f8247, 33px 33px #6f8247, 34px 34px #6f8247, 35px 35px #6f8247, 36px 36px #6f8247, 37px 37px #6f8247, 38px 38px #6f8247, 39px 39px #6f8247, 40px 40px #6f8247, 41px 41px #6f8247, 42px 42px #6f8247, 43px 43px #6f8247, 44px 44px #6f8247, 45px 45px #6f8247, 46px 46px #6f8247, 47px 47px #6f8247, 48px 48px #6f8247, 49px 49px #6f8247, 50px 50px #6f8247, 51px 51px #6f8247, 52px 52px #6f8247, 53px 53px #6f8247, 54px 54px #6f8247, 55px 55px #6f8247, 56px 56px #6f8247, 57px 57px #6f8247, 58px 58px #6f8247, 59px 59px #6f8247, 60px 60px #6f8247;
   position: absolute;
-  right: 35px;
-  top: 50%;
+  right: 40px;
+  top: 47px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 52px;
+  width: 175px;
+  overflow: hidden;
+}
+
+.container .navBar a.contactButton:hover {
+  color: #353317;
+}
+
+.container .navBar a.contactButton:hover svg {
+  fill: yellow;
 }
 
 .container .navBar .brickwallContainer {
@@ -159,28 +176,9 @@ html {
           backdrop-filter: hue-rotate(120%);
 }
 
-.container main .marqueeWrapper .OTLLogoContainer {
-  position: absolute;
-  padding: 60px;
-  padding-left: 70px;
-  padding-right: 70px;
-  text-align: left;
-  background: #e8e4c9;
-  border-radius: 1px;
-  z-index: 8;
-  top: 36%;
-  left: 15%;
-  height: 270px;
-  width: 455px;
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg);
-  -webkit-box-shadow: -1px 1px 0 rgba(212, 212, 161, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.9);
-          box-shadow: -1px 1px 0 rgba(212, 212, 161, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.9);
-}
-
 .container main .marqueeWrapper a.buttonContainer {
   position: absolute;
-  background: #ebba7a;
+  background: #e2ac5a;
   padding: 10px 12px 10px 27px;
   border-radius: 0.5em;
   display: -webkit-inline-box;
@@ -198,8 +196,8 @@ html {
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
   letter-spacing: 0.03em;
-  -webkit-box-shadow: 0px 1px 0 rgba(217, 217, 183, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #d9d9b7, -2px 3.8px 2px rgba(217, 217, 183, 0.75), -3px 5.7px 3px rgba(217, 217, 183, 0.5), -4px 7.6px 4px rgba(217, 217, 183, 0.375), -5px 9.5px 5px rgba(217, 217, 183, 0.3);
-          box-shadow: 0px 1px 0 rgba(217, 217, 183, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #d9d9b7, -2px 3.8px 2px rgba(217, 217, 183, 0.75), -3px 5.7px 3px rgba(217, 217, 183, 0.5), -4px 7.6px 4px rgba(217, 217, 183, 0.375), -5px 9.5px 5px rgba(217, 217, 183, 0.3);
+  -webkit-box-shadow: 0px 1px 0 rgba(217, 217, 183, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #d9d9b7, -2px 3.8px 2px rgba(217, 217, 183, 0.75), -3px 5.7px 3px rgba(217, 217, 183, 0.5), -4px 7.6px 4px rgba(217, 217, 183, 0.375);
+          box-shadow: 0px 1px 0 rgba(217, 217, 183, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #d9d9b7, -2px 3.8px 2px rgba(217, 217, 183, 0.75), -3px 5.7px 3px rgba(217, 217, 183, 0.5), -4px 7.6px 4px rgba(217, 217, 183, 0.375);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   font-size: 18px;
@@ -215,8 +213,8 @@ html {
   cursor: pointer;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
-  -webkit-box-shadow: 0px 1px 0 rgba(217, 217, 183, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #d9d9b7, -2px 3.8px 2px rgba(217, 217, 183, 0.75), -3px 5.7px 3px rgba(217, 217, 183, 0.5), -4px 7.6px 4px rgba(217, 217, 183, 0.375), -5px 9.5px 5px rgba(217, 217, 183, 0.3), -6px 11.4px 6px rgba(217, 217, 183, 0.25), -7px 13.3px 7px rgba(217, 217, 183, 0.214286), -8px 15.2px 8px rgba(217, 217, 183, 0.1875), -9px 17.1px 9px rgba(217, 217, 183, 0.166667);
-          box-shadow: 0px 1px 0 rgba(217, 217, 183, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #d9d9b7, -2px 3.8px 2px rgba(217, 217, 183, 0.75), -3px 5.7px 3px rgba(217, 217, 183, 0.5), -4px 7.6px 4px rgba(217, 217, 183, 0.375), -5px 9.5px 5px rgba(217, 217, 183, 0.3), -6px 11.4px 6px rgba(217, 217, 183, 0.25), -7px 13.3px 7px rgba(217, 217, 183, 0.214286), -8px 15.2px 8px rgba(217, 217, 183, 0.1875), -9px 17.1px 9px rgba(217, 217, 183, 0.166667);
+  -webkit-box-shadow: 0px 1px 0 rgba(217, 217, 183, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #d9d9b7, -2px 3.8px 2px rgba(217, 217, 183, 0.75), -3px 5.7px 3px rgba(217, 217, 183, 0.5), -4px 7.6px 4px rgba(217, 217, 183, 0.375), -5px 9.5px 5px rgba(217, 217, 183, 0.3), -6px 11.4px 6px rgba(217, 217, 183, 0.25), -7px 13.3px 7px rgba(217, 217, 183, 0.214286), -8px 15.2px 8px rgba(217, 217, 183, 0.1875), -9px 17.1px 9px rgba(217, 217, 183, 0.166667), -10px 19px 10px rgba(217, 217, 183, 0.15);
+          box-shadow: 0px 1px 0 rgba(217, 217, 183, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #d9d9b7, -2px 3.8px 2px rgba(217, 217, 183, 0.75), -3px 5.7px 3px rgba(217, 217, 183, 0.5), -4px 7.6px 4px rgba(217, 217, 183, 0.375), -5px 9.5px 5px rgba(217, 217, 183, 0.3), -6px 11.4px 6px rgba(217, 217, 183, 0.25), -7px 13.3px 7px rgba(217, 217, 183, 0.214286), -8px 15.2px 8px rgba(217, 217, 183, 0.1875), -9px 17.1px 9px rgba(217, 217, 183, 0.166667), -10px 19px 10px rgba(217, 217, 183, 0.15);
 }
 
 .container main .marqueeWrapper a.buttonContainer:visited {
@@ -283,7 +281,7 @@ html {
 .container main .marqueeWrapper a.buttonContainer span {
   position: relative;
   font-family: "Alata", sans-serif;
-  color: #97774c;
+  color: #8b6e46;
   font-size: 1.3em;
   width: 100%;
   height: 100%;
@@ -741,7 +739,7 @@ img {
 
 .parentCardContainer {
   position: absolute;
-  top: 32%;
+  top: 22%;
   left: 12%;
   z-index: 5;
 }
@@ -819,8 +817,8 @@ img {
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
   opacity: 1;
   z-index: 10;
-  -webkit-animation: colorChange 0.3s ease;
-          animation: colorChange 0.3s ease;
+  -webkit-animation: colorChange 0.2s linear;
+          animation: colorChange 0.2s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -1039,14 +1037,14 @@ img {
 @-webkit-keyframes colorChange {
   to {
     background: transparent;
-    opacity: 0.3;
+    opacity: 0.7;
   }
 }
 
 @keyframes colorChange {
   to {
     background: transparent;
-    opacity: 0.3;
+    opacity: 0.7;
   }
 }
 

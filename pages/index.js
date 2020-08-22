@@ -30,7 +30,7 @@ export default function Home() {
           Old <span className="middle">Town L</span>ofts
         </div>
         {/* <div className="navMask"></div> */}
-        <a className="contactButton" href="#contact">
+        <a className="contactButton" href="#footer">
           Contact
         </a>
       </nav>
@@ -121,56 +121,8 @@ export default function Home() {
               >
                 <rect x="35" y="35" height="270" width="455" />
               </svg>
-              {/* <svg
-                class="shadow _11"
-                viewBox="0 0 525 340"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect x="35" y="35" height="270" width="455" />
-              </svg>
-              <svg
-                class="shadow _12"
-                viewBox="0 0 525 340"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect x="35" y="35" height="270" width="455" />
-              </svg>
-              <svg
-                class="shadow _13"
-                viewBox="0 0 525 340"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect x="35" y="35" height="270" width="455" />
-              </svg>
-              <svg
-                class="shadow _14"
-                viewBox="0 0 525 340"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect x="35" y="35" height="270" width="455" />
-              </svg>
-              <svg
-                class="shadow _15"
-                viewBox="0 0 525 340"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect x="35" y="35" height="270" width="455" />
-              </svg> */}
             </div>
           </div>
-          {/* <div className="OTLLogoContainer">
-            <img src="/corner.svg" className="corner TL" />
-            <img src="/corner.svg" className="corner TR" />
-            <img src="/corner.svg" className="corner BL" />
-            <img src="/corner.svg" className="corner BR" />
-            <div className="innerFrame"></div>
-            <div className="mask"></div>
-
-            <div className="quoteBox">
-              <img src="/affordable.svg" />
-            </div>
-          </div> */}
-
           <a href="#cards" className="buttonContainer">
             <span>Our Properties</span>
             <svg
@@ -241,6 +193,30 @@ export default function Home() {
       </footer>
 
       <style jsx global>{``}</style>
+      <svg
+        style={{ visibility: "hidden", position: "absolute" }}
+        width="0"
+        height="0"
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+      >
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+              result="goo"
+            />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+          </filter>
+        </defs>
+      </svg>
     </div>
   );
 }
