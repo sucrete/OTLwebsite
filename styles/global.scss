@@ -75,7 +75,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   .navBar {
-    background-color: darken($logoBG, 5%); /* Black background color */
+    background-color: darken($logoBG, 5%);
     // position: fixed; /* Make it stick/fixed */
     top: 0; /* Stay on top */
     width: 100%; /* Full width */
@@ -95,16 +95,16 @@ html {
       padding: 10px 25px;
       line-height: 130%;
       background-image: url("../public/backticket.svg");
-      color: rgb(230, 227, 198);
+      color: rgb(253, 250, 216);
       @mixin angledshadow($color, $steps) {
         $all: ();
-        $all: append($all, 1px 1px darken($color, 3%), comma);
+        $all: append($all, 1px 1px $color, comma);
         @for $i from 2 through $steps {
-          $all: append($all, append($i * 1px $i * 1px, darken($color, 3%)));
+          $all: append($all, append($i * 1px $i * 1px, $color));
         }
         text-shadow: $all;
       }
-      @include angledshadow(#778c4c, 60);
+      @include angledshadow(#7b8750, 60);
       position: absolute;
       right: 40px;
       top: 47px;
@@ -118,7 +118,8 @@ html {
       width: 175px;
       overflow: hidden;
       &:hover {
-        color: rgb(253, 250, 216);
+        color: rgb(247, 246, 229);
+        @include angledshadow(#76814c, 60);
         svg {
           fill: yellow;
         }
@@ -187,7 +188,7 @@ html {
         width: 100vw;
         height: 700px;
         // background: url("../public/terrazo2.svg");
-        background-color: #f1edd1;
+        background-color: #f0eede;
         background-size: cover;
         background-repeat: no-repeat;
         margin-bottom: 2em;
@@ -233,7 +234,7 @@ html {
           width: auto;
           position: relative;
           path {
-            fill: #97774c;
+            fill: rgb(151, 119, 76);
           }
         }
         &:focus {
@@ -402,10 +403,10 @@ footer {
     padding: 25px 0vw;
     .contact {
       font-family: "Antikor", sans-serif;
-      background: hsla(53, 27%, 87%, 1);
+      background-color: $logoBG;
       color: rgb(56, 56, 56);
-      border-radius: 18px;
-      border: 1px solid darken(hsla(53, 27%, 87%, 1), 9%);
+      // border-radius: 18px;
+      border: 7px solid darken($logoBG, 3%);
       width: 79vw;
       height: 300px;
       margin-right: 10.5vw;
@@ -413,22 +414,12 @@ footer {
       padding: 2.7em 2em 2em 2em;
       position: relative;
       z-index: 2;
-      &:after {
-        content: "";
-        height: 100%;
-        background: hsla(53, 27%, 87%, 1);
-        position: absolute;
-        width: 203px;
-        height: 10px;
-        left: 1.6em;
-        top: -1px;
-        z-index: -1;
-      }
+
       h1 {
         position: relative;
         padding-right: 9px;
         font-size: 2.7em;
-        margin-top: -2em;
+        margin-top: -0.8em;
         margin-block-end: 0.2em;
         font-family: "Alata", serif;
         letter-spacing: 0.05em;
@@ -472,7 +463,7 @@ footer {
         color: $btnTxtClr;
         text-decoration: none;
         position: absolute;
-        background-color: #797574;
+        background: rgb(63, 61, 28);
         padding: 10px 20px 10px 25px;
         border-radius: 0.5em;
         text-decoration: none;
@@ -517,7 +508,7 @@ footer {
           transform: translateX(-100px) skewX(-15deg);
         }
         &:hover {
-          background: #6b7f88;
+          background: rgb(83, 81, 37);
           // transform: translate(0%, -6%);
           @include shadow2(darken(hsla(53, 27%, 87%, 1), 20%), 10, white);
           // box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1),
@@ -561,7 +552,7 @@ footer {
           letter-spacing: 0.03em;
         }
         .appImg {
-          filter: sepia(0.4);
+          // filter: sepia(0.4);
           height: 30px;
           width: auto;
           padding-left: 10px;

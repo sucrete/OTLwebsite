@@ -41,7 +41,6 @@ html {
 
 .container .navBar {
   background-color: #e0dbb7;
-  /* Black background color */
   top: 0;
   /* Stay on top */
   width: 100%;
@@ -68,8 +67,8 @@ html {
   padding: 10px 25px;
   line-height: 130%;
   background-image: url("../public/backticket.svg");
-  color: #e6e3c6;
-  text-shadow: 1px 1px #6f8247, 2px 2px #6f8247, 3px 3px #6f8247, 4px 4px #6f8247, 5px 5px #6f8247, 6px 6px #6f8247, 7px 7px #6f8247, 8px 8px #6f8247, 9px 9px #6f8247, 10px 10px #6f8247, 11px 11px #6f8247, 12px 12px #6f8247, 13px 13px #6f8247, 14px 14px #6f8247, 15px 15px #6f8247, 16px 16px #6f8247, 17px 17px #6f8247, 18px 18px #6f8247, 19px 19px #6f8247, 20px 20px #6f8247, 21px 21px #6f8247, 22px 22px #6f8247, 23px 23px #6f8247, 24px 24px #6f8247, 25px 25px #6f8247, 26px 26px #6f8247, 27px 27px #6f8247, 28px 28px #6f8247, 29px 29px #6f8247, 30px 30px #6f8247, 31px 31px #6f8247, 32px 32px #6f8247, 33px 33px #6f8247, 34px 34px #6f8247, 35px 35px #6f8247, 36px 36px #6f8247, 37px 37px #6f8247, 38px 38px #6f8247, 39px 39px #6f8247, 40px 40px #6f8247, 41px 41px #6f8247, 42px 42px #6f8247, 43px 43px #6f8247, 44px 44px #6f8247, 45px 45px #6f8247, 46px 46px #6f8247, 47px 47px #6f8247, 48px 48px #6f8247, 49px 49px #6f8247, 50px 50px #6f8247, 51px 51px #6f8247, 52px 52px #6f8247, 53px 53px #6f8247, 54px 54px #6f8247, 55px 55px #6f8247, 56px 56px #6f8247, 57px 57px #6f8247, 58px 58px #6f8247, 59px 59px #6f8247, 60px 60px #6f8247;
+  color: #fdfad8;
+  text-shadow: 1px 1px #7b8750, 2px 2px #7b8750, 3px 3px #7b8750, 4px 4px #7b8750, 5px 5px #7b8750, 6px 6px #7b8750, 7px 7px #7b8750, 8px 8px #7b8750, 9px 9px #7b8750, 10px 10px #7b8750, 11px 11px #7b8750, 12px 12px #7b8750, 13px 13px #7b8750, 14px 14px #7b8750, 15px 15px #7b8750, 16px 16px #7b8750, 17px 17px #7b8750, 18px 18px #7b8750, 19px 19px #7b8750, 20px 20px #7b8750, 21px 21px #7b8750, 22px 22px #7b8750, 23px 23px #7b8750, 24px 24px #7b8750, 25px 25px #7b8750, 26px 26px #7b8750, 27px 27px #7b8750, 28px 28px #7b8750, 29px 29px #7b8750, 30px 30px #7b8750, 31px 31px #7b8750, 32px 32px #7b8750, 33px 33px #7b8750, 34px 34px #7b8750, 35px 35px #7b8750, 36px 36px #7b8750, 37px 37px #7b8750, 38px 38px #7b8750, 39px 39px #7b8750, 40px 40px #7b8750, 41px 41px #7b8750, 42px 42px #7b8750, 43px 43px #7b8750, 44px 44px #7b8750, 45px 45px #7b8750, 46px 46px #7b8750, 47px 47px #7b8750, 48px 48px #7b8750, 49px 49px #7b8750, 50px 50px #7b8750, 51px 51px #7b8750, 52px 52px #7b8750, 53px 53px #7b8750, 54px 54px #7b8750, 55px 55px #7b8750, 56px 56px #7b8750, 57px 57px #7b8750, 58px 58px #7b8750, 59px 59px #7b8750, 60px 60px #7b8750;
   position: absolute;
   right: 40px;
   top: 47px;
@@ -87,7 +86,8 @@ html {
 }
 
 .container .navBar a.contactButton:hover {
-  color: #fdfad8;
+  color: #f7f6e5;
+  text-shadow: 1px 1px #76814c, 2px 2px #76814c, 3px 3px #76814c, 4px 4px #76814c, 5px 5px #76814c, 6px 6px #76814c, 7px 7px #76814c, 8px 8px #76814c, 9px 9px #76814c, 10px 10px #76814c, 11px 11px #76814c, 12px 12px #76814c, 13px 13px #76814c, 14px 14px #76814c, 15px 15px #76814c, 16px 16px #76814c, 17px 17px #76814c, 18px 18px #76814c, 19px 19px #76814c, 20px 20px #76814c, 21px 21px #76814c, 22px 22px #76814c, 23px 23px #76814c, 24px 24px #76814c, 25px 25px #76814c, 26px 26px #76814c, 27px 27px #76814c, 28px 28px #76814c, 29px 29px #76814c, 30px 30px #76814c, 31px 31px #76814c, 32px 32px #76814c, 33px 33px #76814c, 34px 34px #76814c, 35px 35px #76814c, 36px 36px #76814c, 37px 37px #76814c, 38px 38px #76814c, 39px 39px #76814c, 40px 40px #76814c, 41px 41px #76814c, 42px 42px #76814c, 43px 43px #76814c, 44px 44px #76814c, 45px 45px #76814c, 46px 46px #76814c, 47px 47px #76814c, 48px 48px #76814c, 49px 49px #76814c, 50px 50px #76814c, 51px 51px #76814c, 52px 52px #76814c, 53px 53px #76814c, 54px 54px #76814c, 55px 55px #76814c, 56px 56px #76814c, 57px 57px #76814c, 58px 58px #76814c, 59px 59px #76814c, 60px 60px #76814c;
 }
 
 .container .navBar a.contactButton:hover svg {
@@ -165,7 +165,7 @@ html {
   display: block;
   width: 100vw;
   height: 700px;
-  background-color: #f1edd1;
+  background-color: #f0eede;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 2em;
@@ -419,10 +419,9 @@ footer .footerContent {
 
 footer .footerContent .contact {
   font-family: "Antikor", sans-serif;
-  background: #e7e5d5;
+  background-color: #e8e4c9;
   color: #383838;
-  border-radius: 18px;
-  border: 1px solid #d6d3b8;
+  border: 7px solid #e3dfbe;
   width: 79vw;
   height: 300px;
   margin-right: 10.5vw;
@@ -432,23 +431,11 @@ footer .footerContent .contact {
   z-index: 2;
 }
 
-footer .footerContent .contact:after {
-  content: "";
-  height: 100%;
-  background: #e7e5d5;
-  position: absolute;
-  width: 203px;
-  height: 10px;
-  left: 1.6em;
-  top: -1px;
-  z-index: -1;
-}
-
 footer .footerContent .contact h1 {
   position: relative;
   padding-right: 9px;
   font-size: 2.7em;
-  margin-top: -2em;
+  margin-top: -0.8em;
   -webkit-margin-after: 0.2em;
           margin-block-end: 0.2em;
   font-family: "Alata", serif;
@@ -500,7 +487,7 @@ footer .footerContent .contact .appButton {
   color: #e2cec8;
   text-decoration: none;
   position: absolute;
-  background-color: #797574;
+  background: #3f3d1c;
   padding: 10px 20px 10px 25px;
   border-radius: 0.5em;
   text-decoration: none;
@@ -560,7 +547,7 @@ footer .footerContent .contact .appButton:after {
 }
 
 footer .footerContent .contact .appButton:hover {
-  background: #6b7f88;
+  background: #535125;
   -webkit-box-shadow: 0px 1px 0 rgba(194, 188, 148, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #c2bc94, -2px 3.8px 2px rgba(194, 188, 148, 0.75), -3px 5.7px 3px rgba(194, 188, 148, 0.5), -4px 7.6px 4px rgba(194, 188, 148, 0.375), -5px 9.5px 5px rgba(194, 188, 148, 0.3), -6px 11.4px 6px rgba(194, 188, 148, 0.25), -7px 13.3px 7px rgba(194, 188, 148, 0.214286), -8px 15.2px 8px rgba(194, 188, 148, 0.1875), -9px 17.1px 9px rgba(194, 188, 148, 0.166667), -10px 19px 10px rgba(194, 188, 148, 0.15);
           box-shadow: 0px 1px 0 rgba(194, 188, 148, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #c2bc94, -2px 3.8px 2px rgba(194, 188, 148, 0.75), -3px 5.7px 3px rgba(194, 188, 148, 0.5), -4px 7.6px 4px rgba(194, 188, 148, 0.375), -5px 9.5px 5px rgba(194, 188, 148, 0.3), -6px 11.4px 6px rgba(194, 188, 148, 0.25), -7px 13.3px 7px rgba(194, 188, 148, 0.214286), -8px 15.2px 8px rgba(194, 188, 148, 0.1875), -9px 17.1px 9px rgba(194, 188, 148, 0.166667), -10px 19px 10px rgba(194, 188, 148, 0.15);
 }
@@ -598,8 +585,6 @@ footer .footerContent .contact .appButton span {
 }
 
 footer .footerContent .contact .appButton .appImg {
-  -webkit-filter: sepia(0.4);
-          filter: sepia(0.4);
   height: 30px;
   width: auto;
   padding-left: 10px;
