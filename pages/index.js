@@ -37,6 +37,7 @@ export default function Home() {
       <main>
         <div className="marqueeWrapper">
           <div className="marquee"></div>
+          <div className="welcome">WELCOME</div>
           <div className="parentCardContainer">
             <div class="cardContainer">
               <div class="bizCard">
