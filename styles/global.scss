@@ -172,11 +172,13 @@ html {
       height: 600px;
       z-index: 11;
       .welcome {
-        color: green;
+        color: lighten(#f0eede, 3%);
         position: absolute;
-        font-size: 7em;
+        font-size: 13em;
+        font-family: "Alata";
         top: 20px;
         left: 50px;
+        z-index: 3;
       }
       .marquee {
         position: relative;
