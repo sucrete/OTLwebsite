@@ -83,7 +83,7 @@ html {
     transition: top 0.5s; /* Transition effect when sliding down (and up) */
     z-index: 15;
     border-bottom: 7px solid darken($logoBG, 8%);
-    border-top: 8px solid darken($logoBG, 10%);
+    border-top: 8px solid darken($logoBG, 12%);
     box-shadow: 0 1px 1px rgba(199, 197, 182, 0.5),
       0 2px 2px rgba(199, 197, 182, 0.4), 0 4px 4px rgba(199, 197, 182, 0.3),
       0 8px 8px rgba(199, 197, 182, 0.2), 0 16px 16px rgba(199, 197, 182, 0.1);
@@ -98,7 +98,7 @@ html {
       padding: 10px 25px;
       line-height: 130%;
       background-image: url("../public/backticket.svg");
-      color: rgb(253, 227, 188);
+      color: rgb(240, 241, 199);
       @mixin angledshadow($color, $steps) {
         $all: ();
         $all: append($all, 1px 1px $color, comma);
@@ -121,7 +121,7 @@ html {
       width: 175px;
       overflow: hidden;
       &:hover {
-        color: rgb(223, 198, 162);
+        color: rgb(252, 249, 246);
       }
     }
     .brickwallContainer {
@@ -174,9 +174,15 @@ html {
         position: absolute;
         font-size: 13em;
         font-family: "Alata";
-        top: 20px;
-        left: 70px;
+        top: -25px;
+        left: 100px;
         z-index: 3;
+        opacity: 0;
+        transform: translateX(50px);
+        animation-fill-mode: forwards;
+        animation-name: moveLeft;
+        animation-timing-function: ease;
+        animation-duration: 2s;
       }
       .marquee {
         position: relative;
@@ -186,7 +192,7 @@ html {
         background-color: #f0eede;
         background-size: cover;
         background-repeat: no-repeat;
-        border-bottom: 1px solid darken(#f0eede, 5%);
+        border-bottom: 1px solid darken(#f0eede, 7%);
         margin-bottom: 2em;
         background-size: 110%;
         background-repeat: no-repeat;
@@ -656,6 +662,9 @@ $animationLength: 0.9s;
   left: 12%;
   z-index: 5;
 }
+.parentCardContainer * {
+  animation-delay: 2500ms;
+}
 .cardContainer {
   width: 525px;
   height: 340px;
@@ -714,7 +723,10 @@ $animationLength: 0.9s;
       background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
       opacity: 1;
       z-index: 10;
-      animation: colorChange 0.2s linear;
+      animation-delay: 2.5s;
+      animation-name: colorChange;
+      animation-timing-function: linear;
+      animation-duration: 0.4s;
       animation-fill-mode: forwards;
     }
     .innerFrame {
@@ -847,5 +859,12 @@ $animationLength: 0.9s;
     box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1),
       1px -1px 0 rgba(255, 255, 255, 0.08), -1px 1px 0 rgba(255, 255, 255, 0.08),
       0px 0px 20px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes moveLeft {
+  to {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }

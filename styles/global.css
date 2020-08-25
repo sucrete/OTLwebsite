@@ -51,7 +51,7 @@ html {
   /* Transition effect when sliding down (and up) */
   z-index: 15;
   border-bottom: 7px solid #dcd6ac;
-  border-top: 8px solid #d9d2a5;
+  border-top: 8px solid #d6cf9e;
   -webkit-box-shadow: 0 1px 1px rgba(199, 197, 182, 0.5), 0 2px 2px rgba(199, 197, 182, 0.4), 0 4px 4px rgba(199, 197, 182, 0.3), 0 8px 8px rgba(199, 197, 182, 0.2), 0 16px 16px rgba(199, 197, 182, 0.1);
           box-shadow: 0 1px 1px rgba(199, 197, 182, 0.5), 0 2px 2px rgba(199, 197, 182, 0.4), 0 4px 4px rgba(199, 197, 182, 0.3), 0 8px 8px rgba(199, 197, 182, 0.2), 0 16px 16px rgba(199, 197, 182, 0.1);
   display: -webkit-inline-box;
@@ -68,7 +68,7 @@ html {
   padding: 10px 25px;
   line-height: 130%;
   background-image: url("../public/backticket.svg");
-  color: #fde3bc;
+  color: #f0f1c7;
   text-shadow: 1px 1px #7b8750, 2px 2px #7b8750, 3px 3px #7b8750, 4px 4px #7b8750, 5px 5px #7b8750, 6px 6px #7b8750, 7px 7px #7b8750, 8px 8px #7b8750, 9px 9px #7b8750, 10px 10px #7b8750, 11px 11px #7b8750, 12px 12px #7b8750, 13px 13px #7b8750, 14px 14px #7b8750, 15px 15px #7b8750, 16px 16px #7b8750, 17px 17px #7b8750, 18px 18px #7b8750, 19px 19px #7b8750, 20px 20px #7b8750, 21px 21px #7b8750, 22px 22px #7b8750, 23px 23px #7b8750, 24px 24px #7b8750, 25px 25px #7b8750, 26px 26px #7b8750, 27px 27px #7b8750, 28px 28px #7b8750, 29px 29px #7b8750, 30px 30px #7b8750, 31px 31px #7b8750, 32px 32px #7b8750, 33px 33px #7b8750, 34px 34px #7b8750, 35px 35px #7b8750, 36px 36px #7b8750, 37px 37px #7b8750, 38px 38px #7b8750, 39px 39px #7b8750, 40px 40px #7b8750, 41px 41px #7b8750, 42px 42px #7b8750, 43px 43px #7b8750, 44px 44px #7b8750, 45px 45px #7b8750, 46px 46px #7b8750, 47px 47px #7b8750, 48px 48px #7b8750, 49px 49px #7b8750, 50px 50px #7b8750, 51px 51px #7b8750, 52px 52px #7b8750, 53px 53px #7b8750, 54px 54px #7b8750, 55px 55px #7b8750, 56px 56px #7b8750, 57px 57px #7b8750, 58px 58px #7b8750, 59px 59px #7b8750, 60px 60px #7b8750;
   position: absolute;
   right: 40px;
@@ -87,7 +87,7 @@ html {
 }
 
 .container .navBar a.contactButton:hover {
-  color: #dfc6a2;
+  color: #fcf9f6;
 }
 
 .container .navBar .brickwallContainer {
@@ -160,9 +160,20 @@ html {
   position: absolute;
   font-size: 13em;
   font-family: "Alata";
-  top: 20px;
-  left: 70px;
+  top: -25px;
+  left: 100px;
   z-index: 3;
+  opacity: 0;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: moveLeft;
+          animation-name: moveLeft;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .container main .marqueeWrapper .marquee {
@@ -173,7 +184,7 @@ html {
   background-color: #f0eede;
   background-size: cover;
   background-repeat: no-repeat;
-  border-bottom: 1px solid #e8e5cc;
+  border-bottom: 1px solid #e5e1c5;
   margin-bottom: 2em;
   background-size: 110%;
   background-repeat: no-repeat;
@@ -730,6 +741,11 @@ img {
   z-index: 5;
 }
 
+.parentCardContainer * {
+  -webkit-animation-delay: 2500ms;
+          animation-delay: 2500ms;
+}
+
 .cardContainer {
   width: 525px;
   height: 340px;
@@ -803,8 +819,14 @@ img {
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
   opacity: 1;
   z-index: 10;
-  -webkit-animation: colorChange 0.2s linear;
-          animation: colorChange 0.2s linear;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-name: colorChange;
+          animation-name: colorChange;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -1071,6 +1093,22 @@ img {
   to {
     -webkit-box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.08), -1px 1px 0 rgba(255, 255, 255, 0.08), 0px 0px 20px rgba(255, 255, 255, 0.5);
             box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.08), -1px 1px 0 rgba(255, 255, 255, 0.08), 0px 0px 20px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@-webkit-keyframes moveLeft {
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes moveLeft {
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=global.css.map */
