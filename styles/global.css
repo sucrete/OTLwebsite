@@ -52,8 +52,8 @@ html {
   z-index: 15;
   border-bottom: 7px solid #dcd6ac;
   border-top: 8px solid #d9d2a5;
-  -webkit-box-shadow: 0px 1px 0 rgba(224, 222, 204, 0), -1px 1.9px 1px #e0decc, -2px 3.8px 2px rgba(224, 222, 204, 0.75), -3px 5.7px 3px rgba(224, 222, 204, 0.5), -4px 7.6px 4px rgba(224, 222, 204, 0.375), -5px 9.5px 5px rgba(224, 222, 204, 0.3);
-          box-shadow: 0px 1px 0 rgba(224, 222, 204, 0), -1px 1.9px 1px #e0decc, -2px 3.8px 2px rgba(224, 222, 204, 0.75), -3px 5.7px 3px rgba(224, 222, 204, 0.5), -4px 7.6px 4px rgba(224, 222, 204, 0.375), -5px 9.5px 5px rgba(224, 222, 204, 0.3);
+  -webkit-box-shadow: 0 1px 1px rgba(199, 197, 182, 0.5), 0 2px 2px rgba(199, 197, 182, 0.4), 0 4px 4px rgba(199, 197, 182, 0.3), 0 8px 8px rgba(199, 197, 182, 0.2), 0 16px 16px rgba(199, 197, 182, 0.1);
+          box-shadow: 0 1px 1px rgba(199, 197, 182, 0.5), 0 2px 2px rgba(199, 197, 182, 0.4), 0 4px 4px rgba(199, 197, 182, 0.3), 0 8px 8px rgba(199, 197, 182, 0.2), 0 16px 16px rgba(199, 197, 182, 0.1);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -68,7 +68,7 @@ html {
   padding: 10px 25px;
   line-height: 130%;
   background-image: url("../public/backticket.svg");
-  color: #fdfad8;
+  color: #fde3bc;
   text-shadow: 1px 1px #7b8750, 2px 2px #7b8750, 3px 3px #7b8750, 4px 4px #7b8750, 5px 5px #7b8750, 6px 6px #7b8750, 7px 7px #7b8750, 8px 8px #7b8750, 9px 9px #7b8750, 10px 10px #7b8750, 11px 11px #7b8750, 12px 12px #7b8750, 13px 13px #7b8750, 14px 14px #7b8750, 15px 15px #7b8750, 16px 16px #7b8750, 17px 17px #7b8750, 18px 18px #7b8750, 19px 19px #7b8750, 20px 20px #7b8750, 21px 21px #7b8750, 22px 22px #7b8750, 23px 23px #7b8750, 24px 24px #7b8750, 25px 25px #7b8750, 26px 26px #7b8750, 27px 27px #7b8750, 28px 28px #7b8750, 29px 29px #7b8750, 30px 30px #7b8750, 31px 31px #7b8750, 32px 32px #7b8750, 33px 33px #7b8750, 34px 34px #7b8750, 35px 35px #7b8750, 36px 36px #7b8750, 37px 37px #7b8750, 38px 38px #7b8750, 39px 39px #7b8750, 40px 40px #7b8750, 41px 41px #7b8750, 42px 42px #7b8750, 43px 43px #7b8750, 44px 44px #7b8750, 45px 45px #7b8750, 46px 46px #7b8750, 47px 47px #7b8750, 48px 48px #7b8750, 49px 49px #7b8750, 50px 50px #7b8750, 51px 51px #7b8750, 52px 52px #7b8750, 53px 53px #7b8750, 54px 54px #7b8750, 55px 55px #7b8750, 56px 56px #7b8750, 57px 57px #7b8750, 58px 58px #7b8750, 59px 59px #7b8750, 60px 60px #7b8750;
   position: absolute;
   right: 40px;
@@ -87,11 +87,7 @@ html {
 }
 
 .container .navBar a.contactButton:hover {
-  color: #f7f6e5;
-}
-
-.container .navBar a.contactButton:hover svg {
-  fill: yellow;
+  color: #dfc6a2;
 }
 
 .container .navBar .brickwallContainer {
@@ -126,7 +122,6 @@ html {
 }
 
 .container .navBar a {
-  float: left;
   display: block;
   color: white;
   text-align: center;
@@ -161,12 +156,12 @@ html {
 }
 
 .container main .marqueeWrapper .welcome {
-  color: #f5f3e9;
+  color: #f6f5ec;
   position: absolute;
   font-size: 13em;
   font-family: "Alata";
   top: 20px;
-  left: 50px;
+  left: 70px;
   z-index: 3;
 }
 
@@ -178,6 +173,7 @@ html {
   background-color: #f0eede;
   background-size: cover;
   background-repeat: no-repeat;
+  border-bottom: 1px solid #e8e5cc;
   margin-bottom: 2em;
   background-size: 110%;
   background-repeat: no-repeat;
@@ -206,8 +202,8 @@ html {
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
   letter-spacing: 0.03em;
-  -webkit-box-shadow: 0px 1px 0 rgba(192, 192, 136, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #c0c088, -2px 3.8px 2px rgba(192, 192, 136, 0.75), -3px 5.7px 3px rgba(192, 192, 136, 0.5), -4px 7.6px 4px rgba(192, 192, 136, 0.375);
-          box-shadow: 0px 1px 0 rgba(192, 192, 136, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #c0c088, -2px 3.8px 2px rgba(192, 192, 136, 0.75), -3px 5.7px 3px rgba(192, 192, 136, 0.5), -4px 7.6px 4px rgba(192, 192, 136, 0.375);
+  -webkit-box-shadow: 0px 1px 0 rgba(201, 201, 152, 0), -1px 1.9px 1px #c9c998, -2px 3.8px 2px rgba(201, 201, 152, 0.75), -3px 5.7px 3px rgba(201, 201, 152, 0.5), -4px 7.6px 4px rgba(201, 201, 152, 0.375);
+          box-shadow: 0px 1px 0 rgba(201, 201, 152, 0), -1px 1.9px 1px #c9c998, -2px 3.8px 2px rgba(201, 201, 152, 0.75), -3px 5.7px 3px rgba(201, 201, 152, 0.5), -4px 7.6px 4px rgba(201, 201, 152, 0.375);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   font-size: 18px;
@@ -225,8 +221,6 @@ html {
 }
 
 .container main .marqueeWrapper a.buttonContainer .svgArrow {
-  -webkit-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
   opacity: 1;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -244,8 +238,8 @@ html {
 }
 
 .container main .marqueeWrapper a.buttonContainer:hover {
-  -webkit-box-shadow: 0px 1px 0 rgba(192, 192, 136, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #c0c088, -2px 3.8px 2px rgba(192, 192, 136, 0.75), -3px 5.7px 3px rgba(192, 192, 136, 0.5), -4px 7.6px 4px rgba(192, 192, 136, 0.375), -5px 9.5px 5px rgba(192, 192, 136, 0.3), -6px 11.4px 6px rgba(192, 192, 136, 0.25), -7px 13.3px 7px rgba(192, 192, 136, 0.214286), -8px 15.2px 8px rgba(192, 192, 136, 0.1875), -9px 17.1px 9px rgba(192, 192, 136, 0.166667), -10px 19px 10px rgba(192, 192, 136, 0.15);
-          box-shadow: 0px 1px 0 rgba(192, 192, 136, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #c0c088, -2px 3.8px 2px rgba(192, 192, 136, 0.75), -3px 5.7px 3px rgba(192, 192, 136, 0.5), -4px 7.6px 4px rgba(192, 192, 136, 0.375), -5px 9.5px 5px rgba(192, 192, 136, 0.3), -6px 11.4px 6px rgba(192, 192, 136, 0.25), -7px 13.3px 7px rgba(192, 192, 136, 0.214286), -8px 15.2px 8px rgba(192, 192, 136, 0.1875), -9px 17.1px 9px rgba(192, 192, 136, 0.166667), -10px 19px 10px rgba(192, 192, 136, 0.15);
+  -webkit-box-shadow: 0px 1px 0 rgba(201, 201, 152, 0), -1px 1.9px 1px #c9c998, -2px 3.8px 2px rgba(201, 201, 152, 0.75), -3px 5.7px 3px rgba(201, 201, 152, 0.5), -4px 7.6px 4px rgba(201, 201, 152, 0.375), -5px 9.5px 5px rgba(201, 201, 152, 0.3), -6px 11.4px 6px rgba(201, 201, 152, 0.25), -7px 13.3px 7px rgba(201, 201, 152, 0.214286), -8px 15.2px 8px rgba(201, 201, 152, 0.1875), -9px 17.1px 9px rgba(201, 201, 152, 0.166667), -10px 19px 10px rgba(201, 201, 152, 0.15);
+          box-shadow: 0px 1px 0 rgba(201, 201, 152, 0), -1px 1.9px 1px #c9c998, -2px 3.8px 2px rgba(201, 201, 152, 0.75), -3px 5.7px 3px rgba(201, 201, 152, 0.5), -4px 7.6px 4px rgba(201, 201, 152, 0.375), -5px 9.5px 5px rgba(201, 201, 152, 0.3), -6px 11.4px 6px rgba(201, 201, 152, 0.25), -7px 13.3px 7px rgba(201, 201, 152, 0.214286), -8px 15.2px 8px rgba(201, 201, 152, 0.1875), -9px 17.1px 9px rgba(201, 201, 152, 0.166667), -10px 19px 10px rgba(201, 201, 152, 0.15);
 }
 
 .container main .marqueeWrapper a.buttonContainer:visited {
@@ -516,8 +510,8 @@ footer .footerContent .contact .appButton {
           align-items: center;
   -webkit-transform: translate(0%, 0%);
           transform: translate(0%, 0%);
-  -webkit-box-shadow: 0px 1px 0 rgba(194, 188, 148, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #c2bc94, -2px 3.8px 2px rgba(194, 188, 148, 0.75), -3px 5.7px 3px rgba(194, 188, 148, 0.5), -4px 7.6px 4px rgba(194, 188, 148, 0.375);
-          box-shadow: 0px 1px 0 rgba(194, 188, 148, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #c2bc94, -2px 3.8px 2px rgba(194, 188, 148, 0.75), -3px 5.7px 3px rgba(194, 188, 148, 0.5), -4px 7.6px 4px rgba(194, 188, 148, 0.375);
+  -webkit-box-shadow: 0px 1px 0 rgba(184, 178, 132, 0), -1px 1.9px 1px #b8b284, -2px 3.8px 2px rgba(184, 178, 132, 0.75), -3px 5.7px 3px rgba(184, 178, 132, 0.5), -4px 7.6px 4px rgba(184, 178, 132, 0.375);
+          box-shadow: 0px 1px 0 rgba(184, 178, 132, 0), -1px 1.9px 1px #b8b284, -2px 3.8px 2px rgba(184, 178, 132, 0.75), -3px 5.7px 3px rgba(184, 178, 132, 0.5), -4px 7.6px 4px rgba(184, 178, 132, 0.375);
 }
 
 footer .footerContent .contact .appButton:focus {
@@ -558,8 +552,8 @@ footer .footerContent .contact .appButton:after {
 
 footer .footerContent .contact .appButton:hover {
   background: #535125;
-  -webkit-box-shadow: 0px 1px 0 rgba(194, 188, 148, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #c2bc94, -2px 3.8px 2px rgba(194, 188, 148, 0.75), -3px 5.7px 3px rgba(194, 188, 148, 0.5), -4px 7.6px 4px rgba(194, 188, 148, 0.375), -5px 9.5px 5px rgba(194, 188, 148, 0.3), -6px 11.4px 6px rgba(194, 188, 148, 0.25), -7px 13.3px 7px rgba(194, 188, 148, 0.214286), -8px 15.2px 8px rgba(194, 188, 148, 0.1875), -9px 17.1px 9px rgba(194, 188, 148, 0.166667), -10px 19px 10px rgba(194, 188, 148, 0.15);
-          box-shadow: 0px 1px 0 rgba(194, 188, 148, 0), 1px 1px 20px rgba(255, 255, 255, 0.7), -1px 1.9px 1px #c2bc94, -2px 3.8px 2px rgba(194, 188, 148, 0.75), -3px 5.7px 3px rgba(194, 188, 148, 0.5), -4px 7.6px 4px rgba(194, 188, 148, 0.375), -5px 9.5px 5px rgba(194, 188, 148, 0.3), -6px 11.4px 6px rgba(194, 188, 148, 0.25), -7px 13.3px 7px rgba(194, 188, 148, 0.214286), -8px 15.2px 8px rgba(194, 188, 148, 0.1875), -9px 17.1px 9px rgba(194, 188, 148, 0.166667), -10px 19px 10px rgba(194, 188, 148, 0.15);
+  -webkit-box-shadow: 0px 1px 0 rgba(184, 178, 132, 0), -1px 1.9px 1px #b8b284, -2px 3.8px 2px rgba(184, 178, 132, 0.75), -3px 5.7px 3px rgba(184, 178, 132, 0.5), -4px 7.6px 4px rgba(184, 178, 132, 0.375), -5px 9.5px 5px rgba(184, 178, 132, 0.3), -6px 11.4px 6px rgba(184, 178, 132, 0.25), -7px 13.3px 7px rgba(184, 178, 132, 0.214286), -8px 15.2px 8px rgba(184, 178, 132, 0.1875), -9px 17.1px 9px rgba(184, 178, 132, 0.166667), -10px 19px 10px rgba(184, 178, 132, 0.15);
+          box-shadow: 0px 1px 0 rgba(184, 178, 132, 0), -1px 1.9px 1px #b8b284, -2px 3.8px 2px rgba(184, 178, 132, 0.75), -3px 5.7px 3px rgba(184, 178, 132, 0.5), -4px 7.6px 4px rgba(184, 178, 132, 0.375), -5px 9.5px 5px rgba(184, 178, 132, 0.3), -6px 11.4px 6px rgba(184, 178, 132, 0.25), -7px 13.3px 7px rgba(184, 178, 132, 0.214286), -8px 15.2px 8px rgba(184, 178, 132, 0.1875), -9px 17.1px 9px rgba(184, 178, 132, 0.166667), -10px 19px 10px rgba(184, 178, 132, 0.15);
 }
 
 footer .footerContent .contact .appButton:hover:before {

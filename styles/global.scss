@@ -84,7 +84,9 @@ html {
     z-index: 15;
     border-bottom: 7px solid darken($logoBG, 8%);
     border-top: 8px solid darken($logoBG, 10%);
-    @include shadow(darken(#e4e2d2, 2%), 5, transparent);
+    box-shadow: 0 1px 1px rgba(199, 197, 182, 0.5),
+      0 2px 2px rgba(199, 197, 182, 0.4), 0 4px 4px rgba(199, 197, 182, 0.3),
+      0 8px 8px rgba(199, 197, 182, 0.2), 0 16px 16px rgba(199, 197, 182, 0.1);
     display: inline-flex;
     padding-left: 30px;
     padding-right: 30px;
@@ -96,7 +98,7 @@ html {
       padding: 10px 25px;
       line-height: 130%;
       background-image: url("../public/backticket.svg");
-      color: rgb(253, 250, 216);
+      color: rgb(253, 227, 188);
       @mixin angledshadow($color, $steps) {
         $all: ();
         $all: append($all, 1px 1px $color, comma);
@@ -119,11 +121,7 @@ html {
       width: 175px;
       overflow: hidden;
       &:hover {
-        color: rgb(247, 246, 229);
-
-        svg {
-          fill: yellow;
-        }
+        color: rgb(223, 198, 162);
       }
     }
     .brickwallContainer {
@@ -152,7 +150,7 @@ html {
       }
     }
     a {
-      float: left;
+      // float: left;
       display: block;
       color: white;
       text-align: center;
@@ -172,12 +170,12 @@ html {
       height: 600px;
       z-index: 11;
       .welcome {
-        color: lighten(#f0eede, 3%);
+        color: lighten(#f0eede, 4%);
         position: absolute;
         font-size: 13em;
         font-family: "Alata";
         top: 20px;
-        left: 50px;
+        left: 70px;
         z-index: 3;
       }
       .marquee {
@@ -188,6 +186,7 @@ html {
         background-color: #f0eede;
         background-size: cover;
         background-repeat: no-repeat;
+        border-bottom: 1px solid darken(#f0eede, 5%);
         margin-bottom: 2em;
         background-size: 110%;
         background-repeat: no-repeat;
@@ -208,7 +207,7 @@ html {
         text-decoration: none;
         transform: translate(-50%, 0%);
         letter-spacing: 0.03em;
-        @include shadow2(darken(rgb(245, 245, 236), 30%), 4, white);
+        @include shadow(darken(rgb(245, 245, 236), 25%), 4, white);
         transition: all 0.4s ease;
         font-size: 18px;
         overflow: hidden;
@@ -220,12 +219,9 @@ html {
           font-size: 1.3em;
           width: 100%;
           height: 100%;
-          // bottom: -2px;
         }
         .svgArrow {
-          transform: translate(0%, 0%);
           opacity: 1;
-          //   animation: scatter 1.75s infinite;
           transition: all 0.5s ease;
           height: 45px;
           width: auto;
@@ -239,7 +235,7 @@ html {
         }
         &:hover {
           // cursor: pointer;
-          @include shadow2(darken(rgb(245, 245, 236), 30%), 10, white);
+          @include shadow(darken(rgb(245, 245, 236), 25%), 10, white);
         }
         &:visited {
           color: $btnTxtClr;
@@ -474,7 +470,7 @@ footer {
         // box-shadow: -1px 1.9px 1px #b4af82, -2px 3.8px 2px #b4af82,
         //   -3px 5.7px 3px rgba(180, 175, 130, 0.6666666667),
         //   -4px 7.6px 4px rgba(180, 175, 130, 0.5);
-        @include shadow2(darken(hsla(53, 27%, 87%, 1), 20%), 4, white);
+        @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 4, white);
         &:focus {
           outline: 0;
         }
@@ -506,24 +502,7 @@ footer {
         }
         &:hover {
           background: rgb(83, 81, 37);
-          // transform: translate(0%, -6%);
-          @include shadow2(darken(hsla(53, 27%, 87%, 1), 20%), 10, white);
-          // box-shadow: -1px 1px 0 rgba(180, 175, 130, 0.1),
-          //   1px -1px 0 rgba(255, 255, 255, 0.08),
-          //   -1px 1px 0 rgba(255, 255, 255, 0.08),
-          //   0px 0px 25px rgba(255, 255, 255, 0.4), -1px 1.9px 1px #b4af82,
-          //   -2px 3.8px 2px #b4af82,
-          //   -3px 5.7px 3px rgba(180, 175, 130, 0.6666666667),
-          //   -4px 7.6px 4px rgba(180, 175, 130, 0.5),
-          //   -5px 9.5px 5px rgba(180, 175, 130, 0.4),
-          //   -6px 11.4px 6px rgba(180, 175, 130, 0.3333333333),
-          //   -7px 13.3px 7px rgba(180, 175, 130, 0.2857142857),
-          //   -8px 15.2px 8px rgba(180, 175, 130, 0.25),
-          //   -9px 17.1px 9px rgba(180, 175, 130, 0.2222222222),
-          //   -10px 19px 10px rgba(180, 175, 130, 0.2),
-          //   -11px 20.9px 11px rgba(180, 175, 130, 0.1818181818),
-          //   -12px 22.8px 12px rgba(180, 175, 130, 0.1666666667),
-          //   -13px 24.7px 13px rgba(180, 175, 130, 0.1538461538);
+          @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 10, white);
           &:before {
             transform: translateX(300px) skewX(-15deg);
             opacity: 0.6;
