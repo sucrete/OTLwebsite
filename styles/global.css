@@ -37,7 +37,7 @@ html {
 }
 
 .container .navBar {
-  background-color: #e5dfc2;
+  background-color: #e8e3c9;
   top: 0;
   /* Stay on top */
   width: 100%;
@@ -46,10 +46,8 @@ html {
   transition: top 0.5s;
   /* Transition effect when sliding down (and up) */
   z-index: 15;
-  border-bottom: 7px solid #e2dcbb;
-  border-top: 8px solid #dad2a9;
-  -webkit-box-shadow: 0 1px 1px rgba(199, 197, 182, 0.3), 0 2px 2px rgba(199, 197, 182, 0.25), 0 4px 4px rgba(199, 197, 182, 0.2), 0 8px 8px rgba(199, 197, 182, 0.15), 0 16px 16px rgba(199, 197, 182, 0.1);
-          box-shadow: 0 1px 1px rgba(199, 197, 182, 0.3), 0 2px 2px rgba(199, 197, 182, 0.25), 0 4px 4px rgba(199, 197, 182, 0.2), 0 8px 8px rgba(199, 197, 182, 0.15), 0 16px 16px rgba(199, 197, 182, 0.1);
+  border-bottom: 7px solid #e3ddbe;
+  border-top: 8px solid #dcd4ac;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -129,11 +127,10 @@ html {
   position: relative;
   height: 700px;
   z-index: 11;
-  border-bottom: 1px solid #e5e1c5;
 }
 
 .container .marqueeWrapper .welcome {
-  color: #faf6ea;
+  color: #f6f5ec;
   position: absolute;
   font-size: 13em;
   font-family: "Alata";
@@ -189,6 +186,7 @@ html {
   width: 100vw;
   position: relative;
   z-index: 20;
+  border-top: 1px solid #e5e1c5;
 }
 
 .container main a.buttonContainer {
@@ -205,7 +203,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: -20px;
+  top: -32px;
   left: 50%;
   text-decoration: none;
   -webkit-transform: translate(-50%, 0%);
@@ -315,7 +313,7 @@ html {
 .container main .cardsCorpus {
   width: 79vw;
   height: 100%;
-  margin-top: 10em;
+  margin-top: 8.5em;
 }
 
 .container main .cardsCorpus div .my-masonry-grid {
@@ -432,9 +430,9 @@ footer .footerContent {
 
 footer .footerContent .contact {
   font-family: "Antikor", sans-serif;
-  background-color: #e8e3c9;
+  background-color: #ede9d4;
   color: #383838;
-  border: 7px solid #e3ddbe;
+  border: 7px solid #e8e3c9;
   width: 79vw;
   height: 300px;
   margin-right: 10.5vw;
@@ -823,8 +821,8 @@ img {
           animation-name: colorChange;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-duration: 0.45s;
-          animation-duration: 0.45s;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
