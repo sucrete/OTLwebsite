@@ -29,7 +29,8 @@ export default function Home() {
           Old <span className="middle">Town L</span>ofts
         </div>
         <a className="contactButton" href="#footer">
-          Contact
+          <span>Contact</span>
+          <img src="/backticket.svg" />
         </a>
       </nav>
       <div className="marqueeWrapper">

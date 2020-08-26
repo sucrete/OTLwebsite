@@ -38,6 +38,7 @@ html {
 
 .container .navBar {
   background-color: #e8e3c9;
+  background-size: 10%;
   top: 0;
   /* Stay on top */
   width: 100%;
@@ -48,6 +49,8 @@ html {
   z-index: 15;
   border-bottom: 7px solid #e3ddbe;
   border-top: 8px solid #dcd4ac;
+  -webkit-box-shadow: 0 1px 1px rgba(199, 197, 182, 0.25), 0 2px 2px rgba(199, 197, 182, 0.2), 0 4px 4px rgba(199, 197, 182, 0.15), 0 8px 8px rgba(199, 197, 182, 0.1), 0 16px 16px rgba(199, 197, 182, 0.05);
+          box-shadow: 0 1px 1px rgba(199, 197, 182, 0.25), 0 2px 2px rgba(199, 197, 182, 0.2), 0 4px 4px rgba(199, 197, 182, 0.15), 0 8px 8px rgba(199, 197, 182, 0.1), 0 16px 16px rgba(199, 197, 182, 0.05);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -56,14 +59,12 @@ html {
   height: 90px;
 }
 
-.container .navBar a.contactButton {
+.container .navBar a.contactButton span {
   font-family: "Alata", sans-serif;
   font-size: 1.3em;
   padding: 10px 25px;
   line-height: 130%;
-  background-image: url("../public/backticket.svg");
-  color: #faf6ea;
-  text-shadow: 1px 1px #cbbe85, 2px 2px #cbbe85, 3px 3px #cbbe85, 4px 4px #cbbe85, 5px 5px #cbbe85, 6px 6px #cbbe85, 7px 7px #cbbe85, 8px 8px #cbbe85, 9px 9px #cbbe85, 10px 10px #cbbe85, 11px 11px #cbbe85, 12px 12px #cbbe85, 13px 13px #cbbe85, 14px 14px #cbbe85, 15px 15px #cbbe85, 16px 16px #cbbe85, 17px 17px #cbbe85, 18px 18px #cbbe85, 19px 19px #cbbe85, 20px 20px #cbbe85, 21px 21px #cbbe85, 22px 22px #cbbe85, 23px 23px #cbbe85, 24px 24px #cbbe85, 25px 25px #cbbe85, 26px 26px #cbbe85, 27px 27px #cbbe85, 28px 28px #cbbe85, 29px 29px #cbbe85, 30px 30px #cbbe85, 31px 31px #cbbe85, 32px 32px #cbbe85, 33px 33px #cbbe85, 34px 34px #cbbe85, 35px 35px #cbbe85, 36px 36px #cbbe85, 37px 37px #cbbe85, 38px 38px #cbbe85, 39px 39px #cbbe85, 40px 40px #cbbe85, 41px 41px #cbbe85, 42px 42px #cbbe85, 43px 43px #cbbe85, 44px 44px #cbbe85, 45px 45px #cbbe85, 46px 46px #cbbe85, 47px 47px #cbbe85, 48px 48px #cbbe85, 49px 49px #cbbe85, 50px 50px #cbbe85, 51px 51px #cbbe85, 52px 52px #cbbe85, 53px 53px #cbbe85, 54px 54px #cbbe85, 55px 55px #cbbe85, 56px 56px #cbbe85, 57px 57px #cbbe85, 58px 58px #cbbe85, 59px 59px #cbbe85, 60px 60px #cbbe85;
+  color: #4e3519;
   position: absolute;
   right: 40px;
   top: 47px;
@@ -78,10 +79,21 @@ html {
   height: 52px;
   width: 175px;
   overflow: hidden;
+  z-index: 3;
 }
 
-.container .navBar a.contactButton:hover {
-  color: #96854d;
+.container .navBar a.contactButton span:hover {
+  color: #746232;
+}
+
+.container .navBar a.contactButton img {
+  position: absolute;
+  -webkit-filter: drop-shadow(-1px 1.9px 1px #dbd7bf) drop-shadow(-2px 3.8px 2px rgba(219, 215, 191, 0.75)) drop-shadow(-3px 5.7px 3px rgba(219, 215, 191, 0.5)) drop-shadow(-4px 7.6px 4px rgba(219, 215, 191, 0.375));
+          filter: drop-shadow(-1px 1.9px 1px #dbd7bf) drop-shadow(-2px 3.8px 2px rgba(219, 215, 191, 0.75)) drop-shadow(-3px 5.7px 3px rgba(219, 215, 191, 0.5)) drop-shadow(-4px 7.6px 4px rgba(219, 215, 191, 0.375));
+  height: 52px;
+  right: 40px;
+  top: 20px;
+  z-index: 2;
 }
 
 .container .navBar .brickwallContainer {
@@ -109,6 +121,7 @@ html {
   line-height: 95%;
   letter-spacing: 0.03em;
   z-index: 13;
+  overflow: hidden;
 }
 
 .container .navBar .OTLText .middle {
@@ -132,8 +145,8 @@ html {
 .container .marqueeWrapper .welcome {
   color: #f6f5ec;
   position: absolute;
-  font-size: 13em;
-  font-family: "Alata";
+  font-size: 17em;
+  font-family: "Margo";
   top: -25px;
   left: 100px;
   z-index: 3;
@@ -696,11 +709,6 @@ img {
 }
 
 @font-face {
-  font-family: "Ivar";
-  src: url("./fonts/IvarDisplayCondensed-Light.woff") format("woff");
-}
-
-@font-face {
   font-family: "TS Rough";
   src: url("./fonts/TradesmithRough.otf") format("opentype");
 }
@@ -711,23 +719,8 @@ img {
 }
 
 @font-face {
-  font-family: "Prismatic Base";
-  src: url("./fonts/Prismatic-Base.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Prismatic Top";
-  src: url("./fonts/Prismatic-Top.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Prismatic Bottom";
-  src: url("./fonts/Prismatic-Bottom.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Prismatic Right";
-  src: url("./fonts/Prismatic-Right.otf") format("opentype");
+  font-family: "Margo";
+  src: url("./fonts/Margo_Condensed-Medium.woff2") format("woff2");
 }
 
 .parentCardContainer {
@@ -890,8 +883,8 @@ img {
   top: 4.8px;
   left: -2px;
   opacity: 1;
-  -webkit-animation-name: cardSpin;
-          animation-name: cardSpin;
+  -webkit-animation-name: cardSpin, disappear;
+          animation-name: cardSpin, disappear;
 }
 
 ._3 {

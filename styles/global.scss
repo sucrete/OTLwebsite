@@ -35,6 +35,14 @@ $bgClr: #e4e2d2;
   }
   box-shadow: $all;
 }
+@mixin angledshadow($color, $steps) {
+  $all: ();
+  $all: append($all, 1px 1px $color, comma);
+  @for $i from 2 through $steps {
+    $all: append($all, append($i * 1px $i * 1px, $color));
+  }
+  text-shadow: $all;
+}
 @mixin shadow($color, $steps, $glow) {
   $all: ();
   $all: append($all, 0px 1px 0 rgba($color, 0), comma);
@@ -74,50 +82,57 @@ html {
   .navBar {
     background-color: $logoBG;
     // position: fixed; /* Make it stick/fixed */
+    // background-image: url("../public/deco.svg");
+    background-size: 10%;
     top: 0; /* Stay on top */
     width: 100%; /* Full width */
     transition: top 0.5s; /* Transition effect when sliding down (and up) */
     z-index: 15;
     border-bottom: 7px solid darken($logoBG, 3%);
     border-top: 8px solid darken($logoBG, 8%);
-    // box-shadow: 0 1px 1px rgba(199, 197, 182, 0.3),
-    //   0 2px 2px rgba(199, 197, 182, 0.25), 0 4px 4px rgba(199, 197, 182, 0.2),
-    //   0 8px 8px rgba(199, 197, 182, 0.15), 0 16px 16px rgba(199, 197, 182, 0.1);
+    box-shadow: 0 1px 1px rgba(199, 197, 182, 0.25),
+      0 2px 2px rgba(199, 197, 182, 0.2), 0 4px 4px rgba(199, 197, 182, 0.15),
+      0 8px 8px rgba(199, 197, 182, 0.1), 0 16px 16px rgba(199, 197, 182, 0.05);
     display: inline-flex;
     padding-left: 30px;
     padding-right: 30px;
     height: 90px;
     a.contactButton {
-      font-family: "Alata", sans-serif;
-      // border-radius: 30px;
-      font-size: 1.3em;
-      padding: 10px 25px;
-      line-height: 130%;
-      background-image: url("../public/backticket.svg");
-      color: #faf6ea;
-      @mixin angledshadow($color, $steps) {
-        $all: ();
-        $all: append($all, 1px 1px $color, comma);
-        @for $i from 2 through $steps {
-          $all: append($all, append($i * 1px $i * 1px, $color));
+      span {
+        font-family: "Alata", sans-serif;
+        // border-radius: 30px;
+        font-size: 1.3em;
+        padding: 10px 25px;
+        line-height: 130%;
+        // background-image: url("../public/backticket.svg");
+        color: rgb(78, 53, 25);
+        position: absolute;
+        right: 40px;
+        top: 47px;
+        transform: translateY(-50%);
+        letter-spacing: 0.04em;
+        transition: all 0.3s ease;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 52px;
+        width: 175px;
+        overflow: hidden;
+        z-index: 3;
+        &:hover {
+          color: rgb(116, 98, 50);
         }
-        text-shadow: $all;
       }
-      @include angledshadow(rgb(203, 190, 133), 60);
-      position: absolute;
-      right: 40px;
-      top: 47px;
-      transform: translateY(-50%);
-      letter-spacing: 0.04em;
-      transition: all 0.3s ease;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 52px;
-      width: 175px;
-      overflow: hidden;
-      &:hover {
-        color: rgb(150, 133, 77);
+      img {
+        position: absolute;
+        filter: drop-shadow(-1px 1.9px 1px rgba(219, 215, 191, 1))
+          drop-shadow(-2px 3.8px 2px rgba(219, 215, 191, 0.75))
+          drop-shadow(-3px 5.7px 3px rgba(219, 215, 191, 0.5))
+          drop-shadow(-4px 7.6px 4px rgba(219, 215, 191, 0.375));
+        height: 52px;
+        right: 40px;
+        top: 20px;
+        z-index: 2;
       }
     }
     .brickwallContainer {
@@ -141,6 +156,8 @@ html {
       line-height: 95%;
       letter-spacing: 0.03em;
       z-index: 13;
+      // @include angledshadow(darken($logoBG, 5%), 60);
+      overflow: hidden;
       .middle {
         font-family: "TS Rough";
       }
@@ -162,8 +179,8 @@ html {
     .welcome {
       color: lighten(#f0eede, 4%);
       position: absolute;
-      font-size: 13em;
-      font-family: "Alata";
+      font-size: 17em;
+      font-family: "Margo";
       top: -25px;
       left: 100px;
       z-index: 3;
@@ -614,10 +631,6 @@ img {
 }
 
 @font-face {
-  font-family: "Ivar";
-  src: url("./fonts/IvarDisplayCondensed-Light.woff") format("woff");
-}
-@font-face {
   font-family: "TS Rough";
   src: url("./fonts/TradesmithRough.otf") format("opentype");
 }
@@ -626,25 +639,11 @@ img {
   font-family: "TS Stamp";
   src: url("./fonts/TradesmithStamp.otf") format("opentype");
 }
-
 @font-face {
-  font-family: "Prismatic Base";
-  src: url("./fonts/Prismatic-Base.otf") format("opentype");
+  font-family: "Margo";
+  src: url("./fonts/Margo_Condensed-Medium.woff2") format("woff2");
 }
 
-@font-face {
-  font-family: "Prismatic Top";
-  src: url("./fonts/Prismatic-Top.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Prismatic Bottom";
-  src: url("./fonts/Prismatic-Bottom.otf") format("opentype");
-}
-@font-face {
-  font-family: "Prismatic Right";
-  src: url("./fonts/Prismatic-Right.otf") format("opentype");
-}
 $animationLength: 0.9s;
 @mixin deets($left, $top, $blur, $opacity) {
   $_top: $top + 1;
@@ -773,7 +772,7 @@ $animationLength: 0.9s;
 }
 ._2 {
   @include deets(2, 3.8, 2, 1);
-  animation-name: cardSpin;
+  animation-name: cardSpin, disappear;
 }
 ._3 {
   @include deets(3, 5.7, 3, 0.6666666667);
