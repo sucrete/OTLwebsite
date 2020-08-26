@@ -127,8 +127,7 @@ html {
         position: absolute;
         filter: drop-shadow(-1px 1.9px 1px rgba(219, 215, 191, 1))
           drop-shadow(-2px 3.8px 2px rgba(219, 215, 191, 0.75))
-          drop-shadow(-3px 5.7px 3px rgba(219, 215, 191, 0.5))
-          drop-shadow(-4px 7.6px 4px rgba(219, 215, 191, 0.375));
+          drop-shadow(-3px 5.7px 3px rgba(219, 215, 191, 0.5));
         height: 52px;
         right: 40px;
         top: 20px;
@@ -189,7 +188,7 @@ html {
       animation-fill-mode: forwards;
       animation-name: moveLeft;
       animation-timing-function: ease;
-      animation-duration: 2s;
+      animation-duration: 2.5s;
     }
     .marquee {
       position: relative;
