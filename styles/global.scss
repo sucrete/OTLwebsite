@@ -63,7 +63,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  background: rgb(255, 187, 0);
+  background: darken($logoBG, 8%);
   background-image: url("../public/terrazo2.svg");
 }
 html {
@@ -331,11 +331,13 @@ html {
               height: auto;
               width: 100%;
               z-index: 88;
-              transition: all 0.25s ease;
+              transition: all 0.3s ease;
               -webkit-transform: translateZ(0);
               transform: translateY(0%);
               @include shadow(darken(rgb(245, 245, 236), 16%), 4, white);
               &:hover {
+                -webkit-transform: translateZ(0);
+                transform: translateY(0%);
                 @include shadow(darken(rgb(245, 245, 236), 16%), 10, white);
               }
               a {
