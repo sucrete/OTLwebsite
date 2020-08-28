@@ -511,11 +511,11 @@ footer .footerContent .contact .appButton {
   position: absolute;
   bottom: 16px;
   right: 16px;
-  color: #e2cec8;
+  color: #e0dab7;
   text-decoration: none;
   position: absolute;
   background: #3f3d1c;
-  padding: 10px 20px 10px 25px;
+  padding: 10px 25px 10px 30px;
   border-radius: 0.5em;
   text-decoration: none;
   height: 65px;
@@ -606,8 +606,8 @@ footer .footerContent .contact .appButton:visited {
 footer .footerContent .contact .appButton span {
   position: relative;
   font-family: "Alata", sans-serif;
-  color: #e2cec8;
-  font-size: 1.1em;
+  color: #e0dab7;
+  font-size: 1.3em;
   letter-spacing: 0.03em;
 }
 

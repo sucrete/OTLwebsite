@@ -462,11 +462,11 @@ footer {
         position: absolute;
         bottom: 16px;
         right: 16px;
-        color: $btnTxtClr;
+        color: darken($logoBG, 5%);
         text-decoration: none;
         position: absolute;
         background: rgb(63, 61, 28);
-        padding: 10px 20px 10px 25px;
+        padding: 10px 25px 10px 30px;
         border-radius: 0.5em;
         text-decoration: none;
         height: 65px;
@@ -476,9 +476,6 @@ footer {
         justify-content: center;
         align-items: center;
         transform: translate(0%, 0%);
-        // box-shadow: -1px 1.9px 1px #b4af82, -2px 3.8px 2px #b4af82,
-        //   -3px 5.7px 3px rgba(180, 175, 130, 0.6666666667),
-        //   -4px 7.6px 4px rgba(180, 175, 130, 0.5);
         @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 4, white);
         &:focus {
           outline: 0;
@@ -532,8 +529,8 @@ footer {
         span {
           position: relative;
           font-family: "Alata", sans-serif;
-          color: $btnTxtClr;
-          font-size: 1.1em;
+          color: darken($logoBG, 5%);
+          font-size: 1.3em;
           letter-spacing: 0.03em;
         }
         .appImg {
