@@ -177,7 +177,7 @@ html {
     z-index: 11;
 
     .welcome {
-      color: lighten(#f0eede, 4%);
+      color: lighten(#f0eede, 6%);
       position: absolute;
       font-size: 17em;
       font-family: "Margo";
@@ -398,24 +398,26 @@ html {
 }
 
 footer {
-  width: 100%;
+  width: 100vw;
   margin-top: 3em;
-
+  padding-top: 2em;
+  border-top: 7px solid $logoBG;
+  background-color: lighten($logoBG, 3%);
   .footerContent {
     width: 100%;
     display: block;
-    height: 500px;
-    padding: 25px 0vw;
+    height: 400px;
+    padding: 25px 10vw;
     .contact {
       font-family: "Antikor", sans-serif;
-      background-color: lighten($logoBG, 3%);
+
       color: rgb(56, 56, 56);
-      // border-radius: 18px;
-      border: 7px solid $logoBG;
+      border-radius: 18px;
+      background-color: $logoBG;
       width: 79vw;
       height: 300px;
       margin: 0;
-      padding: 2.7em 2em 2em 2em;
+      padding: 2.7em 2em 0em 2em;
       position: relative;
       z-index: 2;
 
@@ -853,6 +855,6 @@ $animationLength: 0.9s;
   to {
     transform: translateX(0px);
     opacity: 1;
-    color: lighten(#f0eede, 4%);
+    color: lighten(#f0eede, 6%);
   }
 }

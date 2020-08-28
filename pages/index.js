@@ -136,43 +136,40 @@ export default function Home() {
             </svg>
           </a>
           <Cards />
-          <footer id="footer">
-            <div className="footerContent">
-              <div className="contact">
-                <h1>Contact</h1>
-                <div className="contactContainer">
-                  <div className="contactRow">
-                    <span className="left">phone number:</span>
-                    <a className="right" href="tel:+1-816-842-1424">
-                      (816) 842-1424
-                    </a>{" "}
-                  </div>
-                  <div className="contactRow">
-                    <span className="left">office address:</span>
-                    <span
-                      className="right"
-                      style={{ position: "relative", left: "17%" }}
-                    >
-                      934 Wyandotte St
-                      <br /> Kansas City, MO 64105
-                    </span>
-                  </div>
+        </div>
+        <footer id="footer">
+          <div className="footerContent">
+            <div className="contact">
+              <h1>Contact</h1>
+              <div className="contactContainer">
+                <div className="contactRow">
+                  <span className="left">phone number:</span>
+                  <a className="right" href="tel:+1-816-842-1424">
+                    (816) 842-1424
+                  </a>{" "}
                 </div>
-                <img
-                  className="eho"
-                  style={{ float: "right" }}
-                  src="/eho.svg"
-                />
-                <a
-                  className="appButton"
-                  href="https://www.oldtownloftskc.com/files/5215/9249/4482/Application_2020_Editable.pdf"
-                  target="_blank"
-                >
-                  <span>Application</span>
-                  <img className="appImg" src="/file.svg" alt="my image" />
-                </a>
+                <div className="contactRow">
+                  <span className="left">office address:</span>
+                  <span
+                    className="right"
+                    style={{ position: "relative", left: "17%" }}
+                  >
+                    934 Wyandotte St
+                    <br /> Kansas City, MO 64105
+                  </span>
+                </div>
               </div>
-              {/* <div className="freepikContainer">
+              <img className="eho" style={{ float: "right" }} src="/eho.svg" />
+              <a
+                className="appButton"
+                href="https://www.oldtownloftskc.com/files/5215/9249/4482/Application_2020_Editable.pdf"
+                target="_blank"
+              >
+                <span>Application</span>
+                <img className="appImg" src="/file.svg" alt="my image" />
+              </a>
+            </div>
+            {/* <div className="freepikContainer">
             Some icons made by
             <a
               className="freepik"
@@ -191,9 +188,8 @@ export default function Home() {
               www.flaticon.com
             </a>
           </div> */}
-            </div>
-          </footer>
-        </div>
+          </div>
+        </footer>
       </main>
 
       <style jsx global>{``}</style>
