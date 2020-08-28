@@ -65,26 +65,22 @@ html {
   font-size: 1.3em;
   padding: 10px 25px;
   line-height: 130%;
-  color: #7c7320;
+  color: #6e661c;
   position: absolute;
   right: 40px;
   top: 47px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   letter-spacing: 0.04em;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   height: 52px;
   width: 175px;
-  overflow: hidden;
   z-index: 3;
 }
 
 .container .navBar a.contactButton span:hover {
-  color: #746232;
+  color: #554722;
 }
 
 .container .navBar a.contactButton img {
@@ -144,7 +140,7 @@ html {
 }
 
 .container .marqueeWrapper .welcome {
-  color: #faf9f3;
+  color: #f5f3e9;
   position: absolute;
   font-size: 17em;
   font-family: "Margo";
@@ -329,7 +325,8 @@ html {
 .container main .cardsCorpus {
   width: 79vw;
   height: 100%;
-  margin-top: 8.5em;
+  margin-top: 8em;
+  margin-bottom: 6em;
 }
 
 .container main .cardsCorpus div .my-masonry-grid {
@@ -438,6 +435,7 @@ footer {
   padding-top: 2em;
   border-top: 7px solid #e8e3c9;
   background-color: #ede9d4;
+  background-image: url("../public/images/terrazzo.svg");
 }
 
 footer .footerContent {
