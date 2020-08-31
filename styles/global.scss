@@ -43,7 +43,7 @@ $bgClr: #e4e2d2;
   }
   text-shadow: $all;
 }
-@mixin shadow($color, $steps, $glow) {
+@mixin shadow($color, $steps) {
   $all: ();
   $all: append($all, 0px 1px 0 rgba($color, 0), comma);
   // $all: append($all, 1px -1px 25px $glow, comma);
@@ -169,21 +169,42 @@ html {
     position: relative;
     height: 700px;
     z-index: 11;
-
-    .welcome {
-      color: lighten(#f0eede, 3%);
+    .desaturatedBuilding {
       position: absolute;
-      font-size: 17em;
-      font-family: "Margo";
-      top: -25px;
-      left: 100px;
-      z-index: 3;
+      top: 7%;
+      right: 10%;
+      z-index: 2;
+      width: 425px;
+      height: auto;
+      // border-top: 35px solid #82863c;
       opacity: 0;
       transform: translateX(50px);
       animation-fill-mode: forwards;
       animation-name: moveLeft;
       animation-timing-function: ease;
       animation-duration: 2.5s;
+      filter: drop-shadow(-1px 1.9px 1px rgba(219, 215, 191, 1))
+        drop-shadow(-2px 3.8px 2px rgba(219, 215, 191, 0.75))
+        drop-shadow(-3px 5.7px 3px rgba(219, 215, 191, 0.5));
+      // @include shadow(darken(#f0eede, 10%), 7);
+    }
+    .welcome {
+      color: darken(#f0eede, 5%);
+      position: absolute;
+      font-size: 17em;
+      font-family: "Margo";
+      top: 15px;
+      left: 100px;
+      z-index: 3;
+      opacity: 0;
+      transform: translateX(50px);
+      animation-fill-mode: forwards;
+      animation-name: moveLeft2;
+      animation-timing-function: ease;
+      animation-duration: 3s;
+      // animation-delay: 0.2s;
+      // filter: invert(1);
+      mix-blend-mode: screen;
     }
     .marquee {
       position: relative;
@@ -225,7 +246,7 @@ html {
       text-decoration: none;
       transform: translate(-50%, 0%);
       letter-spacing: 0.03em;
-      @include shadow(darken(rgb(245, 245, 236), 25%), 4, white);
+      @include shadow(darken(rgb(245, 245, 236), 25%), 4);
       transition: all 0.4s ease;
       font-size: 18px;
       overflow: hidden;
@@ -253,7 +274,7 @@ html {
       }
       &:hover {
         // cursor: pointer;
-        @include shadow(darken(rgb(245, 245, 236), 25%), 10, white);
+        @include shadow(darken(rgb(245, 245, 236), 25%), 10);
       }
       &:visited {
         color: $btnTxtClr;
@@ -306,7 +327,7 @@ html {
       width: 79vw;
       height: 100%;
       margin-top: 8em;
-      margin-bottom: 6em;
+      margin-bottom: 2em;
       div {
         .my-masonry-grid {
           display: -webkit-box; /* Not needed if autoprefixing */
@@ -329,11 +350,11 @@ html {
               transition: all 0.3s ease;
               -webkit-transform: translateZ(0);
               transform: translateY(0%);
-              @include shadow(darken(rgb(245, 245, 236), 16%), 4, white);
+              @include shadow(darken(rgb(245, 245, 236), 16%), 4);
               &:hover {
                 -webkit-transform: translateZ(0);
                 transform: translateY(0%);
-                @include shadow(darken(rgb(245, 245, 236), 16%), 10, white);
+                @include shadow(darken(rgb(245, 245, 236), 16%), 10);
               }
               a {
                 position: relative;
@@ -395,8 +416,8 @@ html {
 footer {
   width: 100vw;
   margin-top: 3em;
-  padding-top: 2em;
-  border-top: 7px solid $logoBG;
+  padding-top: 3em;
+  // border-top: 7px solid $logoBG;
   background-color: lighten($logoBG, 3%);
   background-image: url("../public/images/terrazzo.svg");
   .footerContent {
@@ -476,7 +497,7 @@ footer {
         justify-content: center;
         align-items: center;
         transform: translate(0%, 0%);
-        @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 4, white);
+        @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 4);
         &:focus {
           outline: 0;
         }
@@ -508,7 +529,7 @@ footer {
         }
         &:hover {
           background: rgb(83, 81, 37);
-          @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 10, white);
+          @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 10);
           &:before {
             transform: translateX(300px) skewX(-15deg);
             opacity: 0.6;
@@ -640,7 +661,7 @@ $animationLength: 0.9s;
 }
 .parentCardContainer {
   position: absolute;
-  top: 22%;
+  top: 32%;
   left: 12%;
   z-index: 5;
 }
@@ -849,5 +870,16 @@ $animationLength: 0.9s;
     transform: translateX(0px);
     opacity: 1;
     color: lighten(#f0eede, 6%);
+  }
+}
+@keyframes moveLeft2 {
+  35% {
+    transform: translateX(25px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 0.5;
+    // color: lighten(#f0eede, 12%);
   }
 }

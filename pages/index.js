@@ -35,6 +35,10 @@ export default function Home() {
       </nav>
       <div className="marqueeWrapper">
         <div className="marquee"></div>
+        <img
+          className="desaturatedBuilding"
+          src="/images/COVER_8desaturated.jpg"
+        />
         <div className="welcome">WELCOME</div>
         <div className="parentCardContainer">
           <div class="cardContainer">
