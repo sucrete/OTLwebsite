@@ -185,7 +185,7 @@ html {
       // filter: drop-shadow(-1px 1.9px 1px rgba(219, 215, 191, 1))
       //   drop-shadow(-2px 3.8px 2px rgba(219, 215, 191, 0.85))
       //   drop-shadow(-3px 5.7px 3px rgba(219, 215, 191, 0.65));
-      @include shadow(darken(#f0eede, 13%), 7);
+      @include shadow(darken(#f0eede, 13%), 12);
       border-radius: 2px;
     }
     .welcome {
@@ -339,15 +339,14 @@ html {
             padding-left: 30px; /* gutter size */
             background-clip: padding-box;
             .card {
-              /* Style your items */ /* change div to reference your elements you put in <Masonry> */
               margin-bottom: 30px;
-              border-radius: 8px;
+              // border-radius: 8px;
               background: transparent;
               overflow: hidden;
               height: auto;
               width: 100%;
               z-index: 88;
-              transition: all 0.3s ease;
+              transition: all 0.2s ease;
               -webkit-transform: translateZ(0);
               transform: translateY(0%);
               @include shadow(darken(rgb(245, 245, 236), 16%), 4);
@@ -394,15 +393,15 @@ html {
                   bottom: 0px;
                   .building,
                   .district {
-                    transition: all 0.3s ease;
+                    transition: all 0.2s ease;
                   }
                   .building {
-                    color: lighten(#332521, 15%);
+                    color: lighten(#332521, 12%);
                     font-family: "Alata", sans-serif;
                     font-size: 1.4em;
                   }
                   .district {
-                    color: lighten(#666666, 15%);
+                    color: lighten(#666666, 12%);
                     font-family: "Antikor", sans-serif;
                     font-size: 0.7em;
                     text-transform: uppercase;

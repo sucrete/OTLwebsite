@@ -103,27 +103,6 @@ export default function Home() {
             >
               <rect x="35" y="35" height="270" width="455" />
             </svg>
-            <svg
-              class="shadow _8"
-              viewBox="0 0 525 340"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect x="35" y="35" height="270" width="455" />
-            </svg>
-            <svg
-              class="shadow _9"
-              viewBox="0 0 525 340"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect x="35" y="35" height="270" width="455" />
-            </svg>
-            <svg
-              class="shadow _10"
-              viewBox="0 0 525 340"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect x="35" y="35" height="270" width="455" />
-            </svg>
           </div>
         </div>
       </div>
