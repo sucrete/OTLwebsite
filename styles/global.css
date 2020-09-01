@@ -369,6 +369,7 @@ html {
 
 .container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card {
   margin-bottom: 30px;
+  border-radius: 7px;
   background: transparent;
   overflow: hidden;
   height: auto;
