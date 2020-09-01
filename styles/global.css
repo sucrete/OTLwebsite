@@ -760,8 +760,8 @@ img {
 }
 
 .parentCardContainer * {
-  -webkit-animation-delay: 2500ms;
-          animation-delay: 2500ms;
+  -webkit-animation-delay: 3000ms;
+          animation-delay: 3000ms;
 }
 
 .cardContainer {
@@ -837,8 +837,8 @@ img {
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
   opacity: 1;
   z-index: 10;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
   -webkit-animation-name: colorChange;
           animation-name: colorChange;
   -webkit-animation-timing-function: linear;

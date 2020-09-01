@@ -677,7 +677,7 @@ $animationLength: 0.9s;
   z-index: 5;
 }
 .parentCardContainer * {
-  animation-delay: 2500ms;
+  animation-delay: 3000ms;
 }
 .cardContainer {
   width: 525px;
@@ -737,7 +737,7 @@ $animationLength: 0.9s;
       background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
       opacity: 1;
       z-index: 10;
-      animation-delay: 2.5s;
+      animation-delay: 3s;
       animation-name: colorChange;
       animation-timing-function: linear;
       animation-duration: 0.4s;

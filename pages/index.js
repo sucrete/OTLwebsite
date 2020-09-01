@@ -48,8 +48,7 @@ export default function Home() {
               <img src="/corner.svg" className="corner BL" />
               <img src="/corner.svg" className="corner BR" />
               <div className="innerFrame"></div>
-              {/* <div className="mask"></div> */}
-
+              <div className="mask"></div>
               <div className="quoteBox">
                 <img src="/affordable.svg" />
               </div>
