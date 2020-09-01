@@ -80,25 +80,49 @@ html {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  $marqueeColor: rgb(224, 222, 200);
   .navBar {
     background-color: $logoBG;
-    // position: fixed; /* Make it stick/fixed */
-    // background-image: url("../public/deco.svg");
-    background-size: 10%;
-    top: 0; /* Stay on top */
     width: 100%; /* Full width */
-    transition: top 0.5s; /* Transition effect when sliding down (and up) */
     z-index: 15;
-    border-bottom: 7px solid darken($logoBG, 3%);
-    border-top: 8px solid darken($logoBG, 8%);
-    box-shadow: 0 1px 1px rgba(199, 197, 182, 0.25),
-      0 2px 2px rgba(199, 197, 182, 0.2), 0 4px 4px rgba(199, 197, 182, 0.15),
-      0 8px 8px rgba(199, 197, 182, 0.1), 0 16px 16px rgba(199, 197, 182, 0.05);
+    // border-bottom: 7px solid darken($logoBG, 0.5%);
+    // border-top: 8px solid darken($logoBG, 2%);
+    // border-bottom: 1px solid darken($logoBG, 5%);
+    // @include shadow(rgb(228, 226, 209), 8);
     display: inline-flex;
-    padding-left: 30px;
+    padding-left: 40px;
     padding-right: 30px;
+    padding-top: 2px;
     height: 90px;
+    .brickwallContainer {
+      display: none;
+      display: inline-flex;
+      align-self: center;
+      .brickwall {
+        width: 32px;
+        height: auto;
+      }
+    }
+
+    .OTLText {
+      align-self: center;
+      color: #3f3525;
+      font-size: 2.5em;
+      padding-bottom: 21px;
+      padding-top: 22px;
+      padding-left: 20px;
+      padding-right: 1em;
+      font-family: "TS Stamp";
+      line-height: 95%;
+      letter-spacing: 0.03em;
+      z-index: 13;
+      overflow: hidden;
+      .middle {
+        font-family: "TS Rough";
+      }
+    }
     a.contactButton {
+      text-align: center;
       span {
         font-family: "Alata", sans-serif;
         font-size: 1.3em;
@@ -124,45 +148,21 @@ html {
           drop-shadow(-2px 3.8px 2px rgba(219, 215, 191, 0.75))
           drop-shadow(-3px 5.7px 3px rgba(219, 215, 191, 0.5));
         height: 52px;
+        transition: all 0.2s ease;
         right: 40px;
         top: 20px;
         z-index: 2;
       }
-    }
-    .brickwallContainer {
-      display: none;
-      display: inline-flex;
-      align-self: center;
-      .brickwall {
-        width: 32px;
-        height: auto;
+      &:hover {
+        img {
+          filter: drop-shadow(-1px 1.9px 1px rgba(219, 215, 191, 1))
+            drop-shadow(-2px 3.8px 2px rgba(219, 215, 191, 0.75))
+            drop-shadow(-3px 5.7px 3px rgba(219, 215, 191, 0.5))
+            drop-shadow(-4px 7.6px 4px rgba(219, 215, 191, 0.375))
+            drop-shadow(-5px 9.5px 5px rgba(219, 215, 191, 0.3))
+            drop-shadow(-6px 11.4px 6px rgba(219, 215, 191, 0.25));
+        }
       }
-    }
-
-    .OTLText {
-      color: #3f3525;
-      font-size: 2.5em;
-      padding-bottom: 21px;
-      padding-top: 18px;
-      padding-left: 25px;
-      padding-right: 1em;
-      font-family: "TS Stamp";
-      line-height: 95%;
-      letter-spacing: 0.03em;
-      z-index: 13;
-      // @include angledshadow(darken($logoBG, 5%), 60);
-      overflow: hidden;
-      .middle {
-        font-family: "TS Rough";
-      }
-    }
-    a {
-      // float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      text-decoration: none;
     }
   }
   .marqueeWrapper {
@@ -183,10 +183,10 @@ html {
       animation-name: moveLeft;
       animation-timing-function: ease;
       animation-duration: 2.5s;
-      filter: drop-shadow(-1px 1.9px 1px rgba(219, 215, 191, 1))
-        drop-shadow(-2px 3.8px 2px rgba(219, 215, 191, 0.75))
-        drop-shadow(-3px 5.7px 3px rgba(219, 215, 191, 0.5));
-      // @include shadow(darken(#f0eede, 10%), 7);
+      // filter: drop-shadow(-1px 1.9px 1px rgba(219, 215, 191, 1))
+      //   drop-shadow(-2px 3.8px 2px rgba(219, 215, 191, 0.85))
+      //   drop-shadow(-3px 5.7px 3px rgba(219, 215, 191, 0.65));
+      @include shadow(darken(#f0eede, 13%), 7);
     }
     .welcome {
       color: darken(#f0eede, 5%);
@@ -211,7 +211,7 @@ html {
       display: block;
       width: 100vw;
       height: 700px;
-      background-color: rgb(240, 238, 222);
+      background-color: #f0eede;
       z-index: 2;
       backdrop-filter: hue-rotate(120%);
       background-image: url("../public/terrazo3.svg");
@@ -327,7 +327,7 @@ html {
       width: 79vw;
       height: 100%;
       margin-top: 8em;
-      margin-bottom: 2em;
+      margin-bottom: 1em;
       div {
         .my-masonry-grid {
           display: -webkit-box; /* Not needed if autoprefixing */
@@ -416,15 +416,15 @@ html {
 footer {
   width: 100vw;
   margin-top: 3em;
-  padding-top: 3em;
+  padding-top: 4em;
+  padding-bottom: 4.2em;
   // border-top: 7px solid $logoBG;
   background-color: lighten($logoBG, 3%);
   background-image: url("../public/images/terrazzo.svg");
   .footerContent {
     width: 100%;
     display: block;
-    height: 400px;
-    padding: 25px 10vw;
+    padding: 0px 10vw;
     .contact {
       font-family: "Antikor", sans-serif;
 
@@ -481,8 +481,8 @@ footer {
 
       .appButton {
         position: absolute;
-        bottom: 16px;
-        right: 16px;
+        bottom: 26px;
+        right: 26px;
         color: darken($logoBG, 5%);
         text-decoration: none;
         position: absolute;

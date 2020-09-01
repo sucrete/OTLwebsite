@@ -28,7 +28,7 @@ export default function Home() {
         <div className="OTLText">
           Old <span className="middle">Town L</span>ofts
         </div>
-        <a className="contactButton" href="#footer">
+        <a className="contactButton" href="#contact">
           <span>Contact</span>
           <img src="/backticket.svg" />
         </a>
@@ -48,7 +48,7 @@ export default function Home() {
               <img src="/corner.svg" className="corner BL" />
               <img src="/corner.svg" className="corner BR" />
               <div className="innerFrame"></div>
-              <div className="mask"></div>
+              {/* <div className="mask"></div> */}
 
               <div className="quoteBox">
                 <img src="/affordable.svg" />
@@ -128,8 +128,8 @@ export default function Home() {
         </div>
       </div>
       <main>
-        <div id="cards" className="cardsCorpus">
-          <a href="#cards" className="buttonContainer">
+        <div id="properties" className="cardsCorpus">
+          <a href="#properties" className="buttonContainer">
             <span>Our Properties</span>
             <svg
               className="svgArrow"
@@ -141,7 +141,7 @@ export default function Home() {
           </a>
           <Cards />
         </div>
-        <footer id="footer">
+        <footer id="contact">
           <div className="footerContent">
             <div className="contact">
               <h1>Contact</h1>
