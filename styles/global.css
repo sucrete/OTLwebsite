@@ -156,6 +156,7 @@ html {
           animation-duration: 2.5s;
   -webkit-box-shadow: 0px 1px 0 rgba(219, 215, 176, 0), -1px 1.9px 1px #dbd7b0, -2px 3.8px 2px rgba(219, 215, 176, 0.75), -3px 5.7px 3px rgba(219, 215, 176, 0.5), -4px 7.6px 4px rgba(219, 215, 176, 0.375), -5px 9.5px 5px rgba(219, 215, 176, 0.3), -6px 11.4px 6px rgba(219, 215, 176, 0.25), -7px 13.3px 7px rgba(219, 215, 176, 0.214286);
           box-shadow: 0px 1px 0 rgba(219, 215, 176, 0), -1px 1.9px 1px #dbd7b0, -2px 3.8px 2px rgba(219, 215, 176, 0.75), -3px 5.7px 3px rgba(219, 215, 176, 0.5), -4px 7.6px 4px rgba(219, 215, 176, 0.375), -5px 9.5px 5px rgba(219, 215, 176, 0.3), -6px 11.4px 6px rgba(219, 215, 176, 0.25), -7px 13.3px 7px rgba(219, 215, 176, 0.214286);
+  border-radius: 2px;
 }
 
 .container .marqueeWrapper .welcome {
@@ -385,10 +386,16 @@ html {
 }
 
 .container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:hover {
-  -webkit-transform: translateZ(0);
-  transform: translateY(0%);
   -webkit-box-shadow: 0px 1px 0 rgba(217, 217, 183, 0), -1px 1.9px 1px #d9d9b7, -2px 3.8px 2px rgba(217, 217, 183, 0.75), -3px 5.7px 3px rgba(217, 217, 183, 0.5), -4px 7.6px 4px rgba(217, 217, 183, 0.375), -5px 9.5px 5px rgba(217, 217, 183, 0.3), -6px 11.4px 6px rgba(217, 217, 183, 0.25), -7px 13.3px 7px rgba(217, 217, 183, 0.214286), -8px 15.2px 8px rgba(217, 217, 183, 0.1875), -9px 17.1px 9px rgba(217, 217, 183, 0.166667), -10px 19px 10px rgba(217, 217, 183, 0.15);
           box-shadow: 0px 1px 0 rgba(217, 217, 183, 0), -1px 1.9px 1px #d9d9b7, -2px 3.8px 2px rgba(217, 217, 183, 0.75), -3px 5.7px 3px rgba(217, 217, 183, 0.5), -4px 7.6px 4px rgba(217, 217, 183, 0.375), -5px 9.5px 5px rgba(217, 217, 183, 0.3), -6px 11.4px 6px rgba(217, 217, 183, 0.25), -7px 13.3px 7px rgba(217, 217, 183, 0.214286), -8px 15.2px 8px rgba(217, 217, 183, 0.1875), -9px 17.1px 9px rgba(217, 217, 183, 0.166667), -10px 19px 10px rgba(217, 217, 183, 0.15);
+}
+
+.container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:hover a .descriptionContainer .building {
+  color: #332521;
+}
+
+.container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card:hover a .descriptionContainer .district {
+  color: #666666;
 }
 
 .container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card a {
@@ -405,10 +412,6 @@ html {
   margin: 0px;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
   z-index: 1;
 }
 
@@ -427,14 +430,20 @@ html {
   bottom: 0px;
 }
 
+.container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card a .descriptionContainer .building,
+.container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card a .descriptionContainer .district {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card a .descriptionContainer .building {
-  color: #332521;
+  color: #61473f;
   font-family: "Alata", sans-serif;
   font-size: 1.4em;
 }
 
 .container main .cardsCorpus div .my-masonry-grid .my-masonry-grid_column .card a .descriptionContainer .district {
-  color: #666666;
+  color: #8c8c8c;
   font-family: "Antikor", sans-serif;
   font-size: 0.7em;
   text-transform: uppercase;
