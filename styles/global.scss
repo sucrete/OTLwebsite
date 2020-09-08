@@ -63,11 +63,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  background: darken($logoBG, 8%);
+  background: $logoBG;
   background-image: url("../public/terrazo2.svg");
-}
-html {
   scroll-behavior: smooth;
+  // webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -116,6 +116,12 @@ html {
       letter-spacing: 0.03em;
       z-index: 13;
       overflow: hidden;
+      -webkit-text-stroke: 0px;
+      // text-shadow: #fff 0px 1px 1px;
+      transform: translate3d(0, 0, 0);
+      // transform: scale(2, 2) translate3d(70px, 0, 0);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       .middle {
         font-family: "TS Rough";
       }
@@ -211,7 +217,7 @@ html {
       display: block;
       width: 100vw;
       height: 700px;
-      background-color: #f0eede;
+      background: #f1efdf;
       z-index: 2;
       backdrop-filter: hue-rotate(120%);
       background-image: url("../public/terrazo3.svg");
