@@ -2,9 +2,7 @@ import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import Masonry from "react-masonry-css";
 import useContainerDimensions from "./../src/retrieveWidth.js";
-// import styled, { keyframes } from "styled-components";
-// import PropTypes from "prop-types";
-// import LazyLoad from "react-lazyload";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const breakpointColumnsObj = {
   default: 4,
@@ -145,11 +143,11 @@ function Cards() {
               <div
                 className="imageContainer"
                 style={{
-                  // backgroundImage: `url(/${card.picURL}.jpg)`,
                   height: `${card.imgHeight}`,
                 }}
               >
-                <img
+                <LazyLoadImage
+                  effect="blur"
                   src={`/${card.picURL}.jpg`}
                   style={{
                     height: `${card.imgHeight}`,
