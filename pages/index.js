@@ -1,20 +1,7 @@
 import Head from "next/head";
 import Cards from "../components/Cards";
-import { useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
-      } else {
-        document.getElementById("navbar").style.top = "-115px";
-      }
-      prevScrollpos = currentScrollPos;
-    };
-  });
   return (
     <div className="container">
       <Head>
