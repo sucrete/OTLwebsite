@@ -135,7 +135,7 @@ function Cards() {
       >
         {cards.map((card) => (
           <div
-            className="card"
+            className="card fadeInUp"
             style={{ backgroundColor: `${card.color}` }}
             ref={componentRef}
           >
