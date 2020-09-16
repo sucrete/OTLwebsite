@@ -91,7 +91,7 @@ body {
     display: inline-flex;
     padding-left: 40px;
     padding-right: 30px;
-    padding-top: 2px;
+    padding-top: 0px;
     height: 90px;
     .brickwallContainer {
       display: none;
@@ -108,7 +108,7 @@ body {
       color: #3f3525;
       font-size: 2.5em;
       padding-bottom: 21px;
-      padding-top: 22px;
+      padding-top: 20px;
       padding-left: 20px;
       padding-right: 1em;
       font-family: "TS Stamp";
@@ -124,7 +124,7 @@ body {
     }
     a.contactButton {
       text-align: center;
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
       span {
         font-family: "Alata", sans-serif;
         font-size: 1.3em;
@@ -133,13 +133,13 @@ body {
         color: rgb(110, 102, 28);
         position: absolute;
         right: 40px;
-        top: 47px;
+        top: 46px;
         transform: translateY(-50%);
         letter-spacing: 0.04em;
         height: 52px;
         width: 175px;
         z-index: 3;
-        transition: all 0.2s ease;
+        transition: all 0.3s ease;
       }
       img {
         position: absolute;
@@ -147,9 +147,9 @@ body {
           drop-shadow(-2px 3.8px 2px rgba(219, 215, 191, 0.75))
           drop-shadow(-3px 5.7px 3px rgba(219, 215, 191, 0.5));
         height: 52px;
-        transition: all 0.2s ease;
+        transition: all 0.3s ease;
         right: 40px;
-        top: 20px;
+        top: 19px;
         z-index: 2;
       }
       &:hover {
@@ -243,10 +243,11 @@ body {
       top: -32px;
       left: 50%;
       text-decoration: none;
-      transform: translate(-50%, 0%);
       letter-spacing: 0.03em;
-      @include shadow(darken(rgb(245, 245, 236), 25%), 4);
-      transition: all 0.4s ease;
+      // @include shadow(darken(rgb(245, 245, 236), 25%), 4);
+      @include shadow(darken(rgb(245, 245, 236), 25%), 10);
+      transform: translate(-50%, 0px);
+      transition: all 0.3s ease;
       font-size: 18px;
       overflow: hidden;
       z-index: 5;
@@ -273,7 +274,7 @@ body {
       }
       &:hover {
         // cursor: pointer;
-        @include shadow(darken(rgb(245, 245, 236), 25%), 10);
+        transform: translate(-50%, -3px);
       }
       &:visited {
         color: $btnTxtClr;
@@ -337,9 +338,6 @@ body {
           .my-masonry-grid_column {
             padding-left: 30px; /* gutter size */
             background-clip: padding-box;
-            .card:hover::after {
-              opacity: 1;
-            }
             .card {
               margin-bottom: 30px;
               border-radius: 7px;
@@ -350,9 +348,9 @@ body {
               z-index: 88;
               transition: all 0.3s ease-in-out;
               @include shadow(darken($background, 14%), 7);
-              transform: translateY(3px);
+              transform: translate(0%, 3px);
               &:hover {
-                transform: translateY(0px);
+                transform: translate(0%, 0px);
                 a {
                   .descriptionContainer {
                     .building {
@@ -378,7 +376,7 @@ body {
                   z-index: 1;
                   overflow: hidden;
                   img {
-                    position: relative;
+                    // position: relative;
                     z-index: 1;
                   }
                   .imgTransition {
@@ -446,7 +444,6 @@ footer {
     padding: 0px 10vw;
     .contact {
       font-family: "Antikor", sans-serif;
-
       color: rgb(56, 56, 56);
       border-radius: 18px;
       background-color: $logoBG;
@@ -497,7 +494,6 @@ footer {
           }
         }
       }
-
       .appButton {
         position: absolute;
         bottom: 26px;
@@ -510,13 +506,13 @@ footer {
         border-radius: 0.5em;
         text-decoration: none;
         height: 65px;
-        transition: all 0.4s ease;
         overflow: hidden;
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        transform: translate(0%, 0%);
-        @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 4);
+        transform: translate(0%, 0px);
+        transition: all 0.3s ease;
+        @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 10);
         &:focus {
           outline: 0;
         }
@@ -548,7 +544,7 @@ footer {
         }
         &:hover {
           background: rgb(83, 81, 37);
-          @include shadow(darken(hsla(53, 27%, 87%, 1), 25%), 10);
+          transform: translate(0%, -3px);
           &:before {
             transform: translateX(300px) skewX(-15deg);
             opacity: 0.6;
