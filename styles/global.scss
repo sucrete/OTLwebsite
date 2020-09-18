@@ -686,21 +686,13 @@ $animationLength: 0.9s;
 .cardContainer {
   width: 525px;
   height: 340px;
-  transform: translate3d(0, 850px, 0);
+  transform: translate3d(0, 0px, 0);
   animation-timing-function: cubic-bezier(0.37, 0.71, 0.42, 0.99);
   animation-duration: $animationLength;
   animation-fill-mode: forwards;
-  animation-name: cardMove;
+  // animation-name: cardMove;
   .shadow,
   .bizCard {
-    animation-timing-function: cubic-bezier(
-      0.37,
-      0.71,
-      0.42,
-      0.99
-    ); //or ease-out
-    animation-duration: $animationLength;
-    animation-fill-mode: forwards;
   }
   .shadow {
     background: transparent;
@@ -722,7 +714,9 @@ $animationLength: 0.9s;
     top: 35px;
     z-index: 2;
     box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
-    animation-name: cardSpin, cardChanges;
+    // animation-name: cardSpin, cardChanges;
+    transform: rotate(-5deg);
+    @include shadow(darken(#f1efdf, 12%), 5);
     .quoteBox {
       width: 200px;
       height: auto;
@@ -732,20 +726,6 @@ $animationLength: 0.9s;
       transform: translate(-50%, -50%);
     }
     .mask {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      background: #292302;
-      background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
-      opacity: 1;
-      z-index: 10;
-      animation-delay: 3s;
-      animation-name: colorChange;
-      animation-timing-function: linear;
-      animation-duration: 0.4s;
-      animation-fill-mode: forwards;
     }
     .innerFrame {
       height: calc(100% - 50px);

@@ -778,20 +778,8 @@ img {
 .cardContainer {
   width: 525px;
   height: 340px;
-  -webkit-transform: translate3d(0, 850px, 0);
-          transform: translate3d(0, 850px, 0);
-  -webkit-animation-timing-function: cubic-bezier(0.37, 0.71, 0.42, 0.99);
-          animation-timing-function: cubic-bezier(0.37, 0.71, 0.42, 0.99);
-  -webkit-animation-duration: 0.9s;
-          animation-duration: 0.9s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-name: cardMove;
-          animation-name: cardMove;
-}
-
-.cardContainer .shadow,
-.cardContainer .bizCard {
+  -webkit-transform: translate3d(0, 0px, 0);
+          transform: translate3d(0, 0px, 0);
   -webkit-animation-timing-function: cubic-bezier(0.37, 0.71, 0.42, 0.99);
           animation-timing-function: cubic-bezier(0.37, 0.71, 0.42, 0.99);
   -webkit-animation-duration: 0.9s;
@@ -824,8 +812,10 @@ img {
   z-index: 2;
   -webkit-box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
           box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
-  -webkit-animation-name: cardSpin, cardChanges;
-          animation-name: cardSpin, cardChanges;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  -webkit-box-shadow: 0px 1px 0 rgba(222, 218, 180, 0), -1px 1.9px 1px #dedab4, -2px 3.8px 2px rgba(222, 218, 180, 0.75), -3px 5.7px 3px rgba(222, 218, 180, 0.5), -4px 7.6px 4px rgba(222, 218, 180, 0.375), -5px 9.5px 5px rgba(222, 218, 180, 0.3);
+          box-shadow: 0px 1px 0 rgba(222, 218, 180, 0), -1px 1.9px 1px #dedab4, -2px 3.8px 2px rgba(222, 218, 180, 0.75), -3px 5.7px 3px rgba(222, 218, 180, 0.5), -4px 7.6px 4px rgba(222, 218, 180, 0.375), -5px 9.5px 5px rgba(222, 218, 180, 0.3);
 }
 
 .cardContainer .bizCard .quoteBox {
@@ -836,28 +826,6 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.cardContainer .bizCard .mask {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background: #292302;
-  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
-  opacity: 1;
-  z-index: 10;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-  -webkit-animation-name: colorChange;
-          animation-name: colorChange;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 .cardContainer .bizCard .innerFrame {

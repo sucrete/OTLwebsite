@@ -40,55 +40,6 @@ export default function Home() {
                 <img src="/affordable.svg" />
               </div>
             </div>
-            <svg
-              class="shadow _1"
-              viewBox="0 0 525 340"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect x="35" y="35" height="270" width="455" />
-            </svg>
-            <svg
-              class="shadow _2"
-              viewBox="0 0 525 340"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect x="35" y="35" height="270" width="455" />
-            </svg>
-            <svg
-              class="shadow _3"
-              viewBox="0 0 525 340"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect x="35" y="35" height="270" width="455" />
-            </svg>
-            <svg
-              class="shadow _4"
-              viewBox="0 0 525 340"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect x="35" y="35" height="270" width="455" />
-            </svg>
-            <svg
-              class="shadow _5"
-              viewBox="0 0 525 340"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect x="35" y="35" height="270" width="455" />
-            </svg>
-            <svg
-              class="shadow _6"
-              viewBox="0 0 525 340"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect x="35" y="35" height="270" width="455" />
-            </svg>
-            <svg
-              class="shadow _7"
-              viewBox="0 0 525 340"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect x="35" y="35" height="270" width="455" />
-            </svg>
           </div>
         </div>
       </div>
