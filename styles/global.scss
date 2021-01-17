@@ -3,10 +3,21 @@ $greyscale: 40%;
 $btnTxtClr: #e2cec8;
 $shadow: #6c708f;
 $footerColor: rgb(219, 219, 219);
-
+$warmWhite: rgb(236, 235, 224);
 $background: rgb(244, 244, 231);
 $logoBG: #e8e3c9;
 $bgClr: #e4e2d2;
+
+@media screen and (min-width: 1200px) {
+  html,
+  body {
+    background: $logoBG !important;
+  }
+  .responsiveMask {
+    display: none;
+  }
+}
+
 @mixin deets($left, $top, $blur, $opacity) {
   $_top: $top + 1;
   $_left: $left;
@@ -63,7 +74,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  background: $logoBG;
+  background: rgb(82, 79, 36);
   background-image: url("../public/terrazo2.svg");
   scroll-behavior: smooth;
   // webkit-font-smoothing: antialiased;
@@ -80,6 +91,75 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  position: relative;
+  .responsiveMask {
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 900;
+    .imageLayer,
+    .graphicalLayer {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+    }
+    .imageLayer {
+      background: url("../public/images/COVER_8.jpg");
+      background-size: cover;
+      background-position: 100% 25%;
+      z-index: 901;
+    }
+    .graphicalLayer {
+      height: 100%;
+      background-color: rgba(83, 81, 35, 0.959);
+      z-index: 902;
+      .informationalContainer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .otlGraphicContainer {
+          display: inline-flex;
+          height: 90px;
+          margin: 0 auto;
+          position: relative;
+          .brickwallContainer {
+            display: none;
+            display: inline-flex;
+            align-self: center;
+            .brickwall {
+              width: 2.1em;
+              height: auto;
+              margin-bottom: 21px;
+              margin-right: 10px;
+            }
+          }
+          .OTLText {
+            align-self: center;
+            color: #d6a585;
+            font-size: 3em;
+            padding-bottom: 21px;
+            font-family: "TS Stamp";
+            line-height: 95%;
+            letter-spacing: 0.03em;
+            z-index: 13;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            .middle {
+              font-family: "TS Rough";
+            }
+          }
+        }
+        .informationalContent {
+          font-family: "Antikor";
+          text-align: center;
+          color: $warmWhite;
+          width: 27em;
+        }
+      }
+    }
+  }
   .navBar {
     background-color: $logoBG;
     width: 100%; /* Full width */
@@ -716,7 +796,7 @@ $animationLength: 0.9s;
     box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
     // animation-name: cardSpin, cardChanges;
     transform: rotate(-5deg);
-    @include shadow(darken(#f1efdf, 12%), 5);
+    @include shadow(darken(#f1efdf, 12%), 4);
     .quoteBox {
       width: 200px;
       height: auto;

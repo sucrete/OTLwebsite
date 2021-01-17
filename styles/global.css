@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Karla:wght@400;700&display=swap");
+@media screen and (min-width: 1200px) {
+  html,
+  body {
+    background: #e8e3c9 !important;
+  }
+  .responsiveMask {
+    display: none;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -6,7 +16,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  background: #e8e3c9;
+  background: #524f24;
   background-image: url("../public/terrazo2.svg");
   scroll-behavior: smooth;
 }
@@ -32,6 +42,94 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
+  position: relative;
+}
+
+.container .responsiveMask {
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 900;
+}
+
+.container .responsiveMask .imageLayer,
+.container .responsiveMask .graphicalLayer {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
+.container .responsiveMask .imageLayer {
+  background: url("../public/images/COVER_8.jpg");
+  background-size: cover;
+  background-position: 100% 25%;
+  z-index: 901;
+}
+
+.container .responsiveMask .graphicalLayer {
+  height: 100%;
+  background-color: rgba(83, 81, 35, 0.959);
+  z-index: 902;
+}
+
+.container .responsiveMask .graphicalLayer .informationalContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 90px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .brickwallContainer {
+  display: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .brickwallContainer .brickwall {
+  width: 2.1em;
+  height: auto;
+  margin-bottom: 21px;
+  margin-right: 10px;
+}
+
+.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .OTLText {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #d6a585;
+  font-size: 3em;
+  padding-bottom: 21px;
+  font-family: "TS Stamp";
+  line-height: 95%;
+  letter-spacing: 0.03em;
+  z-index: 13;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .OTLText .middle {
+  font-family: "TS Rough";
+}
+
+.container .responsiveMask .graphicalLayer .informationalContainer .informationalContent {
+  font-family: "Antikor";
+  text-align: center;
+  color: #ecebe0;
+  width: 27em;
 }
 
 .container .navBar {
@@ -814,8 +912,8 @@ img {
           box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.8);
   -webkit-transform: rotate(-5deg);
           transform: rotate(-5deg);
-  -webkit-box-shadow: 0px 1px 0 rgba(222, 218, 180, 0), -1px 1.9px 1px #dedab4, -2px 3.8px 2px rgba(222, 218, 180, 0.75), -3px 5.7px 3px rgba(222, 218, 180, 0.5), -4px 7.6px 4px rgba(222, 218, 180, 0.375), -5px 9.5px 5px rgba(222, 218, 180, 0.3);
-          box-shadow: 0px 1px 0 rgba(222, 218, 180, 0), -1px 1.9px 1px #dedab4, -2px 3.8px 2px rgba(222, 218, 180, 0.75), -3px 5.7px 3px rgba(222, 218, 180, 0.5), -4px 7.6px 4px rgba(222, 218, 180, 0.375), -5px 9.5px 5px rgba(222, 218, 180, 0.3);
+  -webkit-box-shadow: 0px 1px 0 rgba(222, 218, 180, 0), -1px 1.9px 1px #dedab4, -2px 3.8px 2px rgba(222, 218, 180, 0.75), -3px 5.7px 3px rgba(222, 218, 180, 0.5), -4px 7.6px 4px rgba(222, 218, 180, 0.375);
+          box-shadow: 0px 1px 0 rgba(222, 218, 180, 0), -1px 1.9px 1px #dedab4, -2px 3.8px 2px rgba(222, 218, 180, 0.75), -3px 5.7px 3px rgba(222, 218, 180, 0.5), -4px 7.6px 4px rgba(222, 218, 180, 0.375);
 }
 
 .cardContainer .bizCard .quoteBox {

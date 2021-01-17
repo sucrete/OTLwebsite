@@ -8,6 +8,25 @@ export default function Home() {
         <title>Old Town Lofts</title>
         <link rel="icon" href="/brickwall.svg" />
       </Head>
+      <div className="responsiveMask">
+        <div className="imageLayer"></div>
+        <div className="graphicalLayer">
+          <div className="informationalContainer">
+            <div className="otlGraphicContainer">
+              <div className="brickwallContainer">
+                <img className="brickwall" src="/brickwall.svg" />
+              </div>
+              <div className="OTLText">
+                Old <span className="middle">Town L</span>ofts
+              </div>
+            </div>
+            <div className="informationalContent">
+              This prototype not optimized for browser widths under 1200px.
+              Please view on desktop.
+            </div>
+          </div>
+        </div>
+      </div>
       <nav className="navBar" id="navbar">
         <div className="brickwallContainer">
           <img className="brickwall" src="/brickwall.svg" />
