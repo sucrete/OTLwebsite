@@ -22,13 +22,87 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media (min-width: 401px) and (max-width: 475px) {
   .responsiveMask .imageLayer {
     height: 100% !important;
     width: 100% !important;
+    background-position: 50% 25% !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer {
+    height: 70px !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .otlGraphicContainerInterior {
+    left: 55% !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .brickwallContainer .brickwall {
+    height: 1.5em !important;
+    margin-bottom: unset !important;
   }
   .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .OTLText {
-    color: greenyellow !important;
+    font-size: 2em !important;
+    padding-bottom: unset !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .informationalContent {
+    width: 90vw !important;
+  }
+}
+
+@media (min-width: 330px) and (max-width: 400px) {
+  .responsiveMask .imageLayer {
+    height: 100% !important;
+    width: 100% !important;
+    background-position: 50% 25% !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer {
+    height: 67px !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .otlGraphicContainerInterior {
+    left: 56% !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .brickwallContainer .brickwall {
+    height: 1.2em !important;
+    margin-bottom: unset !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .OTLText {
+    text-align: center;
+    font-size: 1.7em !important;
+    padding-bottom: unset !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .informationalContent {
+    width: 90vw !important;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 329px) {
+  .responsiveMask .imageLayer {
+    height: 100% !important;
+    width: 100% !important;
+    background-position: 50% 25% !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer {
+    width: 95%;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer {
+    height: 65px !important;
+    width: 90vw !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .otlGraphicContainerInterior {
+    width: 87% !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .otlGraphicContainerInterior .brickwallContainer .brickwall {
+    height: 0.95em !important;
+    margin-bottom: unset !important;
+    margin-right: unset !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .otlGraphicContainerInterior .OTLText {
+    font-size: 1.5em !important;
+    padding-bottom: unset !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .informationalContent {
+    width: 92vw !important;
+    font-size: 0.7em !important;
+    width: 100%;
   }
 }
 
@@ -105,15 +179,24 @@ body {
 }
 
 .container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer {
+  display: block;
+  width: 90%;
+  height: 69px;
+}
+
+.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .otlGraphicContainerInterior {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 90px;
-  margin: 0 auto;
-  position: relative;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
-.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .brickwallContainer {
+.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .otlGraphicContainerInterior .brickwallContainer {
   display: none;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -122,18 +205,18 @@ body {
       align-self: center;
 }
 
-.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .brickwallContainer .brickwall {
+.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .otlGraphicContainerInterior .brickwallContainer .brickwall {
   width: 2.1em;
   height: auto;
   margin-bottom: 21px;
   margin-right: 10px;
 }
 
-.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .OTLText {
+.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .otlGraphicContainerInterior .OTLText {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  color: #d6a585;
+  color: #d3bfb2;
   font-size: 3em;
   padding-bottom: 21px;
   font-family: "TS Stamp";
@@ -145,7 +228,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .OTLText .middle {
+.container .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .otlGraphicContainerInterior .OTLText .middle {
   font-family: "TS Rough";
 }
 
@@ -154,6 +237,7 @@ body {
   text-align: center;
   color: #ecebe0;
   width: 27em;
+  display: block;
 }
 
 .container .navBar {

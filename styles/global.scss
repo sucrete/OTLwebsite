@@ -30,28 +30,106 @@ $bgClr: #e4e2d2;
   }
 }
 // FOR MOBILE
-@media screen and (max-width: 500px) {
+@media (min-width: 401px) and (max-width: 475px) {
   .responsiveMask {
     .imageLayer {
       height: 100% !important;
       width: 100% !important;
+      background-position: 50% 25% !important;
     }
     .graphicalLayer {
       .informationalContainer {
         .otlGraphicContainer {
-          // width: 100%;
-          // height: unset;
-          // display: inline-flex;
+          height: 70px !important;
+          .otlGraphicContainerInterior {
+            left: 55% !important;
+          }
           .brickwallContainer {
             .brickwall {
+              height: 1.5em !important;
+              margin-bottom: unset !important;
             }
           }
           .OTLText {
-            color: greenyellow !important;
+            font-size: 2em !important;
+            padding-bottom: unset !important;
           }
         }
         .informationalContent {
-          // width: 90vw !important;
+          width: 90vw !important;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 330px) and (max-width: 400px) {
+  .responsiveMask {
+    .imageLayer {
+      height: 100% !important;
+      width: 100% !important;
+      background-position: 50% 25% !important;
+    }
+    .graphicalLayer {
+      .informationalContainer {
+        .otlGraphicContainer {
+          height: 67px !important;
+          .otlGraphicContainerInterior {
+            left: 56% !important;
+          }
+          .brickwallContainer {
+            .brickwall {
+              height: 1.2em !important;
+              margin-bottom: unset !important;
+            }
+          }
+          .OTLText {
+            text-align: center;
+            font-size: 1.7em !important;
+            padding-bottom: unset !important;
+          }
+        }
+        .informationalContent {
+          width: 90vw !important;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 329px) {
+  .responsiveMask {
+    .imageLayer {
+      height: 100% !important;
+      width: 100% !important;
+      background-position: 50% 25% !important;
+    }
+    .graphicalLayer {
+      .informationalContainer {
+        width: 95%;
+        .otlGraphicContainer {
+          height: 65px !important;
+          width: 90vw !important;
+          .otlGraphicContainerInterior {
+            width: 87% !important;
+            .brickwallContainer {
+              .brickwall {
+                height: 0.95em !important;
+                margin-bottom: unset !important;
+                margin-right: unset !important;
+              }
+            }
+            .OTLText {
+              // text-align: center;
+              font-size: 1.5em !important;
+              padding-bottom: unset !important;
+            }
+          }
+        }
+
+        .informationalContent {
+          width: 92vw !important;
+          font-size: 0.7em !important;
+          width: 100%;
         }
       }
     }
@@ -159,35 +237,42 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         .otlGraphicContainer {
-          display: inline-flex;
-          height: 90px;
-          margin: 0 auto;
-          position: relative;
-          .brickwallContainer {
-            display: none;
+          display: block;
+          width: 90%;
+          height: 69px;
+          .otlGraphicContainerInterior {
             display: inline-flex;
-            align-self: center;
-            .brickwall {
-              width: 2.1em;
-              height: auto;
-              margin-bottom: 21px;
-              margin-right: 10px;
+            height: 90px;
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            .brickwallContainer {
+              display: none;
+              display: inline-flex;
+              align-self: center;
+              .brickwall {
+                width: 2.1em;
+                height: auto;
+                margin-bottom: 21px;
+                margin-right: 10px;
+              }
             }
-          }
-          .OTLText {
-            align-self: center;
-            color: #d6a585;
-            font-size: 3em;
-            padding-bottom: 21px;
-            font-family: "TS Stamp";
-            line-height: 95%;
-            letter-spacing: 0.03em;
-            z-index: 13;
-            overflow: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            .middle {
-              font-family: "TS Rough";
+            .OTLText {
+              align-self: center;
+              color: #d3bfb2;
+              font-size: 3em;
+              padding-bottom: 21px;
+              font-family: "TS Stamp";
+              line-height: 95%;
+              letter-spacing: 0.03em;
+              z-index: 13;
+              overflow: hidden;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              .middle {
+                font-family: "TS Rough";
+              }
             }
           }
         }
@@ -196,6 +281,7 @@ body {
           text-align: center;
           color: $warmWhite;
           width: 27em;
+          display: block;
         }
       }
     }

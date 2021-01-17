@@ -14,11 +14,13 @@ export default function Home() {
         <div className="graphicalLayer">
           <div className="informationalContainer">
             <div className="otlGraphicContainer">
-              <div className="brickwallContainer">
-                <img className="brickwall" src="/brickwall.svg" />
-              </div>
-              <div className="OTLText">
-                Old <span className="middle">Town L</span>ofts
+              <div className="otlGraphicContainerInterior">
+                <div className="brickwallContainer">
+                  <img className="brickwall" src="/brickwall.svg" />
+                </div>
+                <div className="OTLText">
+                  Old <span className="middle">Town L</span>ofts
+                </div>
               </div>
             </div>
             <div className="informationalContent">
