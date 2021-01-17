@@ -3,9 +3,32 @@
   html,
   body {
     background: #e8e3c9 !important;
+    height: unset;
+    overflow: unset;
   }
   .responsiveMask {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body,
+  html,
+  main,
+  .container {
+    height: 100vh !important;
+    min-height: unset !important;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .responsiveMask .imageLayer {
+    height: 100% !important;
+    width: 100% !important;
+  }
+  .responsiveMask .graphicalLayer .informationalContainer .otlGraphicContainer .OTLText {
+    color: greenyellow !important;
   }
 }
 
@@ -19,6 +42,7 @@ body {
   background: #524f24;
   background-image: url("../public/terrazo2.svg");
   scroll-behavior: smooth;
+  height: 100vh;
 }
 
 * {

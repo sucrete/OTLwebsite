@@ -12,12 +12,51 @@ $bgClr: #e4e2d2;
   html,
   body {
     background: $logoBG !important;
+    height: unset;
+    overflow: unset;
   }
   .responsiveMask {
     display: none;
   }
 }
-
+@media screen and (max-width: 1200px) {
+  body,
+  html,
+  main,
+  .container {
+    height: 100vh !important;
+    min-height: unset !important;
+    overflow: hidden;
+  }
+}
+// FOR MOBILE
+@media screen and (max-width: 500px) {
+  .responsiveMask {
+    .imageLayer {
+      height: 100% !important;
+      width: 100% !important;
+    }
+    .graphicalLayer {
+      .informationalContainer {
+        .otlGraphicContainer {
+          // width: 100%;
+          // height: unset;
+          // display: inline-flex;
+          .brickwallContainer {
+            .brickwall {
+            }
+          }
+          .OTLText {
+            color: greenyellow !important;
+          }
+        }
+        .informationalContent {
+          // width: 90vw !important;
+        }
+      }
+    }
+  }
+}
 @mixin deets($left, $top, $blur, $opacity) {
   $_top: $top + 1;
   $_left: $left;
@@ -79,6 +118,7 @@ body {
   scroll-behavior: smooth;
   // webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
 
 * {
