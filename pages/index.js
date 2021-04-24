@@ -46,7 +46,7 @@ export default function Home() {
         <div className="marquee"></div>
         <img
           className="desaturatedBuilding"
-          src="/images/COVER_8desaturated.jpg"
+          src="/images/COVER_8desaturated.png"
         />
         <div className="welcome">WELCOME</div>
         <div className="parentCardContainer">
