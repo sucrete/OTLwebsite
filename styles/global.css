@@ -278,17 +278,13 @@ body {
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 1em;
-  font-family: "TS Stamp";
+  font-family: "TS Rough";
   line-height: 95%;
   letter-spacing: 0.03em;
   z-index: 13;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.container .navBar .OTLText .middle {
-  font-family: "TS Rough";
 }
 
 .container .navBar a.contactButton {
